@@ -1,0 +1,2023 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Wiki de fans de Los Simpson: personajes, historias entrelazadas, Springfield de la A a la Z, misterios, cronología, doblaje España/Latinoamérica y una sala de juegos con sprites en pixel art.">
+<meta property="og:title" content="Siempre Viva 742">
+<meta property="og:description" content="Wiki de fans de Los Simpson: personajes, historias entrelazadas, Springfield de la A a la Z, misterios, cronología, doblaje España/Latinoamérica y una sala de juegos con sprites en pixel art.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://siempre-viva-742.vercel.app/">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://siempre-viva-742.vercel.app/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#70c1f0">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Siempre Viva 742</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:ital,wght@0,400;0,600;0,800;1,400&family=Fredoka:wght@500;600&family=Permanent+Marker&family=VT323&display=swap">
+<style>
+/* Layout: bandas de cielo de Springfield con nubes; tarjetas de cel con contorno negro grueso y sombra plana; de noche, Springfield con neones del Badulaque y de Moe. */
+:root{
+  --sky:#70c1f0; --sky-2:#a9dcf7; --band:#fff7d6; --band-2:#ffffff;
+  --paper:#ffffff; --paper-2:#fffbe9;
+  --ink:#1d1b17; --fg:#1d1b17; --fg-2:#4a4436; --muted:#6f6754;
+  --yellow:#fed90f; --yellow-2:#ffe866; --on-yellow:#1d1b17;
+  --orange:#f05a24; --blue:#2f64d6; --pink:#f58bc0; --green:#3fae49;
+  --link:#1f4fb8;
+  --ok:#2f9a46; --warn:#c77d00; --bad:#d8342c; --info:#1f6fb8; --violet:#7b46c4;
+  --cloud:#ffffff; --cloud-shade:#e3f1fa;
+  --h2-shadow:4px 4px 0 var(--ink); --cloud-op:.95; --stars:none; --neon-glow:none;
+  --stroke:3px; --r:14px; --shadow:5px 5px 0 var(--ink); --shadow-sm:3px 3px 0 var(--ink);
+  --font-display:"Luckiest Guy","Arial Black",Impact,sans-serif;
+  --font-body:"Nunito","Trebuchet MS",Verdana,sans-serif;
+  --font-label:"Fredoka","Trebuchet MS",Verdana,sans-serif;
+  --font-chalk:"Permanent Marker","Comic Sans MS",cursive;
+  --font-mono:"VT323","Courier New",monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --sky:#12204a; --sky-2:#1c2f66; --band:#141c3a; --band-2:#0f1630;
+    --paper:#1d2850; --paper-2:#22305e;
+    --ink:#05070f; --fg:#f4efe0; --fg-2:#cfc8b4; --muted:#9a96a8;
+    --yellow:#ffd60a; --yellow-2:#ffe866; --on-yellow:#1d1b17;
+    --orange:#ff7a3d; --blue:#6f9bff; --pink:#ff5fb4; --green:#58e36b;
+    --link:#8fd0ff;
+    --ok:#58e36b; --warn:#ffb020; --bad:#ff5a52; --info:#5fc8ff; --violet:#b48cff;
+    --cloud:#2a3a72; --cloud-shade:#22305e;
+    --shadow:5px 5px 0 #000; --shadow-sm:3px 3px 0 #000;
+    --h2-shadow:0 0 6px #ffd60a,0 0 18px rgba(255,95,180,.55),4px 4px 0 #000; --cloud-op:.18; --neon-glow:0 0 10px rgba(88,227,107,.55),0 0 22px rgba(255,95,180,.35);
+    --stars:radial-gradient(circle at 12% 18%,#fff 0 1px,transparent 2px),radial-gradient(circle at 34% 8%,#fff 0 1px,transparent 2px),radial-gradient(circle at 58% 22%,#fff 0 1px,transparent 2px),radial-gradient(circle at 76% 12%,#fff 0 1.2px,transparent 2px),radial-gradient(circle at 90% 30%,#fff 0 1px,transparent 2px),radial-gradient(circle at 22% 40%,#fff 0 1px,transparent 2px);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --sky:#12204a; --sky-2:#1c2f66; --band:#141c3a; --band-2:#0f1630;
+  --paper:#1d2850; --paper-2:#22305e;
+  --ink:#05070f; --fg:#f4efe0; --fg-2:#cfc8b4; --muted:#9a96a8;
+  --yellow:#ffd60a; --yellow-2:#ffe866; --on-yellow:#1d1b17;
+  --orange:#ff7a3d; --blue:#6f9bff; --pink:#ff5fb4; --green:#58e36b;
+  --link:#8fd0ff;
+  --ok:#58e36b; --warn:#ffb020; --bad:#ff5a52; --info:#5fc8ff; --violet:#b48cff;
+  --cloud:#2a3a72; --cloud-shade:#22305e;
+  --shadow:5px 5px 0 #000; --shadow-sm:3px 3px 0 #000;
+  --h2-shadow:0 0 6px #ffd60a,0 0 18px rgba(255,95,180,.55),4px 4px 0 #000; --cloud-op:.18; --neon-glow:0 0 10px rgba(88,227,107,.55),0 0 22px rgba(255,95,180,.35);
+  --stars:radial-gradient(circle at 12% 18%,#fff 0 1px,transparent 2px),radial-gradient(circle at 34% 8%,#fff 0 1px,transparent 2px),radial-gradient(circle at 58% 22%,#fff 0 1px,transparent 2px),radial-gradient(circle at 76% 12%,#fff 0 1.2px,transparent 2px),radial-gradient(circle at 90% 30%,#fff 0 1px,transparent 2px),radial-gradient(circle at 22% 40%,#fff 0 1px,transparent 2px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--band);color:var(--fg);font-family:var(--font-body);font-size:17px;line-height:1.55;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--yellow)}
+img{max-width:100%;display:block}
+a{color:var(--link)} a:hover{color:var(--orange)}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.05;margin:0;letter-spacing:.02em;text-wrap:balance}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--font-label);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-2)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.spr{display:block;image-rendering:pixelated}
+
+/* barra superior: el amarillo del logo */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--yellow);border-bottom:var(--stroke) solid var(--ink)}
+.top .wrap{display:flex;align-items:center;gap:8px 18px;min-height:62px;flex-wrap:wrap;padding-block:8px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:1.5rem;color:var(--on-yellow);text-decoration:none;white-space:nowrap}
+.brand .spr{width:34px;height:34px}
+.nav{display:flex;gap:0 14px;flex-wrap:wrap;font-family:var(--font-label);font-weight:600;font-size:.9rem;min-width:0}
+.nav a{color:var(--on-yellow);text-decoration:none;padding:4px 2px;border-bottom:3px solid transparent;white-space:nowrap}
+.nav a:hover,.nav a.on{border-color:var(--on-yellow)}
+.search{margin-left:auto;display:flex;align-items:center;gap:6px;background:#fff;border:var(--stroke) solid #1d1b17;border-radius:999px;padding:4px 8px 4px 12px;flex:1 1 180px;max-width:300px;min-width:0;box-shadow:var(--shadow-sm)}
+.search input{background:none;border:0;color:#1d1b17;font:inherit;font-size:1rem;width:100%;min-width:0;outline:none}
+.search input::placeholder{color:#7a735f}
+.search button{border:0;background:#1d1b17;color:#fff;border-radius:999px;width:24px;height:24px;line-height:1;cursor:pointer;flex:none;padding:0}
+.sstat{flex:1 0 100%;font-size:.95rem;color:#1d1b17;padding:0 0 4px} .sstat b{font-weight:800}
+@media (max-width:820px){.nav{order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.search{max-width:none}}
+
+/* cielo de la intro con nubes */
+.cielo{position:relative;overflow:hidden;background:var(--stars),linear-gradient(180deg,var(--sky) 0%,var(--sky-2) 100%);isolation:isolate}
+.nubes{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.nubes .nube{position:absolute;opacity:var(--cloud-op);animation:volar linear infinite}
+@keyframes volar{from{transform:translateX(-30vw)}to{transform:translateX(130vw)}}
+@keyframes flota{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-10px) rotate(6deg)}}
+.hero .wrap{padding-block:clamp(48px,9vw,104px) clamp(56px,8vw,96px);display:grid;gap:16px;justify-items:start}
+.hero .eyebrow{color:var(--fg)}
+.hero h1{font-size:clamp(3.2rem,10vw,7rem);color:var(--yellow);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:6px 6px 0 var(--ink);line-height:.95;transform:rotate(-2deg)}
+.hero .lede{font-size:clamp(1.1rem,2.1vw,1.3rem);max-width:640px;color:var(--fg);font-weight:600;background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);padding:12px 16px;box-shadow:var(--shadow)}
+.hero .start{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.hero .start span{font-family:var(--font-label);font-weight:600;color:var(--fg)}
+.hero .familia{position:absolute;right:max(16px,4vw);bottom:0;display:flex;align-items:flex-end;gap:4px;z-index:-1}
+.hero .rosquilla{position:absolute;animation:flota 4s ease-in-out infinite;z-index:-1}
+@media (max-width:760px){.hero .familia{opacity:.35;right:8px}}
+
+/* botones y chips con contorno */
+.pill,.chip,.btn{font-family:var(--font-label);font-weight:600;border:var(--stroke) solid var(--ink);border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:transform .12s,box-shadow .12s}
+.pill{background:var(--paper);color:var(--fg);padding:6px 14px;box-shadow:var(--shadow-sm)}
+.pill:hover,.chip:hover,.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.pill:active,.chip:active,.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn{background:var(--yellow);color:var(--on-yellow);padding:8px 16px;box-shadow:var(--shadow-sm);justify-self:start}
+.btn.ghost{background:var(--paper);color:var(--fg)}
+.btn:disabled{opacity:.5;cursor:default;transform:none}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{background:var(--paper);color:var(--fg);padding:5px 13px;font-size:.88rem;box-shadow:var(--shadow-sm)}
+.chip.on{background:var(--yellow);color:var(--on-yellow)}
+
+/* bandas */
+.band{padding-block:clamp(48px,7vw,88px);background:var(--band)}
+.band.alt{background:var(--band-2)}
+.band.cielo{background:var(--stars),linear-gradient(180deg,var(--sky) 0%,var(--sky-2) 100%)}
+.sec-head{display:grid;gap:10px;max-width:780px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(2.3rem,5.5vw,3.6rem);color:var(--yellow);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-shadow:var(--h2-shadow)}
+.lede{color:var(--fg-2);font-size:1.1rem;text-wrap:pretty}
+.cielo .lede,.cielo .eyebrow{color:var(--fg)}
+.leyenda{font-size:.92rem;color:var(--muted)}
+
+/* tarjetas de cel */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:20px}
+.card{--col:var(--yellow);position:relative;display:flex;flex-direction:column;background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);overflow:hidden;cursor:pointer;min-width:0;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
+.card:hover,.card:focus-visible{transform:translate(-3px,-3px) rotate(-.6deg);box-shadow:8px 8px 0 var(--ink),var(--neon-glow)}
+.card figure{margin:0;aspect-ratio:4/3;background:var(--col);border-bottom:var(--stroke) solid var(--ink);display:grid;place-items:center;overflow:hidden;max-width:100%;position:relative}
+.card figure::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),transparent 60%);pointer-events:none}
+.card figure img{width:100%;height:100%;object-fit:cover}
+.card figure .spr{width:auto;height:72%;filter:drop-shadow(3px 3px 0 rgba(0,0,0,.35))}
+.card .body{padding:12px 16px 16px;display:grid;gap:4px;align-content:start}
+.card h3{font-size:1.45rem;color:var(--fg)}
+.card .alias{font-weight:800;color:var(--fg-2);font-size:.95rem}
+.card .hook{color:var(--fg-2);font-size:.97rem;line-height:1.45}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{font-family:var(--font-label);font-weight:600;font-size:.72rem;padding:1px 9px;border-radius:999px;border:2px solid var(--ink);background:var(--paper-2);color:var(--fg)}
+.vacio{color:var(--muted);font-style:italic;padding:12px 0}
+
+/* red de lazos */
+.red-wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(min(280px,100%),1fr);gap:22px;align-items:start;margin-bottom:40px}
+@media (max-width:900px){.red-wrap{grid-template-columns:1fr}}
+.red-box,.red-panel{background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);box-shadow:var(--shadow)}
+.red-box{padding:8px;overflow:hidden} .red-box svg{width:100%;height:auto;display:block}
+.red-panel{padding:20px;display:grid;gap:12px;min-width:0;align-content:start}
+.red-panel h3{font-size:1.7rem} .red-panel .pista{color:var(--muted)}
+.nodo{cursor:pointer}
+.nodo circle{stroke:var(--ink);stroke-width:3}
+.nodo text{font-family:var(--font-label);font-weight:600;font-size:12.5px;fill:var(--fg);text-anchor:middle;pointer-events:none}
+.nodo .ini{font-family:var(--font-display);font-size:13px;fill:#1d1b17}
+.lazo{stroke:var(--fg);stroke-opacity:.22;stroke-width:1.5;fill:none;transition:stroke-opacity .2s,stroke .2s,stroke-width .2s}
+.red.sel .lazo{stroke-opacity:.06} .red.sel .lazo.on{stroke:var(--orange);stroke-opacity:1;stroke-width:3}
+.red.sel .nodo{opacity:.3} .red.sel .nodo.on{opacity:1}
+.lazos{display:grid;gap:9px;font-size:.97rem;margin:0;padding:0;list-style:none}
+.lazos b{color:var(--link);cursor:pointer;font-weight:800} .lazos b:hover{text-decoration:underline}
+
+/* hilos */
+.hilos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:20px}
+.hilo{background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px;display:grid;gap:10px;min-width:0;align-content:start;scroll-margin-top:110px}
+.hilo h3{font-size:1.55rem} .hilo .resumen{color:var(--fg-2)}
+.hilo details,.mist details{border-top:2px dashed var(--ink);padding-top:8px}
+summary{cursor:pointer;font-family:var(--font-label);font-weight:600;color:var(--fg);list-style:none;display:flex;align-items:center;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"";width:0;height:0;border-left:7px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent;transition:transform .2s}
+details[open]>summary::before{transform:rotate(90deg)}
+.cadena{list-style:none;margin:12px 0 0;padding:0;counter-reset:paso}
+.cadena li{position:relative;padding:3px 0 12px 38px;font-size:.97rem}
+.cadena li::before{counter-increment:paso;content:counter(paso);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);color:#1d1b17;font-family:var(--font-display);font-size:.9rem;display:grid;place-items:center}
+.cadena li::after{content:"";position:absolute;left:13px;top:31px;bottom:0;width:2px;background:var(--ink);opacity:.25}
+.cadena li:last-child::after{display:none}
+.lb{font-family:var(--font-label);font-weight:600;font-size:.72rem;margin-left:6px;white-space:nowrap;background:var(--paper-2);border:2px solid var(--ink);border-radius:6px;padding:0 5px;color:var(--fg)}
+.rel{display:flex;flex-wrap:wrap;gap:7px}
+.rel button{background:var(--paper-2);border:2px solid var(--ink);border-radius:999px;padding:2px 11px;cursor:pointer;font-size:.9rem;color:var(--fg);font-weight:600}
+.rel button:hover{background:var(--yellow);color:#1d1b17}
+.rel button.ph{border-style:dashed}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 6px var(--orange)}100%{box-shadow:var(--shadow)}}
+
+/* misterios: expediente con sello de estado */
+.mists{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:20px}
+.mist{--c:var(--muted);position:relative;background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px;display:grid;gap:10px;min-width:0;align-content:start;scroll-margin-top:110px}
+.mist[data-e="abierto"]{--c:var(--bad)} .mist[data-e="debate"]{--c:var(--warn)} .mist[data-e="autora"]{--c:var(--info)} .mist[data-e="agujero"]{--c:var(--violet)} .mist[data-e="resuelto"]{--c:var(--ok)}
+.estado{justify-self:start;font-family:var(--font-label);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--c);border:2px solid var(--c);border-radius:6px;padding:1px 8px;transform:rotate(-2deg)}
+.mist h3{font-size:1.4rem} .mist .sab{color:var(--fg-2);font-size:.97rem}
+.mist details p{margin-top:10px;font-size:.97rem}
+
+/* cronología */
+.tl-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+@media (max-width:860px){.tl-wrap{grid-template-columns:1fr}}
+.tl-col{background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px}
+.tl-col h3{font-size:1.6rem;margin-bottom:14px}
+.tl{list-style:none;margin:0;padding:0 0 0 4px;border-left:3px solid var(--ink);display:grid;gap:12px}
+.tl li{position:relative;padding-left:20px;display:grid;grid-template-columns:78px minmax(0,1fr);gap:10px;align-items:baseline;font-size:.97rem}
+.tl li::before{content:"";position:absolute;left:-9px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink)}
+.tl li.big::before{background:var(--pink);width:15px;height:15px;left:-10.5px;top:5px}
+.tl .y{font-family:var(--font-label);font-weight:600;color:var(--fg);font-variant-numeric:tabular-nums}
+.tl li.big .t{font-weight:800}
+
+/* lugares: fotos como polaroids pegadas */
+.galeria{columns:3 min(290px,100%);column-gap:20px}
+.galeria figure{break-inside:avoid;margin:0 0 20px;background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.galeria figure:nth-child(3n){transform:rotate(.6deg)} .galeria figure:nth-child(3n+1){transform:rotate(-.5deg)}
+.galeria img{border-bottom:var(--stroke) solid var(--ink)}
+.galeria figcaption{padding:12px 14px 14px;font-size:.94rem;color:var(--fg-2)}
+.galeria figcaption b{display:block;font-family:var(--font-display);font-weight:400;font-size:1.25rem;color:var(--fg);line-height:1.1;margin-bottom:4px}
+.galeria figcaption i{display:block;font-size:.8rem;color:var(--muted);margin-top:6px;font-style:normal;font-family:var(--font-label)}
+
+/* glosario como tabla de doblaje */
+.glos-box{background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);box-shadow:var(--shadow);overflow-x:auto}
+.glos{width:100%;border-collapse:collapse;min-width:640px;font-size:.96rem}
+.glos th{font-family:var(--font-label);font-weight:600;text-align:left;background:var(--yellow);color:#1d1b17;padding:10px 12px;border-bottom:var(--stroke) solid var(--ink);position:sticky;top:0}
+.glos td{padding:9px 12px;border-bottom:2px solid color-mix(in srgb,var(--ink) 15%,transparent);vertical-align:top}
+.glos td:first-child{font-weight:800;white-space:nowrap}
+.glos td.es,.glos td.la{font-weight:600;color:var(--fg)}
+.glos tr:nth-child(even) td{background:var(--paper-2)}
+
+/* créditos */
+.cred{columns:2 min(360px,100%);column-gap:28px;font-size:.9rem;color:var(--fg-2);margin:0;padding:0;list-style:none}
+.cred li{break-inside:avoid;padding:5px 0;border-bottom:2px dotted color-mix(in srgb,var(--ink) 25%,transparent)}
+.cred b{color:var(--fg)}
+.aviso{font-size:.92rem;color:var(--muted);max-width:780px;margin-top:22px}
+footer{padding:26px 0 40px;text-align:center;font-family:var(--font-label);font-weight:600;color:#1d1b17;background:var(--yellow);border-top:var(--stroke) solid var(--ink)}
+
+/* ficha */
+dialog.ficha{border:var(--stroke) solid var(--ink);padding:0;background:var(--paper);color:var(--fg);width:min(940px,calc(100vw - 28px));max-height:calc(100vh - 28px);border-radius:18px;box-shadow:8px 8px 0 var(--ink);overflow:hidden}
+dialog::backdrop{background:rgba(20,40,80,.55)}
+.ficha-in{max-height:calc(100vh - 34px);overflow:auto;overscroll-behavior:contain}
+.ficha-banner{--col:var(--yellow);position:relative;height:clamp(150px,26vw,230px);background:linear-gradient(180deg,var(--sky),var(--sky-2));border-bottom:var(--stroke) solid var(--ink);overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.ficha-banner .suelo{position:absolute;inset:auto 0 0 0;height:34%;background:var(--col);border-top:var(--stroke) solid var(--ink)}
+.ficha-banner .spr{position:relative;height:84%;width:auto;margin-bottom:4%;filter:drop-shadow(4px 4px 0 rgba(0,0,0,.3))}
+.ficha-banner img.foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ficha-bar{position:absolute;top:10px;right:10px;left:10px;display:flex;justify-content:space-between;gap:8px;z-index:2}
+.ficha-bar button{background:#fff;color:#1d1b17;border:2px solid #1d1b17;border-radius:999px;padding:4px 12px;cursor:pointer;font-family:var(--font-label);font-weight:600;box-shadow:2px 2px 0 #1d1b17}
+.ficha-bar button[hidden]{display:none}
+.ficha-body{padding:18px clamp(16px,4vw,34px) 34px;display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:28px}
+@media (max-width:760px){.ficha-body{grid-template-columns:1fr;gap:20px}}
+.ficha-main{display:grid;gap:16px;min-width:0}
+.ficha-main h2{font-size:clamp(2rem,4.4vw,2.9rem)}
+.ficha-main .alias{font-weight:800;color:var(--fg-2);margin-top:-8px}
+.ficha-aside{display:grid;gap:16px;align-content:start;min-width:0}
+.ficha h4{font-family:var(--font-label);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--fg-2);margin:0 0 7px}
+.libro{display:grid;gap:9px;padding:0;margin:0;list-style:none}
+.libro li{display:grid;grid-template-columns:46px minmax(0,1fr);gap:10px;align-items:start;font-size:.97rem}
+.libro b{font-family:var(--font-label);font-weight:600;font-size:.76rem;background:var(--yellow);color:#1d1b17;border:2px solid var(--ink);border-radius:6px;text-align:center;padding:1px 0;margin-top:2px}
+.dato{border:var(--stroke) solid var(--ink);background:var(--paper-2);border-radius:var(--r);padding:12px 14px;box-shadow:var(--shadow-sm)}
+.caja{background:var(--paper-2);border:2px solid var(--ink);border-radius:12px;padding:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.94rem;margin:0}
+.kv dt{color:var(--muted);font-family:var(--font-label);font-weight:600;font-size:.82rem;padding-top:2px}
+.kv dd{margin:0}
+
+/* ===== sala de juegos ===== */
+.jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr));gap:20px}
+.jcard{--jc:var(--yellow);position:relative;display:grid;gap:8px;align-content:start;background:var(--paper);border:var(--stroke) solid var(--ink);border-radius:var(--r);box-shadow:var(--shadow);cursor:pointer;overflow:hidden;min-width:0;transition:transform .15s,box-shadow .15s}
+.jcard:hover,.jcard:focus-visible{transform:translate(-3px,-3px) rotate(.5deg);box-shadow:8px 8px 0 var(--ink)}
+.jcard .esc{height:120px;background:var(--jc);border-bottom:var(--stroke) solid var(--ink);display:flex;align-items:flex-end;justify-content:center;gap:6px;padding-bottom:8px;position:relative;overflow:hidden}
+.jcard h3{font-size:1.45rem;padding:0 16px} .jcard p{color:var(--fg-2);font-size:.96rem;padding:0 16px}
+.jcard .best{justify-self:start;margin:2px 16px 16px;font-family:var(--font-label);font-weight:600;font-size:.78rem;background:var(--yellow);color:#1d1b17;border:2px solid var(--ink);border-radius:999px;padding:1px 10px}
+.jcard .best:empty{display:none}
+.jcard:not(:has(.best)) p{padding-bottom:16px}
+.jcard[data-juego="moe"] .esc{background:linear-gradient(180deg,#3a2414 0 62%,#7a4a24 62% 70%,#2a180c 70%)}
+.jcard[data-juego="pizarra"] .esc{background:#2f5a3a;box-shadow:inset 0 0 0 8px #8f6631}
+.jcard[data-juego="central"] .esc{background:linear-gradient(180deg,#6f8f7a,#4a6655)}
+.jcard[data-juego="sofa"] .esc{background:linear-gradient(180deg,#d98ac8 0 72%,#7a5a8f 72%)}
+.jcard[data-juego="tele"] .esc{background:repeating-linear-gradient(0deg,#cfd8de 0 2px,#9aa8b2 2px 4px)}
+.jcard[data-juego="badulaque"] .esc{background:linear-gradient(180deg,#3fae49 0 18%,#fff6c9 18%)}
+.jcard .esc .lbl{position:absolute;top:8px;left:10px;font-family:var(--font-label);font-weight:600;font-size:.72rem;color:#fff;text-shadow:1px 1px 0 #000}
+.jcard[data-juego="badulaque"] .esc .lbl,.jcard[data-juego="tele"] .esc .lbl{color:#1d1b17;text-shadow:none}
+
+dialog.juego{--j-bg:#fff;--j-ink:#1d1b17;--j-ink2:#4a4436;--j-acc:#fed90f;--j-line:#1d1b17;--j-opt:#fff;--j-opt-ink:#1d1b17;border:var(--stroke) solid #1d1b17;padding:0;width:min(860px,calc(100vw - 28px));max-height:calc(100vh - 28px);border-radius:18px;box-shadow:8px 8px 0 #1d1b17;overflow:hidden;background:var(--j-bg);color:var(--j-ink);color-scheme:light}
+.j-in{max-height:calc(100vh - 34px);overflow:auto;overscroll-behavior:contain}
+.j-head{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:12px;padding:10px clamp(14px,4vw,24px);background:#fed90f;color:#1d1b17;border-bottom:var(--stroke) solid #1d1b17}
+.j-head h2{font-size:1.5rem} .j-head .eyebrow{color:#1d1b17}
+.j-score{margin-left:auto;font-family:var(--font-label);font-weight:600;font-size:.9rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.j-close{background:#fff;border:2px solid #1d1b17;border-radius:999px;padding:4px 12px;cursor:pointer;font-family:var(--font-label);font-weight:600;box-shadow:2px 2px 0 #1d1b17;white-space:nowrap;color:#1d1b17}
+.j-stage{position:relative;isolation:isolate;padding:18px clamp(14px,4vw,26px) 26px;display:grid;gap:14px;align-content:start;min-height:360px;overflow:hidden}
+.j-n{font-family:var(--font-label);font-weight:600;font-size:.9rem;color:var(--j-ink2)}
+.j-q{font-size:clamp(1.4rem,3.2vw,1.9rem);color:var(--j-ink)}
+.j-opts{display:grid;gap:10px} .j-opts.cols{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+.j-opt{text-align:left;background:var(--j-opt);color:var(--j-opt-ink);border:3px solid #1d1b17;border-radius:12px;padding:10px 14px;cursor:pointer;font-weight:700;font-size:1rem;box-shadow:3px 3px 0 #1d1b17;transition:transform .1s,box-shadow .1s;min-width:0;display:flex;align-items:center;gap:10px}
+.j-opt:hover:not(:disabled){transform:translate(-1px,-1px);box-shadow:4px 4px 0 #1d1b17}
+.j-opt:disabled{cursor:default}
+.j-opt.ok{background:#bff0c4} .j-opt.bad{background:#ffc2bd}
+.j-opt.sm{font-size:.92rem;font-weight:600}
+.j-exp{background:#fff;color:#1d1b17;border:3px solid #1d1b17;border-radius:12px;padding:12px 14px;display:grid;gap:10px;box-shadow:3px 3px 0 #1d1b17}
+.j-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.j-actions .btn{background:#fed90f;color:#1d1b17;border-color:#1d1b17} .j-actions .btn.ghost{background:#fff}
+.portada{display:grid;gap:12px;justify-items:center;text-align:center;padding:10px 0;position:relative;z-index:1}
+.portada h3{font-size:clamp(2rem,5vw,2.8rem);color:#fed90f;-webkit-text-stroke:2px #1d1b17;paint-order:stroke fill;text-shadow:3px 3px 0 #1d1b17}
+.portada p{max-width:48ch;font-weight:600;background:#fff;color:#1d1b17;border:3px solid #1d1b17;border-radius:12px;padding:10px 14px;box-shadow:3px 3px 0 #1d1b17}
+.portada .lugar{font-family:var(--font-label);font-weight:600;background:#1d1b17;color:#fed90f;border-radius:999px;padding:2px 12px}
+.portada .j-actions{justify-content:center}
+.escena{display:flex;align-items:flex-end;justify-content:center;gap:8px;flex-wrap:wrap}
+.resultado{display:grid;gap:12px;justify-items:center;text-align:center;position:relative;z-index:1}
+.resultado .big{font-family:var(--font-display);font-size:clamp(2.4rem,7vw,3.6rem);color:#fed90f;-webkit-text-stroke:2px #1d1b17;paint-order:stroke fill;text-shadow:4px 4px 0 #1d1b17;line-height:1}
+.resultado p{font-weight:700}
+.corre{position:absolute;bottom:6px;left:-80px;z-index:0;animation:corre 6s linear infinite}
+@keyframes corre{from{transform:translateX(0)}to{transform:translateX(calc(100% + 1000px))}}
+@keyframes llena{from{height:0}}
+@keyframes ring{0%,100%{transform:rotate(0)}10%,30%,50%{transform:rotate(-14deg)}20%,40%{transform:rotate(14deg)}}
+@keyframes parpadea{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes neon{0%,100%{text-shadow:0 0 6px #ff5f5f,0 0 18px #ff2d2d,0 0 36px #ff2d2d}45%{text-shadow:0 0 4px #ff5f5f,0 0 10px #ff2d2d}50%{text-shadow:none;opacity:.7}55%{text-shadow:0 0 6px #ff5f5f,0 0 18px #ff2d2d}}
+@keyframes estatica{0%{background-position:0 0}100%{background-position:0 100%}}
+@keyframes alarma{0%,100%{box-shadow:inset 0 0 0 0 rgba(255,40,40,0)}50%{box-shadow:inset 0 0 60px 20px rgba(255,40,40,.65)}}
+@keyframes ding{0%{transform:scale(1)}40%{transform:scale(1.15) rotate(-4deg)}100%{transform:scale(1)}}
+
+/* 1 · Taberna de Moe */
+dialog.juego[data-skin="moe"]{--j-bg:#2a180c;--j-ink:#f6e7c8;--j-ink2:#d8c29a;--j-opt:#f6e7c8;background:linear-gradient(180deg,#3a2414 0 70%,#24150a 70%);color-scheme:dark}
+dialog.juego[data-skin="moe"] .j-stage{background:repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 3px,transparent 3px 46px)}
+.neon{font-family:var(--font-display);font-size:clamp(2rem,6vw,3rem);color:#ffd9d9;letter-spacing:.06em;text-align:center;animation:neon 4s infinite;line-height:1}
+.neon small{display:block;font-family:var(--font-label);font-size:.9rem;color:#9fffb0;text-shadow:0 0 6px #3fff6a,0 0 14px #1fd94a;letter-spacing:.2em;animation:none}
+.barra-moe{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;padding:8px 12px;border-radius:12px;background:linear-gradient(180deg,#8a5a2c,#5a3518);border:3px solid #1d1b17;box-shadow:3px 3px 0 #000}
+.jarra-wrap{position:relative;width:64px;height:64px}
+.jarra-wrap .spr{position:absolute;inset:0;width:64px;height:64px}
+.jarra-fill{position:absolute;left:12px;right:24px;bottom:12px;background:#f2b53a;border-radius:0 0 2px 2px;transition:height .5s;mix-blend-mode:multiply}
+.jarra-wrap .vacia{filter:grayscale(1) brightness(1.4);opacity:.6}
+.telefono.suena{animation:ring .8s ease-in-out 2}
+.bocadillo{background:#fff;color:#1d1b17;border:3px solid #1d1b17;border-radius:14px;padding:6px 12px;font-weight:800;box-shadow:3px 3px 0 #000;max-width:70%}
+
+/* 2 · La pizarra de Bart */
+dialog.juego[data-skin="pizarra"]{--j-bg:#2f5a3a;--j-ink:#f4f4ee;--j-ink2:#cfe3d0;--j-opt:#f4f4ee;background:#2f5a3a;color-scheme:dark}
+dialog.juego[data-skin="pizarra"] .j-stage{background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.08),transparent 60%),#2f5a3a;box-shadow:inset 0 0 0 10px #8f6631,inset 0 0 0 13px #1d1b17;padding:26px clamp(20px,5vw,34px) 30px}
+.tiza-t{font-family:var(--font-chalk);color:#f4f4ee;opacity:.92;letter-spacing:.02em}
+.palabra{display:flex;flex-wrap:wrap;gap:12px 22px;font-family:var(--font-chalk);font-size:clamp(1.6rem,5.5vw,2.4rem);color:#fff}
+.palabra span{display:flex;gap:6px} .palabra b{display:inline-block;min-width:.85em;text-align:center;border-bottom:3px solid rgba(255,255,255,.85);font-weight:400;line-height:1.15}
+.castigo{font-family:var(--font-chalk);font-size:clamp(.95rem,2.6vw,1.2rem);color:rgba(255,255,255,.88);display:grid;gap:2px;min-height:40px}
+.castigo span{animation:rise .5s ease-out both;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.teclas{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:6px}
+.tecla{background:transparent;border:2px dashed rgba(255,255,255,.65);border-radius:8px;padding:6px 0;cursor:pointer;font-family:var(--font-chalk);font-size:1.15rem;color:#fff}
+.tecla:hover:not(:disabled){border-style:solid;background:rgba(255,255,255,.08)}
+.tecla:disabled{opacity:.25;cursor:default}
+dialog.juego[data-skin="pizarra"] .j-n{color:#cfe3d0}
+
+/* 3 · Sala de control de la central */
+dialog.juego[data-skin="central"]{--j-bg:#c9d6cc;--j-ink:#1d1b17;--j-ink2:#334a3c;background:#c9d6cc}
+dialog.juego[data-skin="central"] .j-stage{background:linear-gradient(180deg,#aebfb2 0 46%,#6f8f7a 46% 50%,#8fa595 50%)}
+dialog.juego[data-skin="central"].alarma .j-stage{animation:alarma .5s ease-in-out 6}
+.consola{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#3e5446;border:3px solid #1d1b17;border-radius:12px;padding:10px 12px;box-shadow:3px 3px 0 #1d1b17}
+.luces{display:flex;gap:6px;flex-wrap:wrap}
+.luces i{width:14px;height:14px;border-radius:50%;border:2px solid #1d1b17;background:#2b3a30}
+.luces i.on{background:#7bd43a;box-shadow:0 0 8px #7bd43a} .luces i.rojo{background:#ff4b3e;box-shadow:0 0 8px #ff4b3e;animation:parpadea .6s infinite}
+.luces i.amb{background:#fed90f;animation:parpadea 1.4s infinite}
+.pantalla-c{font-family:var(--font-mono);font-size:1.3rem;color:#9fffb0;background:#0d1a12;border:2px solid #1d1b17;border-radius:6px;padding:2px 10px;text-shadow:0 0 6px #3fff6a;min-width:180px}
+.barras-c{display:flex;gap:4px;align-items:flex-end}
+.barras-c .spr{opacity:.25;transition:opacity .3s} .barras-c .spr.on{opacity:1;filter:drop-shadow(0 0 6px #7bd43a)}
+.mesa{display:flex;align-items:flex-end;gap:8px}
+.orden{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.orden{grid-template-columns:1fr}}
+.orden-pool{display:grid;gap:8px;align-content:start}
+.orden-list{margin:0;padding:12px 12px 12px 34px;display:grid;gap:8px;align-content:start;background:#0d1a12;color:#9fffb0;border:3px solid #1d1b17;border-radius:10px;font-family:var(--font-mono);font-size:1.15rem;line-height:1.15;min-height:120px}
+.orden-list .hueco{color:#4f7a5c;list-style:none;margin-left:-20px}
+.orden-list.res li.ok{color:#9fffb0} .orden-list.res li.bad{color:#ff8a80}
+.orden-list.res .y{color:#fed90f;margin-right:6px}
+.orden-list.res small{display:block;color:#7a9a85}
+
+/* 4 · El sofá */
+dialog.juego[data-skin="sofa"]{--j-bg:#d98ac8;background:#d98ac8}
+dialog.juego[data-skin="sofa"] .j-stage{background:linear-gradient(180deg,#e39ad2 0 78%,#8a6aa8 78%);padding-bottom:14px}
+.salon-top{display:flex;justify-content:center}
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative;z-index:1}
+@media (max-width:480px){.mem{grid-template-columns:repeat(3,1fr);gap:7px}}
+.mem-card{position:relative;aspect-ratio:1;perspective:600px;background:none;border:0;padding:0;cursor:pointer;min-width:0;max-width:100%}
+.mem-card .back,.mem-card .face{position:absolute;inset:0;border-radius:12px;display:grid;place-items:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .45s;border:3px solid #1d1b17;box-shadow:3px 3px 0 #1d1b17}
+.mem-card .back{background:repeating-linear-gradient(45deg,#c48a3a 0 8px,#b07a30 8px 16px)}
+.mem-card .back .spr{width:44%;height:auto}
+.mem-card .face{transform:rotateY(180deg);background:#fff}
+.mem-card .face .spr{width:66%;height:auto}
+.mem-card.p .face{background:#fff6c9}
+.mem-card.up .back{transform:rotateY(180deg)} .mem-card.up .face{transform:rotateY(0)}
+.mem-card:disabled{cursor:default} .mem-card:disabled .face{background:#bff0c4}
+.sofa-fila{display:flex;justify-content:center;align-items:flex-end;margin-top:4px;position:relative}
+.sofa-fila .gente{position:absolute;bottom:42%;display:flex;gap:2px;align-items:flex-end}
+.sofa-fila .gente .spr{animation:rise .5s ease-out both}
+@keyframes rise{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+
+/* 5 · La tele */
+dialog.juego[data-skin="tele"]{--j-bg:#e9e1d0;background:#e9e1d0}
+dialog.juego[data-skin="tele"] .j-stage{background:linear-gradient(180deg,#e9e1d0 0 80%,#c9b28a 80%)}
+.tv{position:relative;background:#8f6631;border:4px solid #1d1b17;border-radius:22px;padding:16px 64px 16px 16px;box-shadow:5px 5px 0 #1d1b17;max-width:620px;margin:0 auto;width:100%}
+.tv::after{content:"";position:absolute;right:16px;top:22px;width:30px;height:30px;border-radius:50%;background:#c9c9c9;border:3px solid #1d1b17;box-shadow:0 46px 0 -4px #c9c9c9,0 46px 0 -1px #1d1b17}
+.tv-screen{position:relative;border:4px solid #1d1b17;border-radius:30px/24px;background:#1a2a33;min-height:170px;display:grid;place-items:center;padding:16px;overflow:hidden;text-align:center}
+.tv-screen::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 2px,transparent 2px 4px);pointer-events:none}
+.tv-screen.ruido::after{content:"";position:absolute;inset:-50%;background:repeating-radial-gradient(circle at 17% 32%,#fff 0 1px,#000 1px 2px,#888 2px 3px);animation:estatica .15s steps(4) infinite;opacity:.9}
+.tv-frase{font-family:var(--font-mono);font-size:clamp(1.8rem,5.5vw,2.8rem);color:#fff;text-shadow:0 0 8px rgba(160,220,255,.8);line-height:1.05}
+.tv-sub{font-family:var(--font-label);font-weight:600;color:#bfe3f2;font-size:.9rem;margin-top:6px}
+.tv-canal{position:absolute;top:8px;right:14px;font-family:var(--font-mono);font-size:1.4rem;color:#7bd43a;text-shadow:0 0 6px #3fff6a;z-index:1}
+.tv-patas{display:flex;justify-content:space-between;max-width:460px;margin:-4px auto 0;padding:0 70px}
+.tv-patas i{width:10px;height:22px;background:#1d1b17;border-radius:0 0 3px 3px}
+dialog.juego[data-skin="tele"] .j-opt .spr{flex:none}
+
+/* 6 · El Badulaque */
+dialog.juego[data-skin="badulaque"]{--j-bg:#fff6c9;background:#fff6c9}
+dialog.juego[data-skin="badulaque"] .j-stage{background:repeating-linear-gradient(180deg,transparent 0 86px,#c48a3a 86px 94px,#8f6631 94px 98px);}
+.rotulo{justify-self:stretch;background:#3fae49;border:3px solid #1d1b17;border-radius:10px;color:#fff;font-family:var(--font-display);font-size:clamp(1.4rem,4vw,2rem);text-align:center;letter-spacing:.06em;padding:4px;box-shadow:3px 3px 0 #1d1b17;-webkit-text-stroke:1.5px #1d1b17;paint-order:stroke fill}
+.mostrador{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.registradora{display:grid;justify-items:center;gap:4px}
+.registradora .visor{font-family:var(--font-mono);font-size:1.5rem;background:#0d1a12;color:#9fffb0;text-shadow:0 0 6px #3fff6a;border:2px solid #1d1b17;border-radius:6px;padding:0 10px;min-width:96px;text-align:center}
+.registradora.ding .spr{animation:ding .5s ease-out}
+.ticket{background:#fff;color:#1d1b17;border:2px solid #1d1b17;border-radius:4px;padding:10px 14px;font-family:var(--font-mono);font-size:1.25rem;line-height:1.2;box-shadow:3px 3px 0 #1d1b17;max-width:460px;width:100%;position:relative;background-image:radial-gradient(circle at 8px -2px,transparent 6px,#fff 6px);}
+.ticket ol{margin:0;padding-left:0;list-style-position:inside;display:grid;gap:4px}
+.ticket li{animation:rise .4s ease-out both}
+.ticket .cab{display:flex;justify-content:space-between;border-bottom:2px dashed #1d1b17;margin-bottom:6px;padding-bottom:2px}
+.precios .j-opt{background:#fff;position:relative;padding-left:12px}
+.precios .j-opt::after{content:attr(data-precio);margin-left:auto;font-family:var(--font-mono);font-size:1.1rem;background:#fed90f;border:2px solid #1d1b17;border-radius:4px;padding:0 6px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" id="brand">Siempre Viva 742</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#personajes">Personajes</a>
+      <a href="#hilos">Historias</a>
+      <a href="#juegos">Juegos</a>
+      <a href="#conceptos">Springfield</a>
+      <a href="#misterios">Misterios</a>
+      <a href="#linea">Cronología</a>
+      <a href="#lugares">Lugares</a>
+      <a href="#glosario">Doblaje</a>
+    </nav>
+    <form class="search" role="search" id="buscador">
+      <label class="sr" for="q">Buscar en la wiki</label>
+      <input id="q" type="search" placeholder="Buscar: Bob, Duff, pizarra…" autocomplete="off">
+      <button type="button" id="q-clear" aria-label="Limpiar búsqueda" hidden>×</button>
+    </form>
+    <div class="sstat" id="sstat" hidden></div>
+  </div>
+</header>
+
+<main>
+<section class="hero cielo" id="inicio">
+  <div class="nubes" id="nubes" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow">Wiki de fans · Los Simpson · desde 1989</p>
+    <h1>Siempre Viva 742</h1>
+    <p class="lede">Todo Springfield en cartas: la familia, los vecinos, las historias que se cruzan durante más de treinta temporadas, los cabos que nunca se ataron, cómo se dice cada cosa en España y en Latinoamérica, y una sala de juegos para demostrar cuánto sabes.</p>
+    <div class="start"><span>Empieza por</span><a class="pill" href="#juegos">Jugar</a><a class="pill" href="#homer" data-go="homer">Homer</a><a class="pill" href="#h-bob" data-go="h-bob">La saga de Bob</a><a class="pill" href="#m-burns" data-go="m-burns">¿Quién disparó al señor Burns?</a><a class="pill" href="#" data-random>Una carta al azar</a></div>
+  </div>
+  <div class="familia" id="familia" aria-hidden="true"></div>
+</section>
+
+<section class="band" id="personajes">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Cartas de personaje</p>
+      <h2>Personajes</h2>
+      <p class="lede">Toca una carta para abrir su ficha: quién es, sus episodios clave temporada a temporada, quién le pone voz y con quién se cruza. La etiqueta T5 significa temporada 5, y los episodios van con su título original en inglés para que se puedan buscar.</p>
+    </div>
+    <div class="chips" id="chips-personajes" role="group" aria-label="Filtrar personajes"></div>
+    <div class="grid" id="grid-personajes"></div>
+  </div>
+</section>
+
+<section class="band cielo" id="hilos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Historias entrelazadas</p>
+      <h2>Las historias</h2>
+      <p class="lede">En Springfield casi todo vuelve: Bob sale de la cárcel, Burns recupera la central, Selma se casa otra vez. Toca a alguien en la red para ver sus lazos y sigue cada historia episodio a episodio.</p>
+    </div>
+    <div class="red-wrap">
+      <div class="red-box"><svg id="red" class="red" viewBox="-360 -320 720 640" role="img" aria-label="Red de lazos entre personajes"></svg></div>
+      <div class="red-panel" id="red-panel"></div>
+    </div>
+    <div class="hilos" id="lista-hilos"></div>
+  </div>
+</section>
+
+<section class="band alt" id="juegos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Sala de juegos</p>
+      <h2>¡A jugar!</h2>
+      <p class="lede">Seis juegos, cada uno en su rincón de Springfield. Los récords se guardan en este navegador.</p>
+    </div>
+    <div class="jgrid" id="grid-juegos"></div>
+  </div>
+</section>
+
+<section class="band" id="conceptos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Cómo funciona Springfield</p>
+      <h2>Springfield de la A a la Z</h2>
+      <p class="lede">Lugares, marcas, programas de la tele y las costumbres de la serie que todo fan reconoce.</p>
+    </div>
+    <div class="chips" id="chips-conceptos" role="group" aria-label="Filtrar conceptos"></div>
+    <div class="grid" id="grid-conceptos"></div>
+  </div>
+</section>
+
+<section class="band alt" id="misterios">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Lo que quedó abierto</p>
+      <h2>Misterios y cabos sueltos</h2>
+      <p class="lede">Preguntas que la serie no cierra, contradicciones del canon flotante y cosas que aclararon los guionistas fuera de pantalla. Cada expediente lleva su sello de estado.</p>
+    </div>
+    <div class="chips" id="chips-misterios" role="group" aria-label="Filtrar misterios"></div>
+    <div class="mists" id="lista-misterios"></div>
+  </div>
+</section>
+
+<section class="band cielo" id="linea">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Dos relojes</p>
+      <h2>Cronología</h2>
+      <p class="lede">A la izquierda, la vida en Springfield según la propia serie, que cambia las fechas cuando le conviene. A la derecha, la historia real del programa.</p>
+    </div>
+    <div class="tl-wrap">
+      <div class="tl-col"><h3>Dentro de Springfield</h3><ol class="tl" id="tl-mundo"></ol></div>
+      <div class="tl-col"><h3>Fuera, en la tele</h3><ol class="tl" id="tl-real"></ol></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="lugares">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Fotos con licencia libre</p>
+      <h2>Springfield en el mundo real</h2>
+      <p class="lede">El Badulaque de verdad, la taberna de Moe en Orlando, la casa construida en Nevada y la gente que pone las voces. Todas las fotos vienen de Wikimedia Commons; los créditos están al final.</p>
+    </div>
+    <div class="galeria" id="galeria"></div>
+  </div>
+</section>
+
+<section class="band alt" id="glosario">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">España y Latinoamérica</p>
+      <h2>Diccionario de doblaje</h2>
+      <p class="lede">La misma serie con dos doblajes: lo que en Madrid es el Badulaque, en México es el Kwik-E-Mart. Aquí están los nombres que más cambian, con el original al lado.</p>
+    </div>
+    <div class="glos-box"><table class="glos" id="glos"><thead><tr><th scope="col">Original</th><th scope="col">España</th><th scope="col">Latinoamérica</th><th scope="col">Qué es</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</section>
+
+<section class="band" id="creditos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Créditos</p>
+      <h2>De dónde sale cada foto</h2>
+      <p class="lede">Cada imagen enlaza a su página en Wikimedia Commons con autor y licencia. Los sprites en pixel art están dibujados a mano para esta página.</p>
+    </div>
+    <ul class="cred" id="creditos-lista"></ul>
+    <p class="aviso">Página de fans sin ánimo de lucro. Los Simpson, sus personajes y sus nombres pertenecen a sus titulares (Matt Groening, 20th Television y The Walt Disney Company). Los textos resumen episodios emitidos y declaraciones públicas de sus creadores; cuando algo es dudoso, la ficha lo marca como debate.</p>
+  </div>
+</section>
+</main>
+<footer>Siempre Viva 742 · Hecha por fans, con rosquillas</footer>
+
+<dialog class="ficha" id="ficha" aria-labelledby="ficha-titulo">
+  <div class="ficha-in">
+    <div class="ficha-banner" id="ficha-banner">
+      <div class="ficha-bar"><button type="button" id="ficha-back" hidden>← Volver</button><button type="button" id="ficha-close" style="margin-left:auto">Cerrar ✕</button></div>
+    </div>
+    <div class="ficha-body"><div class="ficha-main" id="ficha-main"></div><aside class="ficha-aside" id="ficha-aside"></aside></div>
+  </div>
+</dialog>
+
+<dialog class="juego" id="juego" aria-labelledby="j-titulo">
+  <div class="j-in">
+    <header class="j-head"><div><p class="eyebrow">Juego</p><h2 id="j-titulo"></h2></div><div class="j-score" id="j-score"></div><button type="button" class="j-close" id="j-close">Cerrar ✕</button></header>
+    <div class="j-stage" id="j-stage"></div>
+  </div>
+</dialog>
+<script>
+const CREDITOS={"azaria": {"title": "File:Hank Azaria (25755582981) (cropped1).jpg", "artist": "Greg2600", "license": "CC BY-SA 2.0", "license_url": "https://creativecommons.org/licenses/by-sa/2.0", "page": "https://commons.wikimedia.org/wiki/File:Hank_Azaria_(25755582981)_(cropped1).jpg"}, "bumblebee": {"title": "File:BumbleBee (The Simpsons) Universal Studios Florida May 2023.jpg", "artist": "Benoît Prieur", "license": "CC0", "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "page": "https://commons.wikimedia.org/wiki/File:BumbleBee_(The_Simpsons)_Universal_Studios_Florida_May_2023.jpg"}, "cartwright": {"title": "File:Nancy Cartwright by Gage Skidmore.jpg", "artist": "Gage Skidmore", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "page": "https://commons.wikimedia.org/wiki/File:Nancy_Cartwright_by_Gage_Skidmore.jpg"}, "cast-stamp": {"title": "File:Matt groening, kelsey grammer, nancy cartwright, julie kavner, james l brooks, harry shearer, yeardley smith.jpg", "artist": "Brad Cerenzia", "license": "CC BY 2.0", "license_url": "https://creativecommons.org/licenses/by/2.0", "page": "https://commons.wikimedia.org/wiki/File:Matt_groening,_kelsey_grammer,_nancy_cartwright,_julie_kavner,_james_l_brooks,_harry_shearer,_yeardley_smith.jpg"}, "castellaneta": {"title": "File:Dan Castellaneta 1988 Press Photo (3x4 cropped).jpg", "artist": "Fox Broadcasting Company", "license": "Public domain", "license_url": "", "page": "https://commons.wikimedia.org/wiki/File:Dan_Castellaneta_1988_Press_Photo_(3x4_cropped).jpg"}, "cosplay-bart": {"title": "File:Cosplay of Bart Simpson at MJF Cosplay Battle Gathering 2022.jpg", "artist": "Chongkian", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "page": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Bart_Simpson_at_MJF_Cosplay_Battle_Gathering_2022.jpg"}, "duff": {"title": "File:Duff Beer Universal Studios.jpg", "artist": "Mel 23", "license": "CC BY 3.0", "license_url": "https://creativecommons.org/licenses/by/3.0", "page": "https://commons.wikimedia.org/wiki/File:Duff_Beer_Universal_Studios.jpg"}, "groening": {"title": "File:Matt Groening by Gage Skidmore 2.jpg", "artist": "Gage Skidmore", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "page": "https://commons.wikimedia.org/wiki/File:Matt_Groening_by_Gage_Skidmore_2.jpg"}, "groening-studio": {"title": "File:Matt Groening in his studio.jpg", "artist": "Anacleto Rapping, Los Angeles Times", "license": "CC BY 4.0", "license_url": "https://creativecommons.org/licenses/by/4.0", "page": "https://commons.wikimedia.org/wiki/File:Matt_Groening_in_his_studio.jpg"}, "henderson": {"title": "File:The Simpsons house.jpg", "artist": "Scott Jones (Flickr profile)", "license": "CC BY-SA 2.0", "license_url": "https://creativecommons.org/licenses/by-sa/2.0", "page": "https://commons.wikimedia.org/wiki/File:The_Simpsons_house.jpg"}, "krusty-burger": {"title": "File:Krusty Burger (The Simpsons) Universal Studios Florida May 2023.jpg", "artist": "Benoît Prieur", "license": "CC0", "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "page": "https://commons.wikimedia.org/wiki/File:Krusty_Burger_(The_Simpsons)_Universal_Studios_Florida_May_2023.jpg"}, "krustyland": {"title": "File:Krustyland at Universal Studios, California.jpg", "artist": "Lorie Shaull", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "page": "https://commons.wikimedia.org/wiki/File:Krustyland_at_Universal_Studios,_California.jpg"}, "kwik-merch": {"title": "File:Simpsons merchandise at a Kwik-E-Mart converted 7-Eleven, July 2007.jpg", "artist": "The original uploader was Keyser Söze at English Wikipedia.", "license": "CC BY 2.0", "license_url": "https://creativecommons.org/licenses/by/2.0", "page": "https://commons.wikimedia.org/wiki/File:Simpsons_merchandise_at_a_Kwik-E-Mart_converted_7-Eleven,_July_2007.jpg"}, "kwik-nyc": {"title": "File:Kwik-e-mart (717902147).jpg", "artist": "istolethetv", "license": "CC BY 2.0", "license_url": "https://creativecommons.org/licenses/by/2.0", "page": "https://commons.wikimedia.org/wiki/File:Kwik-e-mart_(717902147).jpg"}, "kwik-orlando": {"title": "File:Kwik-E-Mart (Orlando) May 2023.jpg", "artist": "Benoît Prieur", "license": "CC0", "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "page": "https://commons.wikimedia.org/wiki/File:Kwik-E-Mart_(Orlando)_May_2023.jpg"}, "kwik-seattle": {"title": "File:Kwik-e-mart-7-11.jpg", "artist": "SchmuckyTheCat at English Wikipedia", "license": "CC BY-SA 3.0", "license_url": "http://creativecommons.org/licenses/by-sa/3.0/", "page": "https://commons.wikimedia.org/wiki/File:Kwik-e-mart-7-11.jpg"}, "lard-lad": {"title": "File:Simpsons Lard Lad Donuts - panoramio.jpg", "artist": "Jacob Montgomery", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "page": "https://commons.wikimedia.org/wiki/File:Simpsons_Lard_Lad_Donuts_-_panoramio.jpg"}, "moes": {"title": "File:Moe's Tavern - Universal Studios Florida (May 2023).jpg", "artist": "Benoît Prieur", "license": "CC0", "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "page": "https://commons.wikimedia.org/wiki/File:Moe%27s_Tavern_-_Universal_Studios_Florida_(May_2023).jpg"}, "moes-interior": {"title": "File:Interior of Moe's Tavern (Orlando) May 2023 - 2.JPG", "artist": "Benoît Prieur", "license": "CC0", "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "page": "https://commons.wikimedia.org/wiki/File:Interior_of_Moe%27s_Tavern_(Orlando)_May_2023_-_2.JPG"}, "ride-hollywood": {"title": "File:The Simpsons Ride, Universal Studios, California.jpg", "artist": "Lorie Shaull", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "page": "https://commons.wikimedia.org/wiki/File:The_Simpsons_Ride,_Universal_Studios,_California.jpg"}, "shearer": {"title": "File:Harry Shearer (33906701158) (cropped).jpg", "artist": "Greg2600", "license": "CC BY-SA 2.0", "license_url": "https://creativecommons.org/licenses/by-sa/2.0", "page": "https://commons.wikimedia.org/wiki/File:Harry_Shearer_(33906701158)_(cropped).jpg"}, "springfield-or": {"title": "File:Eugene and Springfield from Mount Pisgah.JPG", "artist": "Jsayre64", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "page": "https://commons.wikimedia.org/wiki/File:Eugene_and_Springfield_from_Mount_Pisgah.JPG"}, "springfield-vt": {"title": "File:SimpsonsSpringfieldVT.jpg", "artist": "Victoria Hingston (attribution required)", "license": "CC BY 2.5", "license_url": "https://creativecommons.org/licenses/by/2.5", "page": "https://commons.wikimedia.org/wiki/File:SimpsonsSpringfieldVT.jpg"}, "star": {"title": "File:The Simpsons HWOF star.jpg", "artist": "Rastrojo (D•ES)", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "page": "https://commons.wikimedia.org/wiki/File:The_Simpsons_HWOF_star.jpg"}, "yeardley": {"title": "File:Yeardley Smith by Gage Skidmore.jpg", "artist": "Gage Skidmore", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "page": "https://commons.wikimedia.org/wiki/File:Yeardley_Smith_by_Gage_Skidmore.jpg"}};
+/* ===== Sprites de Springfield en pixel art (dibujados a mano) ===== */
+const K="#1d1b17",Y="#fed90f",W="#ffffff";
+const SPR={
+homer:{pal:{k:K,y:Y,w:W,s:"#d6b16b",c:"#f4f4f4",b:"#3b6fd8"},rows:[
+"......k..k......",
+".....k..k.......",
+"....kkkkkkkk....",
+"...kyyyyyyyyk...",
+"..kyyyyyyyyyyk..",
+"..kywwwyywwwyk..",
+"..kywwkyywkwyk..",
+"..kywwwyywwwyk..",
+".kyyyyyykkyyyk..",
+"kyyyyyyyyykyyk..",
+"kyyssssssssyk...",
+".kssskkkksssk...",
+".ksssssssssk....",
+"..kkssssskk.....",
+"..kcccbcccck....",
+".kcccccbccccck.."]},
+marge:{h:24,pal:{k:K,y:Y,w:W,h:"#2f64d6",H:"#1f48a8",r:"#d8342c",g:"#7bc043"},rows:[
+".....kkkkkk.....",
+"....khhhhhhk....",
+"....khhHhhhk....",
+"...khhhhhhhhk...",
+"...khhhhHhhhk...",
+"...khhhhhhhhk...",
+"...khhHhhhhhk...",
+"...khhhhhhhhk...",
+"...khhhhhHhhk...",
+"...khhhhhhhhk...",
+"...khhhHhhhhk...",
+"...khhhhhhhhk...",
+"...kyhhhhhhyk...",
+"...kywwwywwwk...",
+"...kywkwywkwk...",
+"...kywwwywwwk...",
+"...kyyyyykyyk...",
+"...kyyyyyyyyk...",
+"....kyykkkyyk...",
+"....kyyyyyyk....",
+"....krrrrrrk....",
+"...kgggggggggk..",
+"..kgggggggggggk.",
+"..kgggggggggggk."]},
+bart:{pal:{k:K,y:Y,w:W,o:"#f05a24",b:"#2f5fd0"},rows:[
+"..k.k.k.k.k.....",
+"..kykykykykk....",
+"..kyyyyyyyyk....",
+"..kyyyyyyyyk....",
+"..kywwwywwwk....",
+"..kywkwywkwk....",
+"..kywwwywwwk....",
+"..kyyyyykkyyk...",
+"..kyyyyyyykyk...",
+"..kyyykkkyyk....",
+"...kyyyyyyk.....",
+"...kkyyyykk.....",
+"..koooooooook...",
+".kooooooooooook.",
+".kbbbbbbbbbbbbk.",
+".kbbbbbkkbbbbbk."]},
+lisa:{pal:{k:K,y:Y,w:W,o:"#f05a24",p:"#f4f4f4"},rows:[
+"k..k..k..k..k...",
+"kykkykkykkyk....",
+".kyyyyyyyyyk....",
+"..kyyyyyyyk.....",
+"..kywwwywwwk....",
+"..kywkwywkwk....",
+"..kywwwywwwk....",
+"..kyyyyykkyyk...",
+"..kyyyyyyykyk...",
+"..kyyykkkyyk....",
+"...kyyyyyyk.....",
+"...kpppppppk....",
+"..koooooooook...",
+".kooooooooooook.",
+".kooooooooooook.",
+"..kkkkkkkkkkkk.."]},
+maggie:{pal:{k:K,y:Y,w:W,b:"#2f64d6",r:"#e2303a"},rows:[
+"................",
+"......kbk.......",
+".....kbbbk......",
+"...k.k.k.k......",
+"..kykykykyk.....",
+"..kyyyyyyyyk....",
+"..kywwwywwwk....",
+"..kywkwywkwk....",
+"..kywwwywwwk....",
+"..kyyyyyyyyyk...",
+"..kyyyrrryyk....",
+"..kyyrrrrryk....",
+"...kyyrrryk.....",
+"...kbbbbbbk.....",
+"..kbbbbbbbbk....",
+"..kkkkkkkkkk...."]},
+burns:{pal:{k:K,y:"#e8cf6a",w:W,g:"#4e5a3c",s:"#bfa95a"},rows:[
+"................",
+"....kkkkkk......",
+"...kyyyyyyk.....",
+"..kyyyyyyyyk....",
+"..kyysyyyyyk....",
+"..kywwkywwkk....",
+"..kyyyyyyyykk...",
+"..kyyyyyykkyyk..",
+"..kyyyyyyyykk...",
+"...kyykkkyyk....",
+"....kyyyyyk.....",
+"....kkyyykk.....",
+"...kggkwkggk....",
+"..kggggkgggggk..",
+".kggggggkggggk..",
+".kgggggggggggk.."]},
+flanders:{pal:{k:K,y:Y,w:W,h:"#6b3f1f",g:"#3e9a4a",p:"#f0e6d2"},rows:[
+"....kkkkkkk.....",
+"...khhhhhhhk....",
+"..khhhhhhhhhk...",
+"..khyyyyyyyhk...",
+"..kkkkkkkkkkk...",
+"..kwwkkwwkkk....",
+"..kwkkkwkkkk....",
+"..kyyyyyykkyk...",
+"..kyyyyyyyykk...",
+"..khhhhhhhhk....",
+"..kyykkkkyyk....",
+"...kyyyyyyk.....",
+"..kgggpppgggk...",
+".kggggpppggggk..",
+".kgggggggggggk..",
+".kgggggggggggk.."]},
+krusty:{pal:{k:K,y:"#f6f1e2",w:W,g:"#3fae49",r:"#e2303a",b:"#2f64d6",p:"#8e4bb8"},rows:[
+"......kbk.......",
+".....kbbbk......",
+".kgk.kyyyk.kgk..",
+"kgggkyyyyyykggk.",
+"kggkyyyyyyyykgk.",
+"kgkywwwywwwyykk.",
+".kkywkwywkwyyk..",
+"..kywwwywwwyyk..",
+"..kyyyyrryyyyk..",
+"..kyyyrrrryyyk..",
+"..krrrrrrrrrrk..",
+"...krrkkkkrrk...",
+"....krrrrrrk....",
+"...kpppkkpppk...",
+"..kpppppppppk...",
+"..kpppppppppk..."]},
+bob:{pal:{k:K,y:Y,w:W,r:"#d8342c",R:"#a3221c",g:"#3fae49"},rows:[
+"..r.r.rr.r.r....",
+".rrrrrrrrrrrr...",
+"rrrRrrrrrrRrrr..",
+"rrrrrrrrrrrrrrr.",
+"rrrkkkkkkkkrrr..",
+"rrkyyyyyyyykrr..",
+".rkywwwywwwkr...",
+".rkywkwywkwk....",
+"..kywwwywwwk....",
+"..kyyyyykkyyk...",
+"..kyyyyyyykyk...",
+"..kyykkkkyyk....",
+"...kyyyyyyk.....",
+"..kgggwwgggk....",
+".kggggwwggggk...",
+".kgggggggggggk.."]},
+milhouse:{pal:{k:K,y:Y,w:W,b:"#3b8ee8",B:"#2a6cc0",r:"#d8342c"},rows:[
+"...bbbbbbb......",
+"..bbbbbbbbbb....",
+"..bbbbbbbbbbb...",
+"..kyyyyyyyyyk...",
+".kkkkkyykkkkkk..",
+".kwwwkkkkwwwk...",
+".kwkwk..kwkwk...",
+".kwwwk..kwwwk...",
+"..kkkyyyykkkyk..",
+"..kyyyyyyyykyk..",
+"..kyyykkkyyyk...",
+"...kyyyyyyk.....",
+"...kkyyyykk.....",
+"..krrrrrrrrk....",
+".krrrrrrrrrrk...",
+".kbbbbbbbbbbk..."]},
+moe:{pal:{k:K,y:Y,w:W,g:"#9aa3b3",s:"#dcdcdc",b:"#4a4a52"},rows:[
+"...gg.....gg....",
+"..gggkkkkkggg...",
+"..ggkyyyyyykgg..",
+"...kyyyyyyyyk...",
+"..kkkkyyykkkk...",
+"..kwkwyyywkwk...",
+"..kyyyyyyyyyk...",
+"..kyyyykkyyyyk..",
+"..kyyyyyykkyyk..",
+"..kykkkkkkkyk...",
+"..kyyyyyyyyyk...",
+"...kyyyyyyyk....",
+"..kssskkksssk...",
+".ksssssssssssk..",
+".ksssbbbbbsssk..",
+".kssbbbbbbbssk.."]},
+nelson:{pal:{k:K,y:Y,w:W,h:"#7a4a24",v:"#4a7bd0",t:"#f4f4f4"},rows:[
+"...hhhhhhhh.....",
+"..hhhhhhhhhh....",
+"..hhyyyyyyyhh...",
+"..kyyyyyyyyyk...",
+"..kywwwywwwyk...",
+"..kywkwywkwyk...",
+"..kywwwywwwyk...",
+"..kyyyyykkyyk...",
+"..kyyyyyyykyk...",
+"..kyykkkkkyk....",
+"...kyyyyyyk.....",
+"..ktvvtttvvtk...",
+".kttvvtttvvttk..",
+".kttvvtttvvttk..",
+".kttvvtttvvttk..",
+".kkkkkkkkkkkkk.."]},
+skinner:{pal:{k:K,y:Y,w:W,g:"#9aa3b3",G:"#7b8792",s:"#3b4a6b",t:"#d8342c"},rows:[
+"...gggggggg.....",
+"..gggggggggg....",
+"..ggggggggggg...",
+"..kyyyyyyyyyk...",
+"..kywwwywwwyk...",
+"..kywkwywkwyk...",
+"..kywwwywwwyk...",
+"..kyyyyykkyyk...",
+"..kyyyyyyykyk...",
+"..kyykkkkyyk....",
+"...kyyyyyyk.....",
+"..ksswtwwssk....",
+".ksssswtwssssk..",
+".kssssstsssssk..",
+".kssssssssssk...",
+".kkkkkkkkkkkk..."]},
+wiggum:{pal:{k:K,y:Y,w:W,b:"#2f4f9f",B:"#1f3570",g:"#e8c33a",h:"#4a6bb0"},rows:[
+"....kkkkkkk.....",
+"...kbbbbbbbk....",
+"..kbbbbgbbbbk...",
+".kBBBBBBBBBBBk..",
+"..khhyyyyyhhk...",
+"..kywwwywwwyk...",
+"..kywkwywkwyk...",
+"..kywwwywwwyk...",
+"..kyyyyykkyyyk..",
+".kyyyyyyyykyyk..",
+".kyyyykkkkyyyk..",
+".kyyyyyyyyyyyk..",
+"..kbbbgbbbgbbk..",
+".kbbbbbbbbbbbbk.",
+".kbbbbbbbbbbbbk.",
+".kbbbbbbbbbbbbk."]},
+donut:{pal:{k:K,d:"#d9a25a",D:"#b07a3a",p:"#f58bc0",P:"#e0649f",a:"#3b8ee8",b:"#7bc043",c:"#fed90f",w:W},rows:[
+"................",
+".....kkkkkk.....",
+"...kkppppppkk...",
+"..kppapppcpppk..",
+".kpppppbpppappk.",
+".kpcppkkkkppbpk.",
+"kppppk....kpppk.",
+"kpapk......kcpk.",
+"kpppk......kppk.",
+"kdppdk....kpdDk.",
+".kddddkkkkddDk..",
+".kDdddddddddDk..",
+"..kDDddddddDk...",
+"...kkDDDDDDk....",
+".....kkkkkk.....",
+"................"]},
+duff:{pal:{k:K,r:"#d8342c",R:"#a3221c",w:W,s:"#c9c9c9",y:Y},rows:[
+"....kkkkkkk.....",
+"....kssssssk....",
+"...kkkkkkkkk....",
+"...krrrrrrrk....",
+"...krrrrrrrk....",
+"...kwwwwwwwk....",
+"...kwkkwkkwk....",
+"...kwkwwkwwk....",
+"...kwkkwkkwk....",
+"...kwwwwwwwk....",
+"...krrrrrrRk....",
+"...krryyrrRk....",
+"...krrrrrrRk....",
+"...krrrrrrRk....",
+"...kkkkkkkkk....",
+"................"]},
+jarra:{pal:{k:K,g:"#cfe6ef",b:"#e8a92a",B:"#c47f12",f:"#fffbe8"},rows:[
+"..kkkkkkkkkk....",
+"..kffffffffk....",
+"..kffffffffk....",
+"..kbbbbbbbbkkk..",
+"..kbbbbbbbbk.k..",
+"..kbgbbbbbbk.k..",
+"..kbgbbbbbBk.k..",
+"..kbgbbbbbBk.k..",
+"..kbbbbbbbBk.k..",
+"..kbbbbbbbBkkk..",
+"..kbbbbbbbBk....",
+"..kbbbbbbbBk....",
+"..kBBBBBBBBk....",
+"..kgggggggggk...",
+"..kkkkkkkkkkk...",
+"................"]},
+sofa:{w:24,h:16,pal:{k:K,s:"#b98b4a",S:"#8f6631",l:"#d4a866"},rows:[
+"........................",
+"..kkkkkkkkkkkkkkkkkkkk..",
+".ksssssssssssssssssssk..",
+".kssllsssssssssslsssssk.",
+".ksssssssssssssssssssk..",
+"kkssssssssssssssssssskk.",
+"ksksssssssssssssssssksk.",
+"ksskkkkkkkkkkkkkkkkkssk.",
+"kssllllllklllllllklssk..",
+"ksssssssskssssssskssssk.",
+"kSSSSSSSSkSSSSSSSkSSSSk.",
+"kkkkkkkkkkkkkkkkkkkkkkk.",
+"kSSSSSSSSSSSSSSSSSSSSSk.",
+".kk..................kk.",
+".kk..................kk.",
+"........................"]},
+barco:{w:24,h:16,pal:{k:K,f:"#c48a3a",F:"#8f5f22",a:"#9fd3ef",m:"#2f64d6",w:W,b:"#7a4a24"},rows:[
+"kkkkkkkkkkkkkkkkkkkkkkkk",
+"kffffffffffffffffffffffk",
+"kfkkkkkkkkkkkkkkkkkkkkfk",
+"kfkaaaaaaaaaaaaaaaaaakfk",
+"kfkaaaaaaaaawaaaaaaaakfk",
+"kfkaaaaaaaawwaaaaaaaakfk",
+"kfkaaaaaaawwwaaaaaaaakfk",
+"kfkaaaaaawwwwaaaaaaaakfk",
+"kfkaaaaaaaaakaaaaaaaakfk",
+"kfkaaaabbbbbbbbbaaaaakfk",
+"kfkaaaaabbbbbbbaaaaaakfk",
+"kfkmmmmmmmmmmmmmmmmmmkfk",
+"kfkmmmmmmmmmmmmmmmmmmkfk",
+"kfkkkkkkkkkkkkkkkkkkkkfk",
+"kFFFFFFFFFFFFFFFFFFFFFFk",
+"kkkkkkkkkkkkkkkkkkkkkkkk"]},
+torre:{pal:{k:K,g:"#a9b4bd",G:"#7b8792",w:"#f2f5f7",v:"#7bd43a"},rows:[
+"..w..ww...w.....",
+".www.www.www....",
+"..wwwwwwwww.....",
+"...kkkkkkkk.....",
+"...kggggggk.....",
+"...kgggggGk.....",
+"....kgggGk......",
+"....kgggGk......",
+"....kgggGk......",
+"...kggggGGk.....",
+"...kggvggGk.....",
+"..kgggggggGk....",
+"..kggggggggGk...",
+".kgggggggggGk...",
+".kGGGGGGGGGGk...",
+".kkkkkkkkkkkk..."]},
+radiacion:{pal:{k:K,y:Y},rows:[
+"....kkkkkkkk....",
+"..kkyyyyyyyykk..",
+".kyyyyyyyyyyyyk.",
+".kykkkyyyykkkyk.",
+"kyykkkkyykkkkyyk",
+"kyykkkkyykkkkyyk",
+"kyyykkkyykkkyyyk",
+"kyyyyyykkyyyyyyk",
+"kyyyyyykkyyyyyyk",
+"kyyyyyyyyyyyyyyk",
+"kyyyyykkkkyyyyyk",
+"kyyyykkkkkkyyyyk",
+".kyyykkkkkkyyyk.",
+".kyyyykkkkyyyyk.",
+"..kkyyyyyyyykk..",
+"....kkkkkkkk...."]},
+barra:{w:8,h:16,pal:{k:K,v:"#7bd43a",V:"#b8f27a",g:"#5aa82a"},rows:[
+"..kkkk..",
+".kVVVvk.",
+".kVvvvk.",
+".kvvvgk.",
+".kVvvgk.",
+".kvvvgk.",
+".kVvvgk.",
+".kvvvgk.",
+".kVvvgk.",
+".kvvvgk.",
+".kVvvgk.",
+".kvvvgk.",
+".kVvvgk.",
+".kvvvgk.",
+".kgggkk.",
+"..kkkk.."]},
+blinky:{pal:{k:K,o:"#f08a24",O:"#c85f12",w:W,g:"#7bd43a"},rows:[
+"................",
+"................",
+"......kkk.......",
+"....kkoooko..k..",
+"...kowwwoook.kk.",
+"..kowkwowwkokok.",
+".kooowwokwkookk.",
+".kowwoowwooook..",
+".kowkoooooook...",
+"..kowwooOOOkokk.",
+"...kooOOOOk.kok.",
+"....kkkkkk...kk.",
+"................",
+"................",
+"................",
+"................"]},
+perro:{pal:{k:K,b:"#a6764a",B:"#7e5531",w:W,n:"#2a2a2a"},rows:[
+"................",
+"..kk............",
+".kbbk...........",
+"kbbbbk..........",
+"kbwkbbk.........",
+"kbbbbbbkk.......",
+".knbbbbbbkkkkkk.",
+"..kkbbbbbbbbbbbk",
+"....kbbbbbbbbbbk",
+"....kbbbbbbbbbk.",
+"....kbbkkkkbbk..",
+"....kbk....kbk..",
+"....kbk....kbk..",
+"....kbk....kbk..",
+"...kbbk...kbbk..",
+"................"]},
+gato:{pal:{k:"#2a2a2e",K:"#141416",y:"#f2d24a",p:"#f58bc0"},rows:[
+"................",
+"..k...k.........",
+"..kk.kk.........",
+"..kkkkk.........",
+"..kykky.........",
+"..kkpkk.........",
+"..kkkkk.........",
+"...kkkkk......k.",
+"...kkkkkk.....k.",
+"...kkkkkkk...kk.",
+"...kkkkkkkk.kk..",
+"...kkkkkkkkkk...",
+"...kkkkkkkkk....",
+"...kk.kk.kk.....",
+"...kk.kk.kk.....",
+"................"]},
+saxo:{pal:{k:K,g:"#e8b23a",G:"#b7801a",w:W},rows:[
+"........kk......",
+".......kgk......",
+"......kgk.......",
+"......kgk.......",
+"......kggk......",
+".....kgwgk......",
+".....kgggk......",
+".....kgwgk......",
+".....kgggk......",
+".....kgwgk..kkk.",
+".....kgggk.kgggk",
+".....kggggkgggGk",
+"......kgggggggk.",
+".......kggggGk..",
+"........kkkkk...",
+"................"]},
+skate:{pal:{k:K,r:"#e2303a",R:"#a3221c",w:"#c9c9c9"},rows:[
+"................",
+"................",
+"................",
+"................",
+"................",
+"................",
+"..kkkkkkkkkkkk..",
+".krrrrrrrrrrrrk.",
+"krrrrrrrrrrrrRRk",
+".kRRRRRRRRRRRRk.",
+"..kkkkkkkkkkkk..",
+"...kk......kk...",
+"..kwwk....kwwk..",
+"..kwwk....kwwk..",
+"...kk......kk...",
+"................"]},
+chupete:{pal:{k:K,r:"#e2303a",R:"#a3221c",w:"#f7c6d4"},rows:[
+"................",
+"................",
+"......kkkk......",
+".....krrrrk.....",
+"....krrkkrrk....",
+"....krk..krk....",
+"....krrkkrrk....",
+".....krrrrk.....",
+"...kkkrrrrkkk...",
+"..krrrrrrrrrrk..",
+"..krRRRRRRRRrk..",
+"...kkkkwwkkkk...",
+"......kwwk......",
+"......kwwk......",
+".......kk.......",
+"................"]},
+bobo:{pal:{k:K,b:"#9b6a3e",B:"#6e4826",t:"#d7b386",w:W},rows:[
+"................",
+"..kk......kk....",
+".kbbk....kbbk...",
+".kbBkkkkkkBbk...",
+"..kbbbbbbbbk....",
+"..kbwkbbwkbk....",
+"..kbbbttbbbk....",
+"..kbbtkktbbk....",
+"...kbbttbbk.....",
+"..kkbbbbbbkk....",
+".kbkbbbbbbkbk...",
+".kbkbttttbkbk...",
+"..kkbttttbkk....",
+"...kbbbbbbk.....",
+"..kbbk..kbbk....",
+"..kkk....kkk...."]},
+telefono:{pal:{k:K,r:"#e2303a",R:"#a3221c",w:W},rows:[
+"................",
+"...kkkkkkkkkk...",
+"..krrrrrrrrrrk..",
+".krrkkkkkkkkrrk.",
+".krk........krk.",
+"..k..........k..",
+"....kkkkkkkk....",
+"...krrrrrrrrk...",
+"..krrrkkkkrrrk..",
+"..krrkwkwkkrrk..",
+"..krrkkwkwkrrk..",
+"..krrkwkwkkrrk..",
+"..krrrkkkkrrrk..",
+"..kRRRRRRRRRRk..",
+"..kkkkkkkkkkkk..",
+"................"]},
+tele:{w:24,h:16,pal:{k:K,b:"#8f6631",B:"#6b4a22",s:"#b9d8e6",S:"#e6f4fa",g:"#c9c9c9"},rows:[
+"........k.....k.........",
+".........k...k..........",
+"..........k.k...........",
+"..kkkkkkkkkkkkkkkkkkkk..",
+"..kbbbbbbbbbbbbbbbbbbk..",
+"..kbkkkkkkkkkkkkkbbbbk..",
+"..kbksSssSssSsskbgbbk...",
+"..kbkssSssSssSskbbbbk...",
+"..kbksSssSssSsskbgbbk...",
+"..kbkssSssSssSskbbbbk...",
+"..kbkkkkkkkkkkkkbbbbk...",
+"..kbbbbbbbbbbbbbbbbbk...",
+"..kBBBBBBBBBBBBBBBBBk...",
+"..kkkkkkkkkkkkkkkkkkk...",
+"...kk.............kk....",
+"...kk.............kk...."]},
+caja:{pal:{k:K,g:"#a9b4bd",G:"#7b8792",v:"#7bd43a",w:W,r:"#e2303a"},rows:[
+"....kkkkkkkk....",
+"....kvvvvvvk....",
+"....kvkvkvvk....",
+"....kkkkkkkk....",
+"...kgggggggGk...",
+"..kgwkwkwkwgGk..",
+"..kgkwkwkwkgGk..",
+"..kgwkwkwkwgGk..",
+"..kgggggggggGk..",
+".kggggggggggGGk.",
+".kgrrrrrrrrrgGk.",
+".kgggggggggggGk.",
+".kGGGGGGGGGGGGk.",
+".kkkkkkkkkkkkkk.",
+"................",
+"................"]},
+squishee:{pal:{k:K,w:W,r:"#e2303a",b:"#3b8ee8",p:"#b84bd8"},rows:[
+".......k........",
+"......k.........",
+".....kkkkkk.....",
+"....kpppppbk....",
+"...kpppbbbppk...",
+"...kkkkkkkkkk...",
+"...kwwwwwwwwk...",
+"...krrwwwwrrk...",
+"....kwwwwwwk....",
+"....kwrrrrwk....",
+"....kwwwwwwk....",
+"....kwwwwwwk....",
+".....kwwwwk.....",
+".....kkkkkk.....",
+"................",
+"................"]},
+rastrillo:{pal:{k:K,m:"#9b6a3e",g:"#a9b4bd"},rows:[
+"...............k",
+"..............km",
+".............km.",
+"............km..",
+"...........km...",
+"..........km....",
+".........km.....",
+"........km......",
+".......km.......",
+"......km........",
+".....km.........",
+"..kkkmkkk.......",
+".kgggggggk......",
+".kgkgkgkgk......",
+".k.k.k.k.k......",
+"................"]},
+tiza:{w:8,h:16,pal:{k:K,w:W,g:"#dcdcdc"},rows:[
+"........",
+"........",
+"........",
+"........",
+"........",
+"..kkkk..",
+".kwwwwk.",
+".kwwwwk.",
+".kwwwgk.",
+".kwwwgk.",
+".kwwwgk.",
+".kwwwgk.",
+".kggggk.",
+"..kkkk..",
+"........",
+"........"]},
+tirachinas:{pal:{k:K,b:"#8f6631",B:"#6b4a22",r:"#e2303a"},rows:[
+"................",
+"..kk......kk....",
+".kbbk....kbbk...",
+".kbbk....kbbk...",
+".kbrrrrrrrrbk...",
+".kbbk.rr.kbbk...",
+"..kbbk..kbbk....",
+"...kbbkkbbk.....",
+"....kbbbbk......",
+".....kbbk.......",
+".....kbbk.......",
+".....kbbk.......",
+".....kbBk.......",
+".....kbBk.......",
+".....kkkk.......",
+"................"]},
+nube:{w:24,h:12,pal:{w:W,s:"#e3f1fa"},rows:[
+"........wwww............",
+"......wwwwwww...........",
+".....wwwwwwwwwwwww......",
+"...wwwwwwwwwwwwwwwww....",
+"..wwwwwwwwwwwwwwwwwwww..",
+".wwwwwwwwwwwwwwwwwwwwww.",
+"wwwwwwwwwwwwwwwwwwwwwwww",
+"wwwwwwwwwwwwwwwwwwwwwwww",
+"swwwwwwwwwwwwwwwwwwwwwws",
+".sssssssssssssssssssssss",
+"..ssssssssssssssssssss..",
+"........................"]}
+};
+function spr(name,size,cls){const s=SPR[name];if(!s)return"";const w=s.w||16,h=s.h||16;let out="";s.rows.forEach((row,y)=>{let x=0;while(x<w){const ch=row[x];if(ch==="."||!s.pal[ch]){x++;continue}let x2=x;while(x2<w&&row[x2]===ch)x2++;out+=`<rect x="${x}" y="${y}" width="${x2-x}" height="1" fill="${s.pal[ch]}"/>`;x=x2}});const sz=size||48;return `<svg class="spr ${cls||""}" viewBox="0 0 ${w} ${h}" width="${sz*w/16}" height="${sz*h/16}" shape-rendering="crispEdges" aria-hidden="true">${out}</svg>`}
+
+const PERSONAJES=[
+{id:"homer",nombre:"Homer Simpson",corto:"Homer",ini:"H",alias:"Homero en Latinoamérica · inspector de seguridad del sector 7G",col:"#3b6fd8",grupos:["familia","central","taberna"],spr:"homer",
+hook:"Ha sido astronauta, quitanieves, cantante con Grammy y conductor de monorraíl, pero siempre vuelve al sector 7G y a la taberna de Moe.",
+quien:"Homer Jay Simpson es el padre de la familia: glotón, perezoso, impulsivo y, cuando importa, un padre que lo da todo. Trabaja como inspector de seguridad en la central nuclear del señor Burns, vive de rosquillas y cerveza Duff, y protagoniza la mitad de los desastres de Springfield.",
+hilo:[["T1","«Homer's Odyssey»: lo despiden, se convierte en activista de la seguridad y acaba con el puesto de inspector."],["T2","Descubre a su medio hermano Herb y le diseña «el Homer», un coche que lo arruina."],["T4","«Marge vs. the Monorail» y «Mr. Plow»: dos de sus empleos más famosos."],["T5","Canta con los Be Sharps, gana un Grammy y viaja al espacio con la NASA."],["T7","Reencuentra a su madre, Mona, una activista fugitiva desde los sesenta."],["T8","«Homer's Enemy»: Frank Grimes no soporta que alguien así tenga éxito."],["Peli","Adopta un cerdo, contamina el lago y Springfield acaba bajo una cúpula."]],
+kv:[["Voz original","Dan Castellaneta"],["Voz en España","Carlos Ysbert"],["Voz en Latinoamérica","Humberto Vélez (etapa clásica)"],["Trabajo","Central nuclear, sector 7G"]],
+rel:["h-trabajos","h-grimes","h-herb","h-mona","c-central","c-duff","m-jay"],
+dato:"Matt Groening le puso el nombre de su propio padre, Homer. La J de su segundo nombre es un homenaje a Jay Ward, el creador de Rocky y Bullwinkle."},
+
+{id:"marge",nombre:"Marge Simpson",corto:"Marge",ini:"M",alias:"Marjorie Bouvier, la del peinado azul",col:"#2f64d6",grupos:["familia"],spr:"marge",
+hook:"La paciencia de la familia hecha persona. Detrás del murmullo de desaprobación hay alguien que ha tumbado un monorraíl y ha estado a punto de dejarlo todo.",
+quien:"Marge, de soltera Bouvier, es la madre de Bart, Lisa y Maggie. Hermana de las gemelas Patty y Selma, hija de Jacqueline Bouvier. Es el sentido común de la casa, aunque la serie le ha dado de todo: una carrera de policía, un negocio de pretzels, una fuga con su amiga Ruth y una cruzada contra los dibujos violentos.",
+hilo:[["T1","«Life on the Fast Lane»: un profesor de bolos la tienta, y al final elige a Homer."],["T2","«The Way We Was»: cómo se conocieron en el instituto, en un castigo, en los años setenta."],["T2","«Itchy & Scratchy & Marge»: hace campaña contra la violencia en los dibujos."],["T4","Es la única que se opone al monorraíl en la asamblea del pueblo."],["T5","«Marge on the Lam»: escapada con su vecina Ruth Powers."],["T7","«Marge Be Not Proud»: Bart roba un videojuego y ella deja de hacerle fotos."]],
+kv:[["Voz original","Julie Kavner"],["Familia","Patty, Selma y Jacqueline Bouvier"],["Peinado","Torre azul"]],
+rel:["h-bouvier","h-trabajos","c-monorrail","c-rascaypica"],
+dato:"Lleva el nombre de la madre de Matt Groening, Margaret."},
+
+{id:"bart",nombre:"Bart Simpson",corto:"Bart",ini:"B",alias:"El Barto",col:"#f05a24",grupos:["familia","escuela"],spr:"bart",
+hook:"Diez años desde 1989. Escribe castigos en la pizarra, llama a Moe con nombres falsos y ha frustrado cada intento de asesinato de Bob.",
+quien:"Bartholomew JoJo Simpson es el hijo mayor: travieso, rebelde, más listo de lo que aparenta y con buen fondo. Su nombre es un anagrama de «brat» (mocoso). Fue el gran fenómeno de 1990, con camisetas prohibidas en algunos colegios de Estados Unidos.",
+hilo:[["T1","«Bart the Genius»: cambia su examen con el de Martin y acaba en una escuela para superdotados."],["T1","«Krusty Gets Busted»: desenmascara a Bob, el ayudante de Krusty."],["T2","«Bart Gets an F»: estudia de verdad y aprueba con lo justo."],["T3","«Bart the Murderer»: acaba de recadero de Tony el Gordo."],["T5","«Cape Feare»: Bob lo persigue hasta una casa flotante."],["T6","«Bart vs. Australia»: una llamada a cobro revertido provoca un incidente diplomático."],["T7","«Bart Sells His Soul»: se la vende a Milhouse por cinco dólares y Lisa la recupera."]],
+kv:[["Voz original","Nancy Cartwright"],["Voz en España","Sara Vivas"],["Voz en Latinoamérica","Patricia Acevedo (etapa clásica)"],["Edad","10 años (siempre)"]],
+rel:["h-bob","h-skinner","c-pizarra","c-llamadas","c-elbarto","m-alma"],
+dato:"Nancy Cartwright fue a la audición para hacer de Lisa, pero pidió leer el papel de Bart y se lo quedó."},
+
+{id:"lisa",nombre:"Lisa Simpson",corto:"Lisa",ini:"L",alias:"La conciencia de Springfield",col:"#e8572a",grupos:["familia","escuela"],spr:"lisa",
+hook:"Ocho años, saxofón barítono, vegetariana desde la temporada 7 y budista desde la 13. En dos futuros distintos, presidenta y novia de un inglés.",
+quien:"Lisa Marie Simpson es la hija mediana: brillante, idealista y muchas veces sola por ello. Toca el saxofón barítono, admira al músico de jazz Encías Sangrantes Murphy y suele ser la única que dice en voz alta lo que el pueblo prefiere no oír.",
+hilo:[["T1","«Moaning Lisa»: aprende blues con Encías Sangrantes Murphy."],["T2","«Lisa's Substitute»: el profesor Bergstrom la entiende como nadie."],["T5","«Lisa vs. Malibu Stacy»: lucha contra una muñeca con frases sexistas."],["T6","«Lisa's Wedding»: una adivina le muestra su futuro con un novio inglés."],["T7","«Lisa the Vegetarian», con Paul y Linda McCartney, y «Lisa the Iconoclast», sobre el fundador del pueblo."],["T11","«Bart to the Future»: presidenta de Estados Unidos, heredando un desastre."],["T13","Se hace budista con la ayuda de Richard Gere."]],
+kv:[["Voz original","Yeardley Smith"],["Edad","8 años"],["Instrumento","Saxofón barítono"]],
+rel:["h-lisa","h-predicciones","c-escuela","m-alma"],
+dato:"Yeardley Smith fue a la audición para Bart; su voz sonó demasiado de niña para él y se quedó con Lisa."},
+
+{id:"maggie",nombre:"Maggie Simpson",corto:"Maggie",ini:"Mg",alias:"La del chupete",col:"#4a8ae0",grupos:["familia"],spr:"maggie",
+hook:"Un año, un chupete y casi ninguna palabra. También es la persona que disparó al hombre más poderoso de Springfield.",
+quien:"Margaret Simpson es la bebé de la familia. Casi no habla, pero lo observa todo, se escapa de guarderías con aires de película bélica y tiene, según varios episodios, una puntería inquietante.",
+hilo:[["T4","«Lisa's First Word»: al final del episodio Maggie dice «papi» con la voz de Elizabeth Taylor."],["T4","«A Streetcar Named Marge»: lidera la fuga de los chupetes en la guardería."],["T6","«And Maggie Makes Three»: por qué Homer tiene sus fotos en el trabajo."],["T7","«Who Shot Mr. Burns? (Part Two)»: fue ella."]],
+kv:[["Edad","1 año"],["Primera palabra","«Papi» (Elizabeth Taylor)"]],
+rel:["h-burns-disparo","m-burns"],
+dato:"El chupeteo de Maggie es uno de los sonidos más reconocibles de la serie."},
+
+{id:"abe",nombre:"Abe Simpson",corto:"Abe",ini:"A",alias:"El abuelo",col:"#c9b9a0",grupos:["familia"],
+hook:"Veterano de la Segunda Guerra Mundial, de historias interminables, que pasa los días en la residencia de ancianos y se cruza con el señor Burns más de lo que parece.",
+quien:"Abraham Simpson es el padre de Homer. Vive en la residencia de Springfield, se queja de todo y cuenta batallitas que nunca acaban. Combatió con los Hellfish, un pelotón en el que también estaba el señor Burns.",
+hilo:[["T2","«Old Money»: hereda una fortuna y quiere repartirla bien."],["T5","«Lady Bouvier's Lover»: romance con la madre de Marge, con el señor Burns como rival."],["T7","«The Curse of the Flying Hellfish»: Abe y Bart contra Burns por un tesoro de guerra."]],
+kv:[["Voz original","Dan Castellaneta"],["Hogar","Residencia de ancianos de Springfield"]],
+rel:["h-mona","h-burns-disparo","c-central"],
+dato:"El mismo actor, Dan Castellaneta, pone voz a Abe y a su hijo Homer."},
+
+{id:"flanders",nombre:"Ned Flanders",corto:"Flanders",ini:"F",alias:"El vecino perfecto",col:"#3e9a4a",grupos:["vecinos"],spr:"flanders",
+hook:"El vecino amable, religioso y en forma al que Homer envidia. Ha perdido su tienda, su casa y dos esposas, y sigue saludando con una sonrisa.",
+quien:"Ned Flanders vive al lado de los Simpson con sus hijos Rod y Todd. Es devoto, servicial y pasado de rosca en su bondad, lo que saca de quicio a Homer. Llevó el Zurdorium, una tienda para zurdos en el centro comercial.",
+hilo:[["T3","«When Flanders Failed»: Homer desea que le vaya mal al Zurdorium y luego lo salva."],["T5","«Homer Loves Flanders»: Homer pasa de odiarlo a no poder separarse de él."],["T8","«Hurricane Neddy»: pierde la casa y por fin estalla."],["T11","Muere Maude, su esposa, en un accidente en un circuito de carreras."],["T22","Empieza a salir con Edna Krabappel; el público vota que sigan juntos."],["T24","Se revela que se han casado."]],
+kv:[["Voz original","Harry Shearer"],["Hijos","Rod y Todd"],["Saludo en España","«¡Hola, holita, vecinito!»"]],
+rel:["h-flanders","c-escuela","m-maude"],
+dato:"En «Viva Ned Flanders» (T10) revela que tiene sesenta años; los atribuye a su vida ordenada."},
+
+{id:"burns",nombre:"Señor Burns",corto:"Burns",ini:"MB",alias:"Charles Montgomery Burns",col:"#4e5a3c",grupos:["central"],spr:"burns",
+hook:"El dueño de la central nuclear, centenario, malvado y frágil. Intentó tapar el sol, perdió un osito de peluche y lo disparó una bebé.",
+quien:"Charles Montgomery Burns es el hombre más rico y temido de Springfield. Dirige la central nuclear con avaricia de otro siglo, siempre con Smithers a su lado. No recuerda el nombre de Homer aunque se lo hayan presentado decenas de veces.",
+hilo:[["T2","«Two Cars in Every Garage and Three Eyes on Every Fish»: se presenta a gobernador y le sirven a Blinky para cenar."],["T4","«Last Exit to Springfield»: la huelga del plan dental."],["T5","«Rosebud»: busca a Bobo, su osito de la infancia."],["T6","«Who Shot Mr. Burns?»: tapa el sol y recibe un disparo."],["T7","Fue miembro de los Hellfish con el abuelo Simpson."]],
+kv:[["Voz original","Harry Shearer"],["Frase","«Excelente»"],["Edad","Más de cien (la serie no se aclara)"]],
+rel:["h-burns-disparo","h-smithers","c-central","c-blinky","m-edad-burns","m-burns"],
+dato:"Su gesto de juntar las yemas de los dedos al decir «Excelente» es casi tan famoso como la frase."},
+
+{id:"smithers",nombre:"Waylon Smithers",corto:"Smithers",ini:"S",alias:"El asistente leal",col:"#f2c94c",grupos:["central"],
+hook:"Treinta años de devoción absoluta por el señor Burns. La serie tardó décadas en contar lo que todo el mundo sabía.",
+quien:"Waylon Smithers es la mano derecha del señor Burns: ayudante, secretario, enfermero y admirador. Colecciona muñecas Stacy Malibú y lo perdona todo.",
+hilo:[["T1","«Homer's Odyssey»: su primera aparición, con un color de piel distinto por error."],["T6","Burns lo despide justo antes del disparo; durante un tiempo es sospechoso."],["T7","«Homer the Smithers»: Homer lo sustituye durante sus vacaciones."],["T27","«Portrait of a Lackey on Fire»: sale del armario."]],
+kv:[["Voz original","Harry Shearer"]],
+rel:["h-smithers","h-burns-disparo","m-smithers"],
+dato:"Su primera aparición fue coloreada por error con otro tono de piel; desde el siguiente episodio se corrigió."},
+
+{id:"moe",spr:"moe",nombre:"Moe Szyslak",corto:"Moe",ini:"Mo",alias:"El dueño de la taberna",col:"#7a5a3a",grupos:["taberna"],
+hook:"Gruñón, solitario y víctima de cada llamada de broma de Bart. Su taberna es el segundo hogar de Homer.",
+quien:"Moe Szyslak lleva la taberna donde beben Homer, Barney, Lenny y Carl. Es feo, amargado y con un corazón más blando de lo que deja ver. Ha intentado el suicidio cómico, la cirugía estética y el amor, casi siempre sin suerte.",
+hilo:[["T3","«Flaming Moe's»: roba a Homer la receta del cóctel y se hace rico."],["T8","«Homer vs. the Eighteenth Amendment»: Springfield prohíbe el alcohol y la taberna se vuelve clandestina."],["T11","«Pygmoelian»: se opera la cara y triunfa en una telenovela."]],
+kv:[["Voz original","Hank Azaria"],["Lugar","La taberna de Moe"]],
+rel:["c-taberna","c-llamadas","c-duff"],
+dato:"Las llamadas de Bart preguntan por clientes con nombres que, dichos en voz alta, son chistes; el doblaje los adaptó en cada país."},
+
+{id:"barney",nombre:"Barney Gumble",corto:"Barney",ini:"Ba",alias:"El cliente más fiel de Moe",col:"#8f6631",grupos:["taberna"],
+hook:"El amigo de la infancia de Homer, eterno cliente de la taberna, que también cantó en los Be Sharps y ganó un festival de cine.",
+quien:"Barney Gumble es el borracho del pueblo y el mejor amigo de Homer desde el instituto. Bajo la barba hay un tenor sorprendente y un cineasta con talento.",
+hilo:[["T4","Le hace la competencia a Homer como quitanieves."],["T5","Sustituye al jefe Wiggum en los Be Sharps."],["T6","«A Star Is Burns»: su película sobre su vida gana el festival del pueblo."],["T11","«Days of Wine and D'oh'ses»: se mantiene sobrio."]],
+kv:[["Voz original","Dan Castellaneta"]],
+rel:["h-trabajos","c-taberna"],
+dato:"En los Be Sharps, el cuarteto de Homer, Barney fue fichado tras escucharlo cantar en la taberna."},
+
+{id:"apu",nombre:"Apu Nahasapeemapetilon",corto:"Apu",ini:"Ap",alias:"El dueño del Badulaque",col:"#3fae49",grupos:["vecinos"],
+hook:"Abre su tienda las veinticuatro horas, tiene un doctorado y ocho hijos. Desde 2020 la serie no le da voz.",
+quien:"Apu lleva el Badulaque (Kwik-E-Mart en Latinoamérica). Trabajador incansable, se casó en un matrimonio concertado con Manjula y tuvo octillizos. Su personaje se discutió mucho a partir de 2017 por los estereotipos, y su actor de voz dejó el papel en 2020.",
+hilo:[["T5","«Homer and Apu»: lo despiden por vender comida caducada y vive con los Simpson."],["T7","«Much Apu About Nothing»: estudia para hacerse ciudadano."],["T9","«The Two Mrs. Nahasapeemapetilons»: boda con Manjula."],["T11","«Eight Misbehavin'»: nacen los octillizos."]],
+kv:[["Voz original","Hank Azaria (1990–2020)"],["Lugar","El Badulaque"]],
+rel:["c-badulaque","m-apu"],
+dato:"En 2017 el documental «The Problem with Apu» abrió el debate sobre el personaje; en 2020 Hank Azaria anunció que dejaba de ponerle voz."},
+
+{id:"krusty",nombre:"Krusty el payaso",corto:"Krusty",ini:"K",alias:"Herschel Krustofsky",col:"#8e4bb8",grupos:["tele"],spr:"krusty",
+hook:"El ídolo de Bart: un payaso cínico, arruinado y con mil productos con su cara. Detrás, un hijo que busca la aprobación de su padre rabino.",
+quien:"Herschel Shmoikel Pinchas Yerucham Krustofsky presenta el programa infantil favorito de Springfield, con Rasca y Pica en sus pausas. Vende su imagen a cualquier marca, de hamburguesas a cereales con premio peligroso.",
+hilo:[["T1","«Krusty Gets Busted»: acusado de un atraco que cometió su ayudante Bob."],["T3","«Like Father, Like Clown»: Bart y Lisa lo reconcilian con su padre rabino."],["T4","«Kamp Krusty» y «Krusty Gets Kancelled», con su gran especial de regreso."],["T15","«Today I Am a Clown»: celebra su bar mitzvá de mayor."]],
+kv:[["Voz original","Dan Castellaneta"],["Negocio","Krusty Burger"]],
+rel:["h-bob","h-krusty","c-krustyburger","c-rascaypica"],
+dato:"Dan Castellaneta, la voz de Homer, también es Krusty."},
+
+{id:"bob",spr:"bob",nombre:"Actor Secundario Bob",corto:"Bob",ini:"Bo",alias:"Bob Patiño en Latinoamérica",col:"#c4302b",grupos:["tele"],
+hook:"Culto, refinado y con un odio eterno a Bart. Lleva más de treinta años saliendo de la cárcel para intentar matarlo, y pisando rastrillos.",
+quien:"Robert Underdunk Terwilliger fue el ayudante de Krusty hasta que lo incriminó en un atraco y Bart lo descubrió. Desde entonces ha sido alcalde, novio de Selma, terrorista con una bomba atómica y vecino con otra cara.",
+hilo:[["T1","«Krusty Gets Busted»: Bart lo desenmascara."],["T3","«Black Widower»: se casa con Selma para matarla."],["T5","«Cape Feare»: persigue a la familia en su programa de protección de testigos."],["T6","«Sideshow Bob Roberts»: gana la alcaldía con trampas."],["T8","«Brother from Another Series»: su hermano Cecil."],["T14","«The Great Louse Detective»: ayuda a Bart a descubrir quién quiere matar a Homer."]],
+kv:[["Voz original","Kelsey Grammer"],["España","Actor Secundario Bob"],["Latinoamérica","Bob Patiño"]],
+rel:["h-bob","c-rastrillos","h-grimes"],
+dato:"El gag de los rastrillos de «Cape Feare» se alargó para rellenar un episodio que se quedaba corto."},
+
+{id:"milhouse",spr:"milhouse",nombre:"Milhouse Van Houten",corto:"Milhouse",ini:"Mi",alias:"El mejor amigo de Bart",col:"#3b8ee8",grupos:["escuela"],
+hook:"Gafas, pelo azul y una mala suerte infinita. Le compró el alma a Bart y lleva treinta años enamorado de Lisa.",
+quien:"Milhouse Mussolini Van Houten es el mejor amigo de Bart: leal, miedoso y siempre el que paga las consecuencias. Sus padres, Kirk y Luann, se divorcian en la temporada 8.",
+hilo:[["T3","«Bart's Friend Falls in Love»: Samantha Stanky."],["T7","«Bart Sells His Soul»: se queda el alma de Bart en un papel."],["T8","«A Milhouse Divided»: el divorcio de sus padres."]],
+kv:[["Voz original","Pamela Hayden"]],
+rel:["m-alma","c-escuela"],
+dato:"Groening lo llamó así por el segundo apellido de Richard Nixon, Milhous."},
+
+{id:"nelson",spr:"nelson",nombre:"Nelson Muntz",corto:"Nelson",ini:"N",alias:"El abusón del «¡Ja, ja!»",col:"#c97a2b",grupos:["escuela"],
+hook:"El matón del patio, con un «¡Ja, ja!» para cada desgracia ajena. Tras la risa, un chico al que su padre dejó tirado.",
+quien:"Nelson Muntz pega, roba almuerzos y se ríe de todos. Vive con su madre, que apenas se ocupa de él; su padre salió a por tabaco y no volvió durante años.",
+hilo:[["T1","«Bart the General»: Bart organiza un ejército contra él."],["T8","«Lisa's Date with Density»: sale con Lisa."],["T16","«Sleeping with the Enemy»: Marge lo acoge y aparece su padre."]],
+kv:[["Voz original","Nancy Cartwright"],["Frase","«¡Ja, ja!»"]],
+rel:["m-nelson","c-escuela"],
+dato:"Nancy Cartwright pone voz a Bart, a Nelson y a Ralph."},
+
+{id:"ralph",nombre:"Ralph Wiggum",corto:"Ralph",ini:"R",alias:"Ralph Gorgory en Latinoamérica",col:"#5aa0d8",grupos:["escuela"],
+hook:"El niño más extraño y entrañable de la escuela. Sus frases sin sentido se han convertido en los memes más citados de la serie.",
+quien:"Hijo del jefe Wiggum, compañero de Lisa. Ingenuo, despistado y feliz a su manera.",
+hilo:[["T4","«I Love Lisa»: la tarjeta de San Valentín con un tren y una ruptura en directo."],["T9","«This Little Wiggy»: Bart tiene que pasar el día con él."]],
+kv:[["Voz original","Nancy Cartwright"]],
+rel:["c-escuela"],
+dato:"En «I Love Lisa» se puede ver el momento exacto en que se le rompe el corazón, rebobinando la cinta."},
+
+{id:"skinner",spr:"skinner",nombre:"Director Skinner",corto:"Skinner",ini:"Sk",alias:"Seymour Skinner (¿o Armin Tamzarian?)",col:"#7b8792",grupos:["escuela"],
+hook:"Veterano de Vietnam, hijo de su madre y director de la escuela. Una vez resultó no ser quien decía ser.",
+quien:"Seymour Skinner dirige la Escuela Primaria de Springfield con más miedo que autoridad, siempre bajo el ojo del superintendente Chalmers. Vive con su madre, Agnes, y tuvo una larga relación con Edna Krabappel.",
+hilo:[["T5","«Sweet Seymour Skinner's Baadasssss Song»: Bart consigue que lo despidan y luego le ayuda a volver."],["T7","«22 Short Films About Springfield»: la comida de las hamburguesas al vapor con Chalmers."],["T8","«Grade School Confidential»: su romance con Edna sale a la luz."],["T9","«The Principal and the Pauper»: resulta ser Armin Tamzarian."]],
+kv:[["Voz original","Harry Shearer"],["Jefe","Superintendente Chalmers"]],
+rel:["h-skinner","c-escuela","m-tamzarian"],
+dato:"Las hamburguesas al vapor de Skinner y Chalmers son uno de los fragmentos más remezclados de internet."},
+
+{id:"edna",nombre:"Edna Krabappel",corto:"Edna",ini:"E",alias:"La señora K",col:"#9b6a3e",grupos:["escuela"],
+hook:"La profesora de cuarto de Bart: cansada, sarcástica y con su risa seca. Salió con Skinner y se casó con Flanders.",
+quien:"Edna Krabappel enseña en la clase de Bart, a la que soporta como puede. Su personaje se retiró cuando murió su actriz, Marcia Wallace, en 2013.",
+hilo:[["T2","«Bart Gets an F»: su examen de historia."],["T8","Su romance con Skinner."],["T22","Empieza a salir con Ned Flanders."],["T25","La serie le dice adiós en la pizarra de la intro."]],
+kv:[["Voz original","Marcia Wallace (hasta 2013)"]],
+rel:["h-skinner","h-flanders","c-pizarra"],
+dato:"La despedida fue en el gag de la pizarra: Bart escribía que la echarían de menos."},
+
+{id:"wiggum",spr:"wiggum",nombre:"Jefe Wiggum",corto:"Wiggum",ini:"W",alias:"Jefe Gorgory en Latinoamérica",col:"#2f5fd0",grupos:["vecinos"],
+hook:"El jefe de policía más perezoso e incompetente del país, siempre con una rosquilla en la mano.",
+quien:"Clancy Wiggum dirige la policía de Springfield con sus agentes Lou y Eddie. Es el padre de Ralph.",
+hilo:[["T5","Fue el cuarto miembro original de los Be Sharps hasta que lo cambiaron por Barney."],["T7","Investiga quién disparó al señor Burns."]],
+kv:[["Voz original","Hank Azaria"],["España","Jefe Wiggum"],["Latinoamérica","Jefe Gorgory"]],
+rel:["h-burns-disparo","c-duff"],
+dato:"Hank Azaria basó su voz en la de Edward G. Robinson."},
+
+{id:"willie",nombre:"Willie",corto:"Willie",ini:"Wi",alias:"El jardinero escocés",col:"#d06a2b",grupos:["escuela"],
+hook:"El jardinero escocés de la escuela: pelirrojo, con un genio terrible y una fuerza bruta legendaria.",
+quien:"Willie cuida los terrenos de la Escuela Primaria y vive en una cabaña junto a ella. Odia casi todo, menos su tractor.",
+hilo:[["T6","Sospechoso en «Who Shot Mr. Burns?»."],["T7","«Treehouse of Horror VI»: protagoniza la parodia de Pesadilla en Elm Street."]],
+kv:[["Voz original","Dan Castellaneta"]],
+rel:["h-burns-disparo","h-halloween","c-escuela"],
+dato:"Apareció por primera vez en «Principal Charming» (T2)."},
+
+{id:"lennycarl",nombre:"Lenny y Carl",corto:"Lenny y Carl",ini:"LC",alias:"Los compañeros de Homer",col:"#6b7c8f",grupos:["central","taberna"],
+hook:"Siempre juntos: en la central, en la taberna y en cada plano de grupo. Inseparables desde que aparecieron.",
+quien:"Lenny Leonard y Carl Carlson trabajan con Homer en la central y beben con él en la taberna de Moe.",
+hilo:[["T1","Aparecen desde la primera temporada como compañeros de Homer en la central."],["T32","Carl cambia de voz: Alex Désert sustituye a Hank Azaria."]],
+kv:[["Voces","Harry Shearer (Lenny) · Hank Azaria y después Alex Désert (Carl)"]],
+rel:["c-central","c-taberna"],
+dato:"Desde 2020 la serie decidió que personajes de color no tengan voces de actores blancos; Carl fue uno de los afectados."},
+
+{id:"bouvier",nombre:"Patty y Selma",corto:"Patty y Selma",ini:"PS",alias:"Las hermanas Bouvier",col:"#a35bd0",grupos:["familia"],
+hook:"Las gemelas fumadoras que trabajan en Tráfico y detestan a Homer. Selma se ha casado con Bob y con Troy McClure.",
+quien:"Patty y Selma Bouvier, hermanas mayores de Marge, comparten piso, tabaco y desprecio por su cuñado. Selma desea una familia; Patty sale del armario en la temporada 16.",
+hilo:[["T2","«Principal Charming»: Skinner sale con Patty."],["T3","«Black Widower»: Selma se casa con Bob."],["T7","«A Fish Called Selma»: boda con Troy McClure."],["T16","Patty sale del armario y Selma adopta a Ling, una niña china."]],
+kv:[["Voz original","Julie Kavner (ambas)"],["Trabajo","Oficina de Tráfico"]],
+rel:["h-bouvier","h-bob"],
+dato:"Julie Kavner pone voz a Marge, a sus dos hermanas y a su madre."},
+
+{id:"cbg",nombre:"El de la tienda de cómics",corto:"Tienda de cómics",ini:"TC",alias:"Sujeto de las historietas en Latinoamérica",col:"#5b8c3a",grupos:["vecinos"],
+hook:"El dueño de la tienda de cómics y crítico de todo. Su «el peor episodio de la historia» se adelantó veinte años a los foros.",
+quien:"Jeff Albertson, nombre que la serie tardó años en dar, lleva la tienda de cómics de Springfield y juzga con desdén cualquier obra de ficción.",
+hilo:[["T8","«The Itchy & Scratchy & Poochie Show»: el público friki que critica la serie dentro de la serie."]],
+kv:[["Voz original","Hank Azaria"]],
+rel:["c-rascaypica","c-poochie"],
+dato:"Es la parodia que los guionistas hicieron de sus fans más exigentes."},
+
+{id:"troy",nombre:"Troy McClure",corto:"Troy",ini:"T",alias:"«Quizá me recuerden de…»",col:"#e0a63a",grupos:["tele"],
+hook:"Actor venido a menos que presenta vídeos educativos y teletiendas. Se casó con Selma para lavar su imagen.",
+quien:"Troy McClure aparece en mil vídeos de segunda: películas de serie B, documentales escolares, telemaratones. Siempre se presenta recordando títulos imposibles.",
+hilo:[["T7","«A Fish Called Selma»: boda por interés."],["T7","Presenta «The Simpsons 138th Episode Spectacular»."],["T10","Su última aparición, tras la muerte de Phil Hartman en 1998."]],
+kv:[["Voz original","Phil Hartman (†1998)"]],
+rel:["h-bouvier"],
+dato:"Tras la muerte de Phil Hartman, la serie retiró a Troy McClure y al abogado Lionel Hutz."},
+
+{id:"grimes",nombre:"Frank Grimes",corto:"Grimes",ini:"G",alias:"«Grimey»",col:"#8a8a7a",grupos:["central"],
+hook:"Un hombre que se lo ganó todo a pulso entra a trabajar con Homer y no puede soportar que el mundo le premie. Solo dura un episodio.",
+quien:"Frank Grimes es el protagonista trágico de «Homer's Enemy» (T8, 1997): un trabajador honrado y amargado que intenta demostrar que Homer es un inútil.",
+hilo:[["T8","«Homer's Enemy»: muere electrocutado y Homer se duerme en su funeral."],["T14","«The Great Louse Detective»: su hijo, Frank Grimes Jr., busca venganza."]],
+kv:[["Voz original","Hank Azaria"]],
+rel:["h-grimes","h-trabajos"],
+dato:"Muchos guionistas lo consideran uno de los episodios más oscuros y mejores de la serie."},
+
+{id:"mona",nombre:"Mona Simpson",corto:"Mona",ini:"Mn",alias:"La madre de Homer",col:"#7b46c4",grupos:["familia"],
+hook:"Durante años Homer creyó que su madre había muerto. En realidad vivía escondida tras sabotear un laboratorio del señor Burns en 1969.",
+quien:"Mona Simpson es una activista de los sesenta que tuvo que huir y dejar a su hijo pequeño. Reaparece varias veces hasta su despedida.",
+hilo:[["T7","«Mother Simpson»: reencuentro y nueva huida."],["T15","«My Mother the Carjacker»: vuelve a Springfield."],["T19","«Mona Leaves-a»: muere y deja a Homer un último encargo."]],
+kv:[["Voz original","Glenn Close"]],
+rel:["h-mona","burns"],
+dato:"El guionista Richard Appel le puso el nombre de su esposa, la novelista Mona Simpson, hermana de Steve Jobs."},
+
+{id:"mascotas",nombre:"Ayudante de Santa y Bola de Nieve",corto:"Mascotas",ini:"AB",alias:"El galgo y la gata",col:"#a6764a",grupos:["familia"],spr:"perro",
+hook:"Un galgo que perdió su última carrera la Nochebuena del primer episodio y una gata negra que ya va por varias reencarnaciones.",
+quien:"Ayudante de Santa Claus es el galgo de la familia, adoptado en el canódromo en el primer episodio. Bola de Nieve II es la gata de Lisa; la primera Bola de Nieve murió antes de empezar la serie.",
+hilo:[["T1","«Simpsons Roasting on an Open Fire»: Homer pierde la última apuesta y se lleva al perro que perdió."],["T6","«Two Dozen and One Greyhounds»: el perro tiene veinticinco cachorros."],["T15","Bola de Nieve II muere y la familia la sustituye por gatas idénticas hasta volver a llamarla igual."]],
+kv:[["Raza","Galgo"],["Gata","Bola de Nieve II"]],
+rel:["c-sofa"],
+dato:"El primer episodio completo fue el especial de Navidad de 1989 en el que llega el perro."}
+];
+
+const HILOS=[
+{id:"h-bob",titulo:"La saga de Bob",resumen:"Un ayudante de payaso humillado durante años, un atraco con disfraz y un niño de diez años que lo descubre. Desde entonces, Bob vuelve cada pocas temporadas.",
+pasos:[["T1","«Krusty Gets Busted» (1990): Bob, harto de recibir tartazos, se disfraza de Krusty y atraca el Badulaque. Bart demuestra que no fue Krusty."],["T3","«Black Widower»: sale en libertad, se casa con Selma y planea matarla. Bart vuelve a pararlo."],["T5","«Cape Feare»: los Simpson se esconden en un lago con otro apellido y Bob los encuentra. Los rastrillos."],["T6","«Sideshow Bob Roberts»: gana la alcaldía con fraude electoral."],["T7","«Sideshow Bob's Last Gleaming»: amenaza con una bomba atómica si no se elimina la tele."],["T8","«Brother from Another Series»: aparece su hermano Cecil, también resentido."],["T12","«Day of the Jackanapes»: usa la retirada de Krusty para acercarse a Bart con una bomba."],["T14","«The Great Louse Detective»: la familia lo saca de la cárcel para que encuentre a quien quiere matar a Homer."],["T21","«The Bob Next Door»: se cambia la cara con otro preso y se muda al lado de los Simpson."]],
+rel:["bob","bart","krusty","bouvier","c-rastrillos","c-badulaque"]},
+
+{id:"h-burns-disparo",titulo:"¿Quién disparó al señor Burns?",resumen:"El final de la temporada 6 dejó al dueño de la central herido y a medio pueblo como sospechoso durante todo un verano de 1995.",
+pasos:[["T6","Los niños encuentran petróleo bajo la escuela. Burns se lo roba con una perforación inclinada."],["T6","Burns construye un disco gigante que tapa el sol para que Springfield gaste más electricidad."],["T6","Smithers se niega a seguirle y Burns lo despide. Homer, Moe, Willie, Abe, Barney y hasta Lisa tienen motivos."],["T6","Tras tapar el sol, Burns sale a la calle, forcejea con alguien y recibe un disparo. Cae sobre el reloj de sol del pueblo."],["T7","«Who Shot Mr. Burns? (Part Two)»: Wiggum investiga. Smithers cree que fue él, borracho; luego todo apunta a Homer."],["T7","Burns despierta y revela la verdad: fue Maggie, que estaba con su piruleta cuando él intentó quitársela y la pistola se disparó."]],
+rel:["burns","maggie","smithers","wiggum","willie","m-burns","c-central"]},
+
+{id:"h-trabajos",titulo:"Los mil trabajos de Homer",resumen:"Oficialmente trabaja en la central desde antes de que nacieran sus hijos. En la práctica, ha probado casi todo.",
+pasos:[["T3","«I Married Marge»: entra en la central para mantener a su familia cuando Marge se queda embarazada de Bart."],["T4","«Mr. Plow»: compra una máquina quitanieves y triunfa hasta que Barney le hace la competencia."],["T4","«Marge vs. the Monorail»: conduce el monorraíl que Lyle Lanley vende al pueblo."],["T5","«Homer's Barbershop Quartet»: canta con los Be Sharps y gana un Grammy."],["T5","«Deep Space Homer»: la NASA lo manda al espacio para mejorar la audiencia."],["T6","«And Maggie Makes Three»: deja la central para trabajar en una bolera, y vuelve cuando llega Maggie."],["T8","«Homer's Enemy»: Frank Grimes demuestra que ese puesto no se lo merece."]],
+rel:["homer","barney","marge","grimes","c-central","c-monorrail"]},
+
+{id:"h-grimes",titulo:"Frank Grimes y su hijo",resumen:"Un episodio que se pregunta qué pasaría si alguien normal entrara en Springfield, y su eco seis temporadas después.",
+pasos:[["T8","Frank Grimes, un hombre que lo ha conseguido todo a base de sufrir, entra a trabajar en la central."],["T8","Ve a Homer cobrar más, vivir mejor y meter la pata sin consecuencias, y se obsesiona."],["T8","Intenta ridiculizarlo con un concurso infantil de maquetas de centrales; Homer gana."],["T8","Fuera de sí, imita a Homer, toca unos cables de alta tensión y muere. En el funeral, Homer se duerme."],["T14","Frank Grimes Jr. intenta matar a Homer para vengar a su padre. Bob lo descubre."]],
+rel:["grimes","homer","bob","c-central"]},
+
+{id:"h-lisa",titulo:"La conciencia de Lisa",resumen:"La serie usa a Lisa para hablar de música, de animales, de religión y de la verdad incómoda sobre los héroes del pueblo.",
+pasos:[["T1","«Moaning Lisa»: Encías Sangrantes Murphy le enseña que el blues sirve para estar triste."],["T2","«Lisa's Substitute»: el profesor Bergstrom le deja una nota: «Tú eres Lisa Simpson»."],["T5","«Lisa vs. Malibu Stacy»: crea una muñeca alternativa con frases dignas."],["T6","«'Round Springfield»: muere Encías Sangrantes y Lisa consigue que la radio ponga su disco."],["T7","«Lisa the Vegetarian»: deja la carne tras ver un cordero en el zoo."],["T7","«Lisa the Iconoclast»: descubre que el fundador del pueblo era un pirata, y decide guardar el secreto."],["T13","«She of Little Faith»: se hace budista."]],
+rel:["lisa","bart","c-escuela","h-predicciones"]},
+
+{id:"h-bouvier",titulo:"Las Bouvier",resumen:"La familia de Marge: dos hermanas gemelas, una madre que también tuvo pretendientes y una cadena de bodas desafortunadas.",
+pasos:[["T2","«Principal Charming»: Homer intenta casar a Selma y quien se enamora es Skinner, de Patty."],["T3","«Black Widower»: Selma se casa con Bob, que intenta matarla en la luna de miel."],["T5","«Lady Bouvier's Lover»: la madre de Marge sale con el abuelo Simpson y con el señor Burns."],["T7","«A Fish Called Selma»: boda con Troy McClure para limpiar su imagen."],["T16","«There's Something About Marrying»: Patty sale del armario cuando Springfield legaliza el matrimonio homosexual."],["T16","«Goo Goo Gai Pan»: Selma adopta a Ling en China."]],
+rel:["marge","bouvier","bob","troy","abe","burns"]},
+
+{id:"h-skinner",titulo:"Bart contra Skinner",resumen:"El alumno y el director: treinta años de guerra que a veces se convierten en algo parecido a la amistad.",
+pasos:[["T1","Bart ya es el castigo diario del director desde la primera temporada."],["T5","«Sweet Seymour Skinner's Baadasssss Song»: Bart lleva a su perro a clase, Skinner pierde el puesto y se hacen amigos."],["T8","«Grade School Confidential»: Bart guarda el secreto de Skinner y Edna."],["T9","«The Principal and the Pauper»: el verdadero Seymour Skinner aparece; el pueblo prefiere al falso."],["T22","Edna, la profesora de Bart, deja a Skinner por Ned Flanders."]],
+rel:["bart","skinner","edna","m-tamzarian","c-escuela","c-pizarra"]},
+
+{id:"h-flanders",titulo:"Flanders, Maude y Edna",resumen:"El vecino perfecto pierde mucho a lo largo de la serie, y la serie le hace pagar por algunos conflictos de fuera de la pantalla.",
+pasos:[["T3","«When Flanders Failed»: el Zurdorium casi quiebra; Homer, arrepentido, lo salva."],["T8","«Hurricane Neddy»: un huracán le destruye la casa y estalla por fin contra todos."],["T11","«Alone Again, Natura-Diddily»: Maude muere al caer de una grada en un circuito, golpeada por un cañón de camisetas."],["T22","Empieza a salir con Edna Krabappel."],["T24","Se revela que Ned y Edna se han casado."],["T25","Tras la muerte de Marcia Wallace, la voz de Edna, Ned queda viudo otra vez."]],
+rel:["flanders","edna","homer","m-maude"]},
+
+{id:"h-mona",titulo:"La madre de Homer",resumen:"Homer creyó durante años que su madre había muerto. La verdad tenía que ver con 1969, con un laboratorio y con el señor Burns.",
+pasos:[["T7","«Mother Simpson»: Homer finge su muerte, va al cementerio y encuentra a su madre viva."],["T7","Mona cuenta que en 1969 saboteó un laboratorio de armas biológicas de Burns y tuvo que huir."],["T7","Burns la reconoce y la persigue; Homer la ayuda a escapar de nuevo."],["T15","«My Mother the Carjacker»: vuelve, la juzgan y Homer la libera."],["T19","«Mona Leaves-a»: muere tras discutir con Homer, que cumple su última voluntad."]],
+rel:["mona","homer","abe","burns"]},
+
+{id:"h-herb",titulo:"Herb, el medio hermano",resumen:"Un hermano perdido, una fábrica de coches y un error de diseño que se llama Homer.",
+pasos:[["T2","«Oh Brother, Where Art Thou?»: Abe confiesa que tuvo un hijo antes que Homer. Es Herb Powell, un rico fabricante de coches."],["T2","Herb deja que Homer diseñe un coche para la gente corriente: «el Homer». Es un fracaso que lo arruina."],["T3","«Brother, Can You Spare Two Dimes?»: Homer le ayuda a volver a hacerse rico con un traductor de bebés."]],
+rel:["homer","abe"]},
+
+{id:"h-krusty",titulo:"Krusty y su padre",resumen:"El payaso más cínico de la tele resulta ser el hijo de un rabino que nunca aprobó su oficio.",
+pasos:[["T1","«Krusty Gets Busted»: Bart salva al ídolo que lo ignora."],["T3","«Like Father, Like Clown»: Bart y Lisa buscan citas del Talmud para que el rabino Krustofsky perdone a su hijo."],["T4","«Krusty Gets Kancelled»: los Simpson le organizan un especial de regreso."],["T15","«Today I Am a Clown»: celebra el bar mitzvá que no tuvo."]],
+rel:["krusty","bart","lisa","c-rascaypica","c-krustyburger"]},
+
+{id:"h-smithers",titulo:"Smithers y Burns",resumen:"La lealtad más larga de Springfield, contada a medias durante décadas y por fin en voz alta.",
+pasos:[["T1","Aparece junto a Burns desde la primera temporada."],["T6","Se niega a apoyar el plan de tapar el sol y Burns lo despide."],["T7","«Homer the Smithers»: se va de vacaciones y Homer lo sustituye tan mal que Burns aprende a valerse solo."],["T27","«Portrait of a Lackey on Fire»: sale del armario y busca pareja."]],
+rel:["smithers","burns","c-central","m-smithers"]},
+
+{id:"h-halloween",titulo:"Los especiales de Halloween",resumen:"Desde 1990, cada otoño la serie rompe sus reglas: los personajes mueren, los extraterrestres aparecen y nada cuenta para el canon.",
+pasos:[["T2","«Treehouse of Horror» (1990): tres historias contadas en la casa del árbol, con «El cuervo» de Poe leído por James Earl Jones."],["T2","Debutan Kang y Kodos, los extraterrestres babeantes que vuelven casi cada año."],["T6","«Treehouse of Horror V»: «The Shinning», parodia de El resplandor."],["T7","«Treehouse of Horror VI»: Homer entra en la tercera dimensión y acaba en una calle real de Los Ángeles."],["Siempre","Los créditos cambian a nombres de miedo y nada de lo que pasa se recuerda después."]],
+rel:["c-halloween","c-kang","willie","homer"]},
+
+{id:"h-predicciones",titulo:"Las predicciones",resumen:"Con tantos episodios, algunos chistes acabaron pareciéndose a noticias reales. Otros son montajes que circulan por redes.",
+pasos:[["T5","«$pringfield»: un tigre ataca a los magos Gunter y Ernst. En 2003 un tigre atacó a Roy Horn, de Siegfried & Roy."],["T6","«Lisa's Wedding»: videollamadas y relojes con pantalla en un futuro de 2010."],["T10","«When You Dish Upon a Star»: un cartel dice que 20th Century Fox es una división de Disney. Disney compró Fox en 2019."],["T10","«The Wizard of Evergreen Terrace»: en la pizarra de Homer hay una ecuación que da un valor cercano a la masa del bosón de Higgs."],["T11","«Bart to the Future»: Lisa hereda la presidencia de Donald Trump."],["Ojo","Muchas «predicciones» que circulan son capturas falsas o de episodios posteriores a los hechos."]],
+rel:["lisa","homer","m-predicen"]}
+];
+
+const CONCEPTOS=[
+{id:"c-springfield",nombre:"Springfield",tipo:"lugar",img:"springfield-or",spr:"torre",def:"El pueblo donde vive la familia. Tiene central nuclear, puerto, montañas, desierto y garganta: lo que necesite el chiste de la semana.",
+mas:["Nadie dice en qué estado está. Los mapas, las matrículas y las conversaciones se contradicen a propósito.","Lo fundó Jebediah Springfield, cuya leyenda resulta ser mentira en «Lisa the Iconoclast».","Su rival es Shelbyville, al otro lado del río, donde todo es parecido pero al revés."],
+rel:["m-estado","h-lisa","c-shelbyville"]},
+{id:"c-badulaque",nombre:"El Badulaque",tipo:"lugar",img:"kwik-orlando",spr:"caja",def:"La tienda de Apu, abierta día y noche. En Latinoamérica conserva el nombre original: Kwik-E-Mart.",
+mas:["Allí atraca Bob disfrazado de Krusty en la primera temporada.","Vende Squishees, rosquillas pasadas y perritos que llevan años girando.","En 2007, para el estreno de la película, doce tiendas 7-Eleven de Estados Unidos y Canadá se convirtieron en Kwik-E-Mart."],
+rel:["apu","h-bob","c-squishee"]},
+{id:"c-central",nombre:"La central nuclear",tipo:"lugar",spr:"torre",def:"La central nuclear de Springfield, propiedad del señor Burns. Homer es inspector de seguridad del sector 7G, cosa que dice mucho de la seguridad.",
+mas:["Tiene dos torres de refrigeración y un historial de fugas que el pueblo ya no comenta.","Al final de la intro, Homer sale del trabajo con una barra de plutonio en la espalda y la tira por la ventanilla.","El sindicato ganó el plan dental en «Last Exit to Springfield» gracias a Homer."],
+rel:["burns","homer","smithers","lennycarl","c-blinky","h-trabajos"]},
+{id:"c-rascaypica",nombre:"Rasca y Pica",tipo:"tele",def:"Un gato y un ratón que se matan de las formas más sangrientas en el programa de Krusty. En Latinoamérica se llaman Tommy y Daly.",
+mas:["Son una parodia de Tom y Jerry llevada al extremo.","Marge hizo campaña contra ellos en «Itchy & Scratchy & Marge».","En «The Itchy & Scratchy & Poochie Show», los productores añaden un perro con actitud para modernizarlos: Poochie."],
+rel:["krusty","marge","c-poochie"]},
+{id:"c-taberna",nombre:"La taberna de Moe",tipo:"lugar",img:"moes-interior",spr:"jarra",def:"El bar oscuro donde Homer, Barney, Lenny y Carl pasan las tardes. Se llama Bar de Moe en España y Taberna de Moe en Latinoamérica.",
+mas:["Su teléfono es el blanco de las llamadas de broma de Bart.","Ha sido un local de moda con el cóctel de Homer y un bar clandestino durante la prohibición."],
+rel:["moe","barney","homer","c-llamadas","c-duff"]},
+{id:"c-krustyburger",nombre:"Krusty Burger",tipo:"lugar",img:"krusty-burger",def:"La cadena de hamburguesas con la cara de Krusty. Su comida es de dudosa procedencia, como todo lo que vende el payaso.",
+mas:["Es una parodia de McDonald's; tiene su propia mascota y menús infantiles con juguetes defectuosos."],
+rel:["krusty"]},
+{id:"c-escuela",nombre:"La escuela primaria",tipo:"lugar",def:"La Escuela Primaria de Springfield: aulas sin presupuesto, un comedor con carne de dudoso origen y un jardinero escocés.",
+mas:["El director es Skinner y el superintendente, Chalmers.","Bart está en la clase de Edna Krabappel; Lisa, en la de la señorita Hoover.","En la temporada 6 encuentran petróleo debajo, y Burns se lo roba."],
+rel:["skinner","edna","willie","bart","lisa","milhouse","nelson","ralph"]},
+{id:"c-duff",nombre:"Cerveza Duff",tipo:"marca",img:"duff",spr:"duff",def:"La cerveza de Springfield y de Homer. Tiene mascota (Duffman), cervecera con visitas guiadas y variantes que salen todas del mismo tubo.",
+mas:["En «Duffless» (T4) Homer intenta dejarla un mes.","En los parques de Universal se vende una Duff real."],
+rel:["homer","c-taberna","barney"]},
+{id:"c-pizarra",nombre:"El gag de la pizarra",tipo:"serie",spr:"tiza",def:"Al principio de muchos episodios, Bart escribe un castigo distinto en la pizarra de clase, una y otra vez.",
+mas:["El texto cambia en cada episodio y ha servido para bromas, metachistes y homenajes.","Sirvió para despedir a Edna Krabappel en 2013."],
+rel:["bart","edna","c-sofa"]},
+{id:"c-sofa",nombre:"El gag del sofá",tipo:"serie",spr:"sofa",def:"El final de la intro: la familia corre hacia el sofá y algo distinto pasa cada vez.",
+mas:["Ha habido sofás que se rompen, familias aplastadas y versiones dibujadas por artistas invitados.","Sobre el sofá cuelga el cuadro del barco de vela."],
+rel:["c-pizarra","mascotas"]},
+{id:"c-canon",nombre:"El canon flotante",tipo:"serie",def:"Los personajes no envejecen. Bart tiene diez años desde 1989, y las fechas del pasado se van moviendo para que encajen.",
+mas:["En «The Way We Was» (T2) Homer y Marge se conocen en 1974.","En «That '90s Show» (T19) su noviazgo se traslada a los noventa, para disgusto de muchos fans.","Las Navidades y los cumpleaños pasan, pero nadie cumple años."],
+rel:["m-edades","m-edad-burns"]},
+{id:"c-halloween",nombre:"La casa-árbol del terror",tipo:"serie",def:"Los especiales anuales de Halloween («Treehouse of Horror»): tres historias de miedo que no cuentan en la continuidad.",
+mas:["El primero se emitió en octubre de 1990.","Los personajes mueren sin consecuencias y aparecen Kang y Kodos."],
+rel:["h-halloween","c-kang"]},
+{id:"c-kang",nombre:"Kang y Kodos",tipo:"serie",def:"Dos extraterrestres verdes, con un solo ojo y tentáculos, que intentan conquistar la Tierra en casi cada especial de Halloween.",
+mas:["En un especial suplantan a los candidatos a la presidencia de Estados Unidos."],
+rel:["c-halloween","h-halloween"]},
+{id:"c-monorrail",nombre:"El monorraíl",tipo:"historia",def:"Un vendedor, Lyle Lanley, convence al pueblo de gastarse un dinero caído del cielo en un monorraíl con una canción pegadiza.",
+mas:["«Marge vs. the Monorail» (T4) lo escribió Conan O'Brien.","Marge es la única que vota en contra; Homer acaba de conductor."],
+rel:["marge","homer","h-trabajos"]},
+{id:"c-llamadas",nombre:"Las llamadas a Moe",tipo:"serie",spr:"telefono",def:"Bart llama a la taberna preguntando por un cliente con un nombre que, dicho en voz alta, es un chiste. Moe pica siempre.",
+mas:["Cada doblaje adaptó los juegos de palabras a su idioma.","Moe amenaza con lo que le hará a Bart si lo encuentra."],
+rel:["bart","moe","c-taberna"]},
+{id:"c-elbarto",nombre:"El Barto",tipo:"serie",spr:"tirachinas",def:"La firma de grafiti de Bart, que aparece por todo Springfield.",
+mas:["El pueblo tarda en descubrir quién es; para los fans, nunca fue un secreto."],
+rel:["bart"]},
+{id:"c-blinky",nombre:"Blinky, el pez de tres ojos",tipo:"historia",spr:"blinky",def:"Un pez mutante pescado junto a la central nuclear, prueba de los vertidos de Burns.",
+mas:["En «Two Cars in Every Garage and Three Eyes on Every Fish» (T2) Burns intenta convencer al estado de que es un salto evolutivo.","Marge se lo sirve para cenar ante las cámaras y Burns lo escupe."],
+rel:["burns","c-central"]},
+{id:"c-rastrillos",nombre:"Los rastrillos",tipo:"historia",spr:"rastrillo",def:"En «Cape Feare» (T5), Bob pisa un rastrillo tras otro y cada mango le da en la cara. El gag dura lo que no debería, y por eso funciona.",
+mas:["Se alargó para rellenar minutos de un episodio que se quedaba corto."],
+rel:["bob","h-bob"]},
+{id:"c-poochie",nombre:"Poochie",tipo:"tele",def:"Un perro con gorra y gafas que los ejecutivos meten en Rasca y Pica para hacerlo más moderno. Homer le pone voz.",
+mas:["Es una sátira de las propias reuniones de la cadena con los guionistas.","Muere en su segundo episodio, camino de su planeta natal."],
+rel:["c-rascaypica","cbg","homer"]},
+{id:"c-squishee",nombre:"El Squishee",tipo:"marca",spr:"squishee",def:"El granizado del Badulaque. Tomado en exceso, provoca efectos dignos de un capítulo entero.",
+mas:["Es la parodia del Slurpee de las tiendas 7-Eleven."],
+rel:["c-badulaque","apu"]},
+{id:"c-shelbyville",nombre:"Shelbyville",tipo:"lugar",def:"El pueblo vecino y rival eterno de Springfield. Tienen su propio Bart, su propio Homer y su propio jugo de nabo.",
+mas:["La rivalidad viene de la fundación: Shelby y Jebediah no se pusieron de acuerdo en si casarse con primas."],
+rel:["c-springfield"]},
+{id:"c-estrellas",nombre:"Las estrellas invitadas",tipo:"serie",def:"Cientos de famosos han puesto su voz a la serie, a menudo haciendo de sí mismos; tiene el récord Guinness de estrellas invitadas.",
+mas:["Paul y Linda McCartney, Elizabeth Taylor, Johnny Cash, Stephen Hawking, Glenn Close o Kelsey Grammer.","Kelsey Grammer y Glenn Close tienen papeles fijos: Bob y Mona."],
+rel:["bob","mona","lisa","maggie"]}
+];
+
+const MISTERIOS=[
+{id:"m-burns",corto:"¿Quién disparó a Burns?",pregunta:"¿Quién disparó al señor Burns?",estado:"resuelto",sabemos:"La temporada 6 terminó en mayo de 1995 con Burns herido y un montón de sospechosos. Fox montó un concurso para que el público adivinara al culpable durante el verano.",abierto:"Se resolvió en septiembre de 1995: fue Maggie. Burns intentó quitarle la piruleta, la pistola se le escurrió y se disparó. Los guionistas animaron varios finales alternativos para no filtrar el bueno.",rel:["burns","maggie","h-burns-disparo"]},
+{id:"m-estado",corto:"¿Dónde está Springfield?",pregunta:"¿En qué estado de Estados Unidos está Springfield?",estado:"autora",sabemos:"Hay Springfields en muchos estados y la serie nunca da el suyo: los mapas se contradicen y los personajes esquivan la pregunta a propósito.",abierto:"Matt Groening contó en 2012 que eligió el nombre por Springfield, en Oregón (él creció en Portland), y por la ciudad de la serie «Papá lo sabe todo». Aclaró que eso no significa que el pueblo de la serie esté allí.",rel:["c-springfield"]},
+{id:"m-edades",corto:"¿Por qué no crecen?",pregunta:"Si Bart tiene diez años desde 1989, ¿cuándo se conocieron Homer y Marge?",estado:"agujero",sabemos:"En «The Way We Was» (T2) se conocen en el instituto en 1974. En «That '90s Show» (T19) la serie traslada su juventud a los noventa.",abierto:"Es el precio del canon flotante: el pasado se mueve para que las edades cuadren. Muchos fans consideran que «That '90s Show» rompió la historia clásica; otros lo aceptan como un ajuste inevitable.",rel:["c-canon","homer","marge"]},
+{id:"m-edad-burns",corto:"La edad de Burns",pregunta:"¿Cuántos años tiene el señor Burns?",estado:"agujero",sabemos:"Unos episodios lo hacen octogenario y otros centenario; en alguno se menciona que tiene 104 años.",abierto:"La serie lo usa como chiste variable. Lo único constante es que es muy, muy viejo.",rel:["burns","c-canon"]},
+{id:"m-tamzarian",corto:"¿Skinner es Skinner?",pregunta:"¿El director Skinner es Armin Tamzarian?",estado:"debate",sabemos:"En «The Principal and the Pauper» (T9) aparece el verdadero Seymour Skinner: el director era un huérfano llamado Armin Tamzarian que tomó su identidad tras Vietnam.",abierto:"Al final un juez decreta que todo vuelva a ser como antes y que nadie lo mencione. Harry Shearer, su voz, criticó el episodio, y la serie lo ha tratado después como algo a medio camino entre canon y broma.",rel:["skinner","h-skinner"]},
+{id:"m-apu",corto:"¿Qué pasó con Apu?",pregunta:"¿Qué ha sido de Apu?",estado:"abierto",sabemos:"Hank Azaria dejó de ponerle voz en 2020, tras años de críticas al personaje como estereotipo.",abierto:"La serie no le ha dado una despedida ni un sustituto de voz: aparece de fondo de vez en cuando y su historia se ha quedado congelada.",rel:["apu","c-badulaque"]},
+{id:"m-nelson",corto:"El padre de Nelson",pregunta:"¿Dónde está el padre de Nelson?",estado:"resuelto",sabemos:"Durante años el chiste era que salió a comprar tabaco y no volvió.",abierto:"En «Sleeping with the Enemy» (T16) Bart y Lisa lo encuentran: trabajaba en un espectáculo de feria por una reacción alérgica. Vuelve con su familia.",rel:["nelson"]},
+{id:"m-maude",corto:"¿Por qué murió Maude?",pregunta:"¿Por qué la serie mató a Maude Flanders?",estado:"autora",sabemos:"En «Alone Again, Natura-Diddily» (T11, 2000) Maude muere en un accidente en un circuito.",abierto:"Fuera de pantalla, su actriz de voz, Maggie Roswell, dejó la serie en 1999 por un desacuerdo económico. Años después volvió para otros personajes, pero Maude ya no.",rel:["flanders","h-flanders"]},
+{id:"m-smithers",corto:"El primer Smithers",pregunta:"¿Por qué Smithers tenía otro color de piel en su primera aparición?",estado:"resuelto",sabemos:"En «Homer's Odyssey» (T1) Smithers aparece con la piel oscura.",abierto:"Fue un error del estudio de animación al colorear. Desde su siguiente aparición tiene el tono definitivo.",rel:["smithers"]},
+{id:"m-jay",corto:"La J de Homer",pregunta:"¿Qué significa la J de Homer J. Simpson?",estado:"autora",sabemos:"Dentro de la serie es Jay, y se han hecho chistes con otras posibilidades.",abierto:"Matt Groening explicó que es un homenaje a Jay Ward, creador de Rocky y Bullwinkle, cuyos personajes tenían una inicial en medio.",rel:["homer"]},
+{id:"m-alma",corto:"El alma de Bart",pregunta:"¿Bart vendió su alma de verdad?",estado:"resuelto",sabemos:"En «Bart Sells His Soul» (T7) se la vende a Milhouse por cinco dólares, escrita en un papel, y empieza a notar cosas raras.",abierto:"Lisa la recupera con su dinero y se la devuelve. El episodio no aclara si de verdad había algo en el papel, y por eso sigue siendo uno de los más comentados.",rel:["bart","milhouse","lisa"]},
+{id:"m-predicen",corto:"¿Predice el futuro?",pregunta:"¿Los Simpson predicen el futuro?",estado:"debate",sabemos:"Hay coincidencias reales: Trump presidente, la compra de Fox por Disney, el tigre de Siegfried & Roy.",abierto:"Con más de setecientos episodios, alguna broma iba a acertar. Y muchas «predicciones» que circulan son capturas falsas o escenas emitidas después de los hechos. Los guionistas lo atribuyen a la estadística y a la sátira.",rel:["h-predicciones"]},
+{id:"m-halloween",corto:"¿Cuentan los Halloween?",pregunta:"¿Lo que pasa en los especiales de Halloween forma parte de la historia?",estado:"resuelto",sabemos:"En ellos mueren personajes, se destruye el mundo y aparecen extraterrestres.",abierto:"No: son episodios fuera de continuidad. Nada de lo que pasa en ellos se recuerda después.",rel:["c-halloween","h-halloween"]},
+{id:"m-final",corto:"¿Cómo acabará?",pregunta:"¿Cómo terminará la serie?",estado:"abierto",sabemos:"«Holidays of Future Passed» (T23, 2011) se escribió pensando en que podía ser el último episodio, con la familia de mayores.",abierto:"La serie siguió renovándose temporada tras temporada. No hay final anunciado, y los fans se reparten entre los que quieren un cierre y los que esperan que no llegue nunca.",rel:["c-canon"]},
+{id:"m-cumple",corto:"Los cumpleaños",pregunta:"¿Cuándo cumple años cada uno?",estado:"agujero",sabemos:"La serie ha dado fechas distintas para los cumpleaños de Homer y de otros personajes según el episodio.",abierto:"Con el canon flotante, ninguna fecha es definitiva. Los fans suelen quedarse con la última que se mencionó.",rel:["c-canon","homer"]},
+{id:"m-grimes",corto:"¿Tenía razón Grimes?",pregunta:"¿Era Frank Grimes el villano o el único cuerdo?",estado:"debate",sabemos:"«Homer's Enemy» (T8) presenta a Grimes como un amargado, pero todo lo que dice de Homer es verdad.",abierto:"Para muchos es la crítica más dura que la serie se hizo a sí misma; para otros, un chiste cruel sobre un hombre normal. El debate sigue en los foros desde 1997.",rel:["grimes","h-grimes"]}
+];
+
+const CRONO={
+mundo:[
+{y:"1940s",t:"Abe Simpson y el joven señor Burns sirven juntos en los Hellfish durante la Segunda Guerra Mundial."},
+{y:"1969",t:"Mona Simpson sabotea el laboratorio de Burns y huye, dejando a Homer de niño."},
+{y:"1974",t:"Homer y Marge se conocen en un castigo del instituto (según la versión clásica).",big:true},
+{y:"Antes de Bart",t:"Marge se queda embarazada, se casan en una capilla y Homer entra en la central nuclear."},
+{y:"Antes de Lisa",t:"Los Simpson compran la casa del 742 de Evergreen Terrace."},
+{y:"Antes de Maggie",t:"Homer deja la central para trabajar en una bolera y vuelve cuando nace Maggie."},
+{y:"Navidad",t:"Homer pierde su última apuesta en el canódromo y vuelve a casa con un galgo.",big:true},
+{y:"T1",t:"Bob, el ayudante de Krusty, atraca el Badulaque disfrazado; Bart lo desenmascara."},
+{y:"T6–T7",t:"Burns tapa el sol y recibe un disparo. Fue Maggie.",big:true},
+{y:"T8",t:"Frank Grimes muere en la central."},
+{y:"T11",t:"Muere Maude Flanders."},
+{y:"T19",t:"Muere Mona Simpson."},
+{y:"T24",t:"Ned Flanders y Edna Krabappel se han casado."},
+{y:"Futuros",t:"La serie ha imaginado varios: Lisa casándose en 2010, Lisa presidenta, la familia de mayores. Ninguno es seguro."}
+],
+real:[
+{y:"1987",t:"19 de abril: primer corto de la familia en «The Tracey Ullman Show».",big:true},
+{y:"1989",t:"17 de diciembre: «Simpsons Roasting on an Open Fire», primer episodio completo, en Fox.",big:true},
+{y:"1990",t:"Empieza la temporada regular. La «Bartmanía»: camisetas, muñecos y polémica."},
+{y:"1990",t:"Octubre: primer especial de Halloween."},
+{y:"1991",t:"Llega a España por TVE. En Latinoamérica, el doblaje clásico mexicano se hace popular en toda la región."},
+{y:"1994",t:"En España pasa a Antena 3, su casa durante décadas."},
+{y:"1995",t:"«Who Shot Mr. Burns?» parte el verano en dos."},
+{y:"1997",t:"Supera a «Los Picapiedra» como la serie animada de horario estelar más larga."},
+{y:"1998",t:"Muere Phil Hartman, voz de Troy McClure y Lionel Hutz."},
+{y:"2000",t:"Recibe su estrella en el Paseo de la Fama de Hollywood."},
+{y:"2007",t:"27 de julio: «Los Simpson: la película»."},
+{y:"2009",t:"Nueva intro en alta definición."},
+{y:"2014",t:"FXX emite todos los episodios seguidos en un maratón de doce días."},
+{y:"2018",t:"Supera a «Gunsmoke» en número de episodios: la serie de ficción de horario estelar más larga de la tele estadounidense."},
+{y:"2019",t:"Disney compra 21st Century Fox. La serie completa llega a Disney+ en noviembre.",big:true},
+{y:"2020",t:"Hank Azaria deja de poner voz a Apu y la serie cambia las voces de personajes no blancos."},
+{y:"2025",t:"Fox la renueva hasta la temporada 40."}
+]};
+
+const LUGARES=[
+{img:"kwik-orlando",t:"El Badulaque, Universal Orlando",d:"El Kwik-E-Mart de la zona Springfield U.S.A. de Universal Studios Florida, con Squishees y rosquillas de verdad.",k:"Parque temático"},
+{img:"moes",t:"La taberna de Moe, Orlando",d:"La fachada de Moe's Tavern en Universal Studios Florida.",k:"Parque temático"},
+{img:"moes-interior",t:"Dentro de la taberna de Moe",d:"La barra, los taburetes y la penumbra, tal como en la serie.",k:"Parque temático"},
+{img:"krusty-burger",t:"Krusty Burger, Orlando",d:"La hamburguesería del payaso, con la cabeza de Krusty sobre el tejado.",k:"Parque temático"},
+{img:"lard-lad",t:"Lard Lad Donuts",d:"La estatua gigante con la rosquilla rosa, en el parque de Universal Studios Florida.",k:"Parque temático"},
+{img:"bumblebee",t:"El Hombre Abeja, en Orlando",d:"El puesto de comida del personaje del canal en español de Springfield.",k:"Parque temático"},
+{img:"duff",t:"Cerveza Duff de verdad",d:"Latas de Duff a la venta en Universal Orlando.",k:"Parque temático"},
+{img:"ride-hollywood",t:"The Simpsons Ride, Hollywood",d:"La atracción de simulador ambientada en Krustyland, el parque de atracciones de Krusty.",k:"Parque temático"},
+{img:"krustyland",t:"Krustyland",d:"La entrada de la atracción en Universal Studios Hollywood, con la cabeza de Krusty.",k:"Parque temático"},
+{img:"kwik-seattle",t:"Un 7-Eleven convertido, Seattle",d:"En julio de 2007, para el estreno de la película, doce 7-Eleven se transformaron en Kwik-E-Mart.",k:"Promoción de la película"},
+{img:"kwik-merch",t:"Productos del Kwik-E-Mart, 2007",d:"Buzz Cola, Krusty-O's y Squishees que se vendieron en esas tiendas.",k:"Promoción de la película"},
+{img:"kwik-nyc",t:"El Kwik-E-Mart de Nueva York",d:"El 7-Eleven de la calle 42 de Manhattan durante la promoción.",k:"Promoción de la película"},
+{img:"springfield-vt",t:"Springfield, Vermont, 2007",d:"El pueblo que ganó el concurso para acoger el estreno de la película.",k:"Promoción de la película"},
+{img:"henderson",t:"La casa de Henderson, Nevada",d:"Una réplica de la casa de los Simpson construida en 1997 para un concurso. Después se repintó y hoy es una vivienda normal.",k:"Réplica real"},
+{img:"springfield-or",t:"Springfield, Oregón",d:"La ciudad, junto a Eugene, cuyo nombre inspiró a Matt Groening.",k:"Inspiración"},
+{img:"star",t:"La estrella del Paseo de la Fama",d:"Los Simpson tienen estrella en Hollywood desde el año 2000.",k:"Reconocimiento"},
+{img:"groening",t:"Matt Groening",d:"El creador de la serie, en la Comic-Con de San Diego de 2010.",k:"Los creadores"},
+{img:"groening-studio",t:"Groening en su estudio",d:"En su «Bat Cave» de Venice, California.",k:"Los creadores"},
+{img:"castellaneta",t:"Dan Castellaneta",d:"La voz de Homer, Abe, Krusty, Barney y Willie, en una foto promocional de 1988.",k:"Las voces"},
+{img:"cartwright",t:"Nancy Cartwright",d:"La voz de Bart, Nelson y Ralph.",k:"Las voces"},
+{img:"yeardley",t:"Yeardley Smith",d:"La voz de Lisa desde 1987.",k:"Las voces"},
+{img:"azaria",t:"Hank Azaria",d:"Moe, Wiggum, el de la tienda de cómics y, hasta 2020, Apu.",k:"Las voces"},
+{img:"shearer",t:"Harry Shearer",d:"Burns, Smithers, Flanders, Skinner, Lenny y muchos más.",k:"Las voces"},
+{img:"cast-stamp",t:"El reparto con su sello",d:"Groening, Kelsey Grammer y parte del reparto en la presentación de los sellos de correos de la serie en 2009.",k:"Las voces"},
+{img:"cosplay-bart",t:"Cosplay de Bart",d:"Un fan vestido de Bart en una convención en Malasia en 2022.",k:"El fandom"}
+];
+
+const GLOSARIO=[
+["Homer","Homer","Homero","El padre de la familia."],
+["Kwik-E-Mart","Badulaque","Kwik-E-Mart","La tienda de Apu."],
+["Sideshow Bob","Actor Secundario Bob","Bob Patiño","El enemigo de Bart."],
+["Chief Wiggum","Jefe Wiggum","Jefe Gorgory","El jefe de policía."],
+["Ralph Wiggum","Ralph Wiggum","Ralph Gorgory","Su hijo."],
+["Itchy & Scratchy","Rasca y Pica","Tommy y Daly","Los dibujos violentos de Krusty."],
+["Moe's Tavern","Bar de Moe","Taberna de Moe","El bar de Homer."],
+["Comic Book Guy","El de la tienda de cómics","Sujeto de las historietas","El crítico de Springfield."],
+["Spider-Pig","Spider-Cerdo","Puerco Araña","El cerdo de la película."],
+["Eat my shorts!","¡Multiplícate por cero!","¡Cómete mis calzones!","La frase de Bart."],
+["Mmm… donuts","Mmm… rosquillas","Mmm… donas","Homer ante la comida."],
+["Hi-diddly-ho, neighborino!","¡Hola, holita, vecinito!","—","El saludo de Flanders."],
+["Santa's Little Helper","Ayudante de Santa Claus","Ayudante de Santa","El galgo de la familia."],
+["Snowball II","Bola de Nieve II","Bola de Nieve II","La gata de Lisa."],
+["Bleeding Gums Murphy","Encías Sangrantes Murphy","Encías Sangrantes Murphy","El jazzista de Lisa."],
+["Hans Moleman","Hans Topo","Hans Topo","El anciano que siempre sufre."],
+["Fat Tony","Tony el Gordo","Tony el Gordo","El mafioso de Springfield."],
+["Radioactive Man","Hombre Radiactivo","Hombre Radiactivo","El superhéroe favorito de Bart."],
+["Duff","Duff","Duff","La cerveza."],
+["Krusty the Clown","Krusty el payaso","Krusty el payaso","El payaso de la tele."],
+["Mr. Burns","Señor Burns","Señor Burns","El dueño de la central."],
+["Excellent","Excelente","Excelente","La palabra de Burns."],
+["Ay, caramba!","¡Ay, caramba!","¡Ay, caramba!","Igual en los dos doblajes."],
+["Ha-ha!","¡Ja, ja!","¡Ja, ja!","La risa de Nelson."],
+["Shelbyville","Shelbyville","Shelbyville","El pueblo rival."],
+["Kang & Kodos","Kang y Kodos","Kang y Kodos","Los extraterrestres de Halloween."],
+["Treehouse of Horror","La casa-árbol del terror","Especial de Noche de Brujas","Los especiales de Halloween."],
+["Evergreen Terrace","Evergreen Terrace","Avenida Siempre Viva","La calle de los Simpson, número 742."],
+["Lisa Simpson","Lisa","Lisa","Igual en los dos doblajes."],
+["The Simpsons Movie","Los Simpson: la película","Los Simpson: la película","La película de 2007."]
+];
+
+const RED={lazos:[
+["homer","marge","Casados desde que Marge se quedó embarazada de Bart; ella siempre lo perdona."],
+["homer","bart","«¡Pequeño…!»: lo estrangula y lo quiere a partes iguales."],
+["homer","lisa","No la entiende, pero lo intenta; ella es lo mejor que ha hecho."],
+["homer","maggie","Sus fotos tapan el cartel de su jefe: «Hazlo por ella»."],
+["homer","abe","Lo dejó en la residencia y lo visita poco."],
+["homer","flanders","Envidia, desprecio y cariño a su pesar."],
+["homer","burns","Su jefe, que nunca recuerda su nombre."],
+["homer","moe","Su camarero y amigo, a veces rival."],
+["homer","barney","Amigos desde el instituto; Be Sharps."],
+["homer","lennycarl","Compañeros de trabajo y de barra."],
+["homer","grimes","El hombre al que su existencia volvió loco."],
+["homer","mona","Su madre fugitiva."],
+["homer","smithers","Lo sustituyó durante unas vacaciones."],
+["homer","bouvier","Sus cuñadas lo odian; él a ellas también."],
+["homer","apu","Vivió en su casa y la arruinó."],
+["marge","bouvier","Sus hermanas gemelas."],
+["marge","bart","Su «niño especial»."],
+["marge","lisa","Se parecen más de lo que Lisa cree."],
+["bart","lisa","Hermanos que se pelean y se protegen."],
+["bart","milhouse","Mejores amigos; le vendió el alma."],
+["bart","bob","Bob ha intentado matarlo una y otra vez."],
+["bart","krusty","Su ídolo, al que salvó en la cárcel."],
+["bart","skinner","Enemigos y, a veces, amigos."],
+["bart","edna","Su profesora durante décadas."],
+["bart","nelson","Su abusón y, a ratos, cómplice."],
+["bart","moe","Las llamadas de broma."],
+["lisa","ralph","Le dio una tarjeta de San Valentín por pena."],
+["lisa","nelson","Salieron juntos un tiempo."],
+["lisa","milhouse","Él la ama; ella no."],
+["maggie","burns","Le disparó."],
+["burns","smithers","Su asistente devoto."],
+["burns","abe","Los Hellfish; rivales por Jacqueline Bouvier."],
+["burns","mona","Ella saboteó su laboratorio."],
+["burns","lennycarl","Sus empleados."],
+["flanders","edna","Se casaron."],
+["skinner","edna","Fueron pareja durante años."],
+["krusty","bob","Lo incriminó en el atraco."],
+["bob","bouvier","Se casó con Selma para matarla."],
+["troy","bouvier","Se casó con Selma por imagen."],
+["moe","barney","Su mejor cliente."],
+["wiggum","ralph","Padre e hijo."],
+["willie","skinner","Su jardinero."],
+["apu","moe","Comerciantes vecinos y solteros eternos."],
+["grimes","burns","Lo contrató la central."],
+["mascotas","bart","El perro de Bart, sobre todo."],
+["mascotas","lisa","La gata de Lisa."]
+]};
+
+/* ===== Datos de los juegos ===== */
+const TRIVIA=[
+{q:"¿En qué sector de la central trabaja Homer?",a:["7G","5B","3D","9F"],e:"Inspector de seguridad del sector 7G, un puesto que dice mucho de la seguridad.",go:"homer"},
+{q:"¿Quién disparó al señor Burns?",a:["Maggie","Smithers","Willie","Homer"],e:"Burns intentó quitarle la piruleta y la pistola se disparó.",go:"h-burns-disparo"},
+{q:"¿Cómo se llama el galgo de la familia en España?",a:["Ayudante de Santa Claus","Bola de Nieve","Bobo","Poochie"],e:"Llegó en el primer episodio, después de perder su última carrera.",go:"mascotas"},
+{q:"¿Qué instrumento toca Lisa?",a:["Saxofón barítono","Trompeta","Clarinete","Piano"],e:"Lo aprendió a querer gracias a Encías Sangrantes Murphy.",go:"lisa"},
+{q:"¿Qué cerveza bebe Homer?",a:["Duff","Fudd","Buzz Cola","Squishee"],e:"Fudd es la cerveza de Shelbyville; Buzz Cola, el refresco; el Squishee, el granizado del Badulaque.",go:"c-duff"},
+{q:"¿Cómo se llama el osito de peluche del señor Burns?",a:["Bobo","Rosebud","Blinky","Snowball"],e:"En «Rosebud» (T5) lo busca desesperado, y acaba en manos de Maggie.",go:"burns"},
+{q:"¿Cuántos ojos tiene Blinky?",a:["Tres","Dos","Cuatro","Cinco"],e:"El pez mutante de los vertidos de la central.",go:"c-blinky"},
+{q:"¿Quién sustituyó al jefe Wiggum en los Be Sharps?",a:["Barney","Moe","Flanders","Krusty"],e:"Homer, Apu, Skinner y Barney: el cuarteto que ganó un Grammy.",go:"barney"},
+{q:"¿A quién le vende Bart su alma?",a:["Milhouse","Nelson","Moe","Lisa"],e:"Por cinco dólares, escrita en un papel. Lisa la recuperó.",go:"m-alma"},
+{q:"¿Con quién se casa Selma en «A Fish Called Selma»?",a:["Troy McClure","Bob","Hans Topo","Abe Simpson"],e:"Una boda para lavar la imagen de Troy.",go:"troy"},
+{q:"¿Quién puso voz a la primera palabra de Maggie?",a:["Elizabeth Taylor","Meryl Streep","Glenn Close","Julie Kavner"],e:"Dijo «papi» al final de «Lisa's First Word».",go:"maggie"},
+{q:"¿Quién es la voz original de Bart?",a:["Nancy Cartwright","Yeardley Smith","Julie Kavner","Pamela Hayden"],e:"Fue a la audición para Lisa y se quedó con Bart.",go:"bart"},
+{q:"¿En qué año se emitió el primer episodio completo?",a:["1989","1987","1990","1991"],e:"El especial de Navidad del 17 de diciembre de 1989.",go:"mascotas"},
+{q:"¿Qué tienda atraca Bob disfrazado de Krusty?",a:["El Badulaque","Krusty Burger","La taberna de Moe","El banco"],e:"Así empezó su enemistad con Bart, en la primera temporada.",go:"h-bob"},
+{q:"¿Cómo se llama Bob en el doblaje latinoamericano?",a:["Bob Patiño","Bob Rastrillo","Beto Secundario","Roberto Payasín"],e:"En España es el Actor Secundario Bob.",go:"bob"},
+{q:"¿Cómo se llaman Rasca y Pica en Latinoamérica?",a:["Tommy y Daly","Tom y Jerry","Tito y Lalo","Pica y Rasca"],e:"El gato y el ratón más sangrientos de la tele.",go:"c-rascaypica"},
+{q:"¿Qué película parodia «Cape Feare»?",a:["El cabo del miedo","El resplandor","Psicosis","Tiburón"],e:"La versión de Scorsese de 1991, con rastrillos incluidos.",go:"c-rastrillos"},
+{q:"¿Qué es El Barto?",a:["La firma de grafiti de Bart","Un luchador mexicano","El bar de Barney","La mascota de Duff"],e:"Aparece pintado por todo Springfield.",go:"c-elbarto"},
+{q:"¿Quién es el jefe del director Skinner?",a:["El superintendente Chalmers","El señor Burns","El alcalde Quimby","El jefe Wiggum"],e:"Y el invitado a las famosas hamburguesas al vapor.",go:"skinner"},
+{q:"¿En qué número viven los Simpson?",a:["742","724","427","247"],e:"Evergreen Terrace en España, Avenida Siempre Viva en Latinoamérica.",go:"c-springfield"},
+{q:"¿Quién escribió «Marge vs. the Monorail»?",a:["Conan O'Brien","Matt Groening","Ricky Gervais","Seth MacFarlane"],e:"Antes de tener su propio programa de entrevistas.",go:"c-monorrail"},
+{q:"¿Qué grupo de rock aparece en «Flaming Moe's»?",a:["Aerosmith","U2","The Ramones","Red Hot Chili Peppers"],e:"Tocan en la taberna cuando el cóctel la pone de moda.",go:"moe"},
+{q:"¿En qué año se estrenó la película?",a:["2007","2005","2009","2003"],e:"El 27 de julio de 2007.",go:"c-badulaque"},
+{q:"¿Cómo se llama el cerdo de la película en España?",a:["Spider-Cerdo","Puerco Araña","Cerdomán","Súper Cerdo"],e:"En Latinoamérica es el Puerco Araña.",go:"homer"},
+{q:"¿Qué tapa el señor Burns en «Who Shot Mr. Burns?»?",a:["El sol","La luna","El río","La escuela"],e:"Con un disco gigante, para vender más electricidad.",go:"h-burns-disparo"},
+{q:"¿Cómo se llama el medio hermano de Homer?",a:["Herb","Cecil","Abe","Lenny"],e:"Herb Powell, fabricante de coches, arruinado por «el Homer».",go:"h-herb"},
+{q:"¿Quién pone voz a Mona Simpson?",a:["Glenn Close","Meryl Streep","Julie Kavner","Elizabeth Taylor"],e:"La madre fugitiva de Homer.",go:"mona"},
+{q:"¿Quiénes hacen de invitados en «Lisa the Vegetarian»?",a:["Paul y Linda McCartney","John Lennon y Yoko Ono","Elton John","Los Rolling Stones"],e:"Lisa deja la carne en ese episodio.",go:"lisa"},
+{q:"¿Qué actor es la voz de Bob?",a:["Kelsey Grammer","Kevin Spacey","Danny DeVito","Phil Hartman"],e:"Danny DeVito es Herb; Phil Hartman, Troy McClure.",go:"bob"},
+{q:"¿Cómo muere Frank Grimes?",a:["Electrocutado en la central","Atropellado","En un huracán","De un infarto en la taberna"],e:"Imitando a Homer. En el funeral, Homer se duerme.",go:"grimes"},
+{q:"¿Cómo se ríe Nelson?",a:["¡Ja, ja!","¡Je, je!","¡Jo, jo!","¡Ji, ji!"],e:"Siempre de la desgracia ajena.",go:"nelson"},
+{q:"¿Qué dice Burns juntando las yemas de los dedos?",a:["Excelente","Perfecto","Magnífico","Maravilloso"],e:"Su gesto y su palabra más famosos.",go:"burns"},
+{q:"¿Qué es Shelbyville?",a:["El pueblo rival","La capital del estado","Una marca de cerveza","El barrio de Moe"],e:"Al otro lado del río, todo es parecido pero al revés.",go:"c-shelbyville"},
+{q:"¿Qué le pasa a Homer en «Deep Space Homer»?",a:["Viaja al espacio","Se hace quitanieves","Canta en un cuarteto","Conduce un monorraíl"],e:"La NASA lo manda arriba para subir la audiencia.",go:"h-trabajos"},
+{q:"¿En qué cadena se emite la serie en Estados Unidos?",a:["Fox","NBC","CBS","ABC"],e:"Desde 1989. La produce 20th Television, que hoy es de Disney; por eso está en Disney+.",go:"c-estrellas"},
+{q:"¿Qué escribe Bart al principio de muchos episodios?",a:["Un castigo en la pizarra","Su firma en la pared","Una carta a Krusty","Un examen"],e:"Una frase distinta, repetida una y otra vez.",go:"c-pizarra"}
+];
+const FRASES=[
+{t:"D'oh!",id:"homer",es:"El gruñido más famoso de la tele."},
+{t:"Woo-hoo!",id:"homer",es:"Cuando algo sale bien, por una vez."},
+{t:"Why you little…!",id:"homer",es:"Justo antes de estrangular a Bart."},
+{t:"Ay, caramba!",id:"bart",es:"Igual en los dos doblajes."},
+{t:"Eat my shorts!",id:"bart",es:"En España: «¡Multiplícate por cero!»"},
+{t:"Don't have a cow, man!",id:"bart",es:"La camiseta más vendida de 1990."},
+{t:"Excellent…",id:"burns",es:"Con las yemas de los dedos juntas."},
+{t:"Release the hounds.",id:"burns",es:"Para recibir visitas."},
+{t:"Ha-ha!",id:"nelson",es:"En el peor momento posible."},
+{t:"Hi-diddly-ho, neighborino!",id:"flanders",es:"En España: «¡Hola, holita, vecinito!»"},
+{t:"Hi, I'm Troy McClure…",id:"troy",es:"«…quizá me recuerden de…»"},
+{t:"Worst. Episode. Ever.",id:"cbg",es:"La crítica más corta de la historia."},
+{t:"Hey-hey!",id:"krusty",es:"Para abrir su programa."},
+{t:"Everything's coming up Milhouse!",id:"milhouse",es:"Las pocas veces que le va bien."},
+{t:"I'm learnding!",id:"ralph",es:"Una palabra que no existe."},
+{t:"Steamed hams.",id:"skinner",es:"Aunque eran de Krusty Burger."},
+{t:"Bake him away, toys.",id:"wiggum",es:"Al revés, como todo lo que dice."},
+{t:"Hmmmm…",id:"marge",es:"El murmullo de desaprobación."},
+{t:"Thank you, come again!",id:"apu",es:"Al despedir a cada cliente del Badulaque."}
+];
+const QUIEN=[
+{id:"homer",p:["Trabajo en un sector con número y letra.","He sido astronauta y quitanieves.","Mi madre fue fugitiva desde 1969.","Me encantan las rosquillas y la Duff."]},
+{id:"marge",p:["Tengo dos hermanas gemelas.","Me opuse al monorraíl yo sola.","Hice campaña contra unos dibujos muy violentos.","Llevo el pelo azul en torre."]},
+{id:"bart",p:["Tengo diez años desde hace décadas.","Llamo a una taberna con nombres falsos.","Vendí mi alma por cinco dólares.","Escribo castigos en la pizarra."]},
+{id:"lisa",p:["Admiro a un músico de jazz que se llamaba Encías Sangrantes.","Dejé de comer carne por un cordero.","En un futuro fui presidenta.","Toco el saxofón barítono."]},
+{id:"maggie",p:["Mi primera palabra la dijo una estrella de Hollywood.","Me escapé de una guardería con los demás bebés.","Disparé a alguien muy poderoso.","Nunca suelto el chupete."]},
+{id:"burns",p:["Combatí con los Hellfish.","Busqué durante años un osito de peluche.","Tapé el sol una vez.","Soy el dueño de la central."]},
+{id:"flanders",p:["Tuve una tienda para zurdos.","Un huracán me destruyó la casa.","Tengo dos hijos, Rod y Todd.","Vivo al lado de los Simpson."]},
+{id:"moe",p:["Me operé la cara y salí en una telenovela.","Un cóctel robado me hizo rico un tiempo.","Contesto el teléfono a un niño bromista cada semana.","Tengo un bar."]},
+{id:"krusty",p:["Mi padre es rabino.","Me acusaron de un atraco que cometió mi ayudante.","Mi cara está en hamburguesas y cereales.","Soy payaso."]},
+{id:"bob",p:["Me casé con Selma.","Fui alcalde con trampas.","Pisé muchos rastrillos.","Quiero matar a Bart."]},
+{id:"milhouse",p:["Mis padres se divorciaron.","Me llamo así por un presidente.","Compré un alma por cinco dólares.","Soy el mejor amigo de Bart."]},
+{id:"skinner",p:["Estuve en Vietnam.","Vivo con mi madre.","Resulté llamarme Armin Tamzarian.","Dirijo la escuela."]},
+{id:"apu",p:["Tengo un doctorado.","Me casé en un matrimonio concertado.","Tengo octillizos.","Trabajo en el Badulaque."]},
+{id:"barney",p:["Hice una película que ganó el festival del pueblo.","Canté en los Be Sharps.","Fui rival de Homer como quitanieves.","Soy el mejor cliente de Moe."]},
+{id:"smithers",p:["Me fui de vacaciones y me sustituyó Homer.","Colecciono muñecas Stacy Malibú.","Me despidieron justo antes del disparo.","Soy el asistente del señor Burns."]},
+{id:"nelson",p:["Mi padre trabajaba en una feria.","Salí con Lisa.","Tengo un chaleco azul.","Me río de todos: ¡ja, ja!"]}
+];
+const PAREJAS=[["homer","donut","Homer y sus rosquillas"],["bart","skate","Bart y su monopatín"],["lisa","saxo","Lisa y su saxofón"],["maggie","chupete","Maggie y su chupete"],["burns","bobo","Burns y Bobo"],["moe","jarra","Moe y su cerveza"]];
+const PIZARRA=["BADULAQUE","RASCA Y PICA","CENTRAL NUCLEAR","ROSQUILLAS","SHELBYVILLE","MONORRAIL","KRUSTY BURGER","BOLA DE NIEVE","SPIDER CERDO","EL BARTO","KANG Y KODOS","HOMBRE RADIACTIVO","SQUISHEE","PLAN DENTAL","SECTOR SIETE G","CERVEZA DUFF","SIEMPRE VIVA"];
+const PISTA_PIZ={"BADULAQUE":"La tienda de Apu en España.","RASCA Y PICA":"Gato y ratón violentos.","CENTRAL NUCLEAR":"Donde trabaja Homer.","ROSQUILLAS":"Mmm…","SHELBYVILLE":"El pueblo rival.","MONORRAIL":"La gran estafa de Lyle Lanley.","KRUSTY BURGER":"Hamburguesas con cara de payaso.","BOLA DE NIEVE":"La gata de Lisa.","SPIDER CERDO":"La mascota de la película, en España.","EL BARTO":"Una firma en las paredes.","KANG Y KODOS":"Visitan cada Halloween.","HOMBRE RADIACTIVO":"El superhéroe de Bart.","SQUISHEE":"Granizado del Badulaque.","PLAN DENTAL":"«¡Lisa necesita frenos!»","SECTOR SIETE G":"El puesto de Homer.","CERVEZA DUFF":"La bebida de Springfield.","SIEMPRE VIVA":"La avenida de los Simpson en Latinoamérica."};
+
+const GRUPOS=[["todos","Todos"],["familia","La familia"],["vecinos","El pueblo"],["central","La central"],["escuela","La escuela"],["taberna","La taberna"],["tele","La tele"]];
+const GN=Object.fromEntries(GRUPOS);
+const TIPOS=[["todos","Todo"],["lugar","Lugares"],["tele","Tele"],["marca","Marcas"],["serie","Gags de la serie"],["historia","Episodios míticos"]];
+const TN=Object.fromEntries(TIPOS);
+const ESTADOS={abierto:"Sin resolver",debate:"Debate de fans",autora:"Lo aclararon los creadores",agujero:"Agujero del canon",resuelto:"Resuelto en la serie"};
+const ESTADO_LBL={abierto:"Lo que no sabemos",debate:"El debate",autora:"Lo que dijeron los creadores",agujero:"El agujero",resuelto:"La respuesta"};
+const tLabel=l=>/^T\d+$/.test(l)?"Temporada "+l.slice(1):l==="Peli"?"La película (2007)":"";
+const IDX={};
+PERSONAJES.forEach(p=>IDX[p.id]={tipo:"personaje",obj:p});
+HILOS.forEach(h=>IDX[h.id]={tipo:"hilo",obj:h});
+CONCEPTOS.forEach(c=>IDX[c.id]={tipo:"concepto",obj:c});
+MISTERIOS.forEach(m=>IDX[m.id]={tipo:"misterio",obj:m});
+function nombreDe(id){const e=IDX[id];if(!e)return id;const o=e.obj;return o.nombre||o.titulo||o.corto||o.pregunta}
+function pic(src,alt){return `<img src="img/${src}.jpg" alt="${alt||""}" loading="lazy">`}
+function badge(p){return `<svg viewBox="0 0 100 100" width="96" height="96" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#fed90f" stroke="#1d1b17" stroke-width="5"/><text x="50" y="${p.ini.length>2?60:64}" text-anchor="middle" font-family="Luckiest Guy, Arial Black, sans-serif" font-size="${p.ini.length>2?30:40}" fill="#1d1b17">${p.ini}</text></svg>`}
+function figura(o){if(o.spr)return spr(o.spr,96);if(o.img)return pic(o.img,o.nombre);return badge(o)}
+function chips(ids,skip){const s=new Set(skip||[]);return (ids||[]).filter(id=>IDX[id]&&!s.has(id)).map(id=>{const t=IDX[id].tipo;const ph=t==="hilo"||t==="misterio";return `<button type="button" class="${ph?"ph":""}" data-go="${id}">${t==="hilo"?"Historia: ":t==="misterio"?"Misterio: ":""}${nombreDe(id)}</button>`}).join("")}
+function lazosDe(id){return RED.lazos.filter(([a,b])=>a===id||b===id).map(([a,b,t])=>[a===id?b:a,t])}
+const $=s=>document.querySelector(s);
+
+/* hero: nubes de la intro y la familia */
+(function(){const n=$("#nubes");if(n){let h="";for(let i=0;i<7;i++){const top=6+Math.random()*70,dur=50+Math.random()*60,del=-Math.random()*dur,sz=90+Math.random()*120;h+=`<span class="nube" style="top:${top}%;animation-duration:${dur}s;animation-delay:${del}s">${spr("nube",sz)}</span>`}n.innerHTML=h}
+const f=$("#familia");if(f)f.innerHTML=["homer","marge","bart","lisa","maggie"].map(s=>spr(s,s==="marge"?110:s==="maggie"?60:s==="homer"?100:84)).join("")+`<span>${spr("perro",64)}</span>`;
+const b=$("#brand");if(b)b.insertAdjacentHTML("afterbegin",spr("donut",34));
+const hero=$(".hero");if(hero){[[8,14],[86,22],[64,70]].forEach(([x,y],i)=>hero.insertAdjacentHTML("beforeend",`<span class="rosquilla" style="left:${x}%;top:${y}%;animation-delay:${-i*1.3}s" aria-hidden="true">${spr("donut",i===1?56:40)}</span>`))}})();
+
+/* cartas */
+$("#grid-personajes").innerHTML=PERSONAJES.map(p=>`<article class="card" tabindex="0" role="button" data-id="${p.id}" data-grupos="${p.grupos.join(" ")}" style="--col:${p.col}">
+<figure>${figura(p)}</figure><div class="body"><h3>${p.nombre}</h3><p class="alias">${p.alias}</p><p class="hook">${p.hook}</p><div class="tags">${p.grupos.map(g=>`<span class="tag">${GN[g]}</span>`).join("")}</div></div></article>`).join("");
+const TCOL={lugar:"#9fd3ef",tele:"#f58bc0",marca:"#f05a24",serie:"#fed90f",historia:"#7bc043"};
+$("#grid-conceptos").innerHTML=CONCEPTOS.map(c=>`<article class="card" tabindex="0" role="button" data-id="${c.id}" data-tipo="${c.tipo}" style="--col:${TCOL[c.tipo]}">
+<figure>${c.img?pic(c.img,c.nombre):c.spr?spr(c.spr,96):badge({ini:(w=>w.charAt(0).toUpperCase()+w.charAt(1))(c.nombre.replace(/^(El|La|Los|Las) /,""))})}</figure><div class="body"><h3>${c.nombre}</h3><p class="hook">${c.def}</p><div class="tags"><span class="tag">${TN[c.tipo]}</span></div></div></article>`).join("");
+$("#lista-hilos").innerHTML=HILOS.map(h=>`<article class="hilo" id="${h.id}"><p class="eyebrow">Historia</p><h3>${h.titulo}</h3><p class="resumen">${h.resumen}</p>
+<details><summary>Seguir la historia · ${h.pasos.length} pasos</summary><ol class="cadena">${h.pasos.map(([l,t])=>`<li>${t}<span class="lb" title="${tLabel(l)}">${l}</span></li>`).join("")}</ol></details><div class="rel">${chips(h.rel)}</div></article>`).join("");
+$("#lista-misterios").innerHTML=MISTERIOS.map(m=>`<article class="mist" id="${m.id}" data-e="${m.estado}"><span class="estado">${ESTADOS[m.estado]}</span><h3>${m.pregunta}</h3><p class="sab">${m.sabemos}</p>
+<details><summary>${ESTADO_LBL[m.estado]}</summary><p>${m.abierto}</p></details><div class="rel">${chips(m.rel)}</div></article>`).join("");
+$("#tl-mundo").innerHTML=CRONO.mundo.map(e=>`<li class="${e.big?"big":""}"><span class="y">${e.y}</span><span class="t">${e.t}</span></li>`).join("");
+$("#tl-real").innerHTML=CRONO.real.map(e=>`<li class="${e.big?"big":""}"><span class="y">${e.y}</span><span class="t">${e.t}</span></li>`).join("");
+function credito(slug){const c=CREDITOS[slug];if(!c)return"";const a=c.artist?c.artist.replace(/\s*\(.*?\)\s*/g,"").slice(0,48):"";return `Foto: ${a||"autor desconocido"} · ${c.license}`}
+$("#galeria").innerHTML=LUGARES.map(l=>`<figure><img src="img/${l.img}.jpg" alt="${l.t}" loading="lazy"><figcaption><b>${l.t}</b>${l.d}<i>${l.k} · ${credito(l.img)}</i></figcaption></figure>`).join("");
+$("#glos tbody").innerHTML=GLOSARIO.map(([en,es,la,d])=>`<tr><td lang="en">${en}</td><td class="es">${es}</td><td class="la">${la}</td><td>${d}</td></tr>`).join("");
+const TIT=Object.fromEntries(LUGARES.map(l=>[l.img,l.t]));
+$("#creditos-lista").innerHTML=Object.entries(CREDITOS).map(([slug,c])=>`<li><b>${TIT[slug]||slug}</b> — ${c.artist||"autor desconocido"}, <a href="${c.license_url||c.page}" target="_blank" rel="noopener">${c.license}</a> · <a href="${c.page}" target="_blank" rel="noopener">Wikimedia Commons</a></li>`).join("");
+
+/* filtros y búsqueda */
+const state={personajes:"todos",conceptos:"todos",misterios:"todos",q:""};
+function chipbar(el,list,key){el.innerHTML=list.map(([v,l])=>`<button type="button" class="chip ${v==="todos"?"on":""}" data-v="${v}">${l}</button>`).join("");el.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;state[key]=b.dataset.v;el.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c===b));applyAll()})}
+chipbar($("#chips-personajes"),GRUPOS,"personajes");chipbar($("#chips-conceptos"),TIPOS,"conceptos");chipbar($("#chips-misterios"),[["todos","Todos"],...Object.entries(ESTADOS)],"misterios");
+const norm=s=>(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const FILTRABLES=[...document.querySelectorAll("#grid-personajes .card,#grid-conceptos .card,#lista-hilos .hilo,#lista-misterios .mist,#glos tbody tr,#galeria figure")];
+FILTRABLES.forEach(el=>el.dataset.txt=norm(el.textContent));
+["grid-personajes","grid-conceptos","lista-hilos","lista-misterios","galeria"].forEach(id=>{const p=document.createElement("p");p.className="vacio";p.hidden=true;p.textContent="Nada por aquí. ¡D'oh!";document.getElementById(id).insertAdjacentElement("afterend",p)});
+function applyAll(){const q=norm(state.q.trim());let n=0;FILTRABLES.forEach(el=>{let ok=true;if(el.dataset.grupos!==undefined&&state.personajes!=="todos")ok=el.dataset.grupos.split(" ").includes(state.personajes);if(el.dataset.tipo!==undefined&&state.conceptos!=="todos")ok=el.dataset.tipo===state.conceptos;if(el.dataset.e!==undefined&&state.misterios!=="todos")ok=el.dataset.e===state.misterios;if(ok&&q)ok=el.dataset.txt.includes(q);el.hidden=!ok;if(ok&&q)n++});
+document.querySelectorAll(".vacio").forEach(p=>{const c=p.previousElementSibling;p.hidden=[...c.children].some(ch=>!ch.hidden)});
+const st=$("#sstat");if(q){st.hidden=false;st.innerHTML=`<b>${n}</b> ${n===1?"resultado":"resultados"} para «${state.q.trim()}».`}else st.hidden=true;$("#q-clear").hidden=!q}
+$("#q").addEventListener("input",e=>{state.q=e.target.value;applyAll()});
+$("#buscador").addEventListener("submit",e=>{e.preventDefault();const first=FILTRABLES.find(el=>!el.hidden&&state.q.trim());if(first)first.scrollIntoView({behavior:"smooth",block:"center"})});
+$("#q-clear").addEventListener("click",()=>{$("#q").value="";state.q="";applyAll();$("#q").focus()});
+
+/* ficha */
+const dlg=$("#ficha"),banner=$("#ficha-banner"),main=$("#ficha-main"),aside=$("#ficha-aside"),back=$("#ficha-back");let stack=[];
+function lazosHTML(id){const l=lazosDe(id);return l.length?`<div><h4>Se cruza con</h4><ul class="lazos">${l.map(([o,t])=>`<li><b data-go="${o}">${nombreDe(o)}</b> · ${t}</li>`).join("")}</ul></div>`:""}
+function setBanner(o,col){banner.style.setProperty("--col",col);banner.querySelectorAll(":scope > :not(.ficha-bar)").forEach(n=>n.remove());banner.insertAdjacentHTML("afterbegin",o.img&&!o.spr?`<img class="foto" src="img/${o.img}.jpg" alt="">`:`<div class="suelo"></div>${o.spr?spr(o.spr,160):badge(o.ini?o:{ini:(o.nombre||"?").slice(0,2)})}`)}
+function renderPersonaje(p){setBanner(p,p.col);
+main.innerHTML=`<p class="eyebrow">Personaje · ${p.grupos.map(g=>GN[g]).join(" · ")}</p><h2 id="ficha-titulo">${p.nombre}</h2><p class="alias">${p.alias}</p><div><h4>Quién es</h4><p>${p.quien}</p></div><div><h4>Sus episodios clave</h4><ol class="libro">${p.hilo.map(([l,t])=>`<li><b title="${tLabel(l)}">${l}</b><span>${t}</span></li>`).join("")}</ol></div><div class="dato"><h4>Dato de fan</h4>${p.dato}</div>`;
+const lz=lazosDe(p.id).map(x=>x[0]);aside.innerHTML=`<div class="caja"><h4>Ficha</h4><dl class="kv">${(p.kv||[]).map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl></div>${lazosHTML(p.id)}<div><h4>Ver también</h4><div class="rel">${chips(p.rel,lz)}</div></div>`}
+function renderConcepto(c){setBanner(c,TCOL[c.tipo]);main.innerHTML=`<p class="eyebrow">Springfield · ${TN[c.tipo]}</p><h2 id="ficha-titulo">${c.nombre}</h2><p class="alias">${c.def}</p>${c.mas.map(t=>`<p>${t}</p>`).join("")}`;aside.innerHTML=`<div><h4>Aparece en</h4><div class="rel">${chips(c.rel)}</div></div>`}
+function openEntry(id,push=true){const e=IDX[id];if(!e)return;if(e.tipo==="personaje")renderPersonaje(e.obj);else if(e.tipo==="concepto")renderConcepto(e.obj);else{go(id);return}if(push)stack.push(id);back.hidden=stack.length<2;if(!dlg.open)dlg.showModal();dlg.querySelector(".ficha-in").scrollTop=0}
+function closeDlg(){if(dlg.open)dlg.close();stack=[]}
+$("#ficha-close").addEventListener("click",closeDlg);
+back.addEventListener("click",()=>{stack.pop();const prev=stack[stack.length-1];if(prev)openEntry(prev,false);else closeDlg()});
+dlg.addEventListener("click",e=>{if(e.target===dlg)closeDlg()});dlg.addEventListener("close",()=>{stack=[]});
+function go(id){const e=IDX[id];if(e&&(e.tipo==="personaje"||e.tipo==="concepto")){openEntry(id);return}closeDlg();const dj=document.getElementById("juego");if(dj&&dj.open)dj.close();const el=document.getElementById(id);if(!el)return;const d=el.querySelector("details");if(d)d.open=true;el.hidden=false;el.scrollIntoView({behavior:"smooth",block:"center"});el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash")}
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){e.preventDefault();go(g.dataset.go);return}const c=e.target.closest(".card");if(c)openEntry(c.dataset.id)});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("card")){e.preventDefault();openEntry(e.target.dataset.id)}});
+document.querySelectorAll("[data-random]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const pool=[...PERSONAJES,...CONCEPTOS];openEntry(pool[Math.random()*pool.length|0].id)}));
+function fromHash(){const id=decodeURIComponent(location.hash.slice(1));if(!id)return;if(IDX[id])go(id);else{const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:"smooth"})}}
+addEventListener("hashchange",fromHash);setTimeout(fromHash,150);
+
+/* red de lazos */
+(function(){const svg=$("#red"),panel=$("#red-panel");
+const inner=["marge","bart","lisa","maggie","abe","flanders","burns","moe"];
+const outer=["bouvier","mona","grimes","smithers","lennycarl","barney","apu","wiggum","ralph","willie","skinner","edna","nelson","milhouse","bob","krusty","troy","mascotas"];
+const pos={homer:[0,0]};inner.forEach((id,i)=>{const a=-Math.PI/2+i*2*Math.PI/inner.length;pos[id]=[Math.cos(a)*145,Math.sin(a)*140]});outer.forEach((id,i)=>{const a=-Math.PI/2+(i+.5)*2*Math.PI/outer.length;pos[id]=[Math.cos(a)*288,Math.sin(a)*262]});
+let s="";RED.lazos.forEach(([a,b])=>{if(!pos[a]||!pos[b])return;s+=`<line class="lazo" data-a="${a}" data-b="${b}" x1="${pos[a][0].toFixed(1)}" y1="${pos[a][1].toFixed(1)}" x2="${pos[b][0].toFixed(1)}" y2="${pos[b][1].toFixed(1)}"></line>`});
+Object.keys(pos).forEach(id=>{const p=IDX[id].obj,[x,y]=pos[id],r=id==="homer"?30:inner.includes(id)?24:20;s+=`<g class="nodo" data-id="${id}" transform="translate(${x.toFixed(1)},${y.toFixed(1)})" tabindex="0" role="button" aria-label="${p.nombre}"><circle r="${r}" fill="${p.col}"></circle><circle r="${r-6}" fill="#fed90f" stroke="none"></circle><text class="ini" dy="5">${p.ini}</text><text dy="${r+15}">${p.corto}</text></g>`});
+svg.innerHTML=s;const nodes=[...svg.querySelectorAll(".nodo")],edges=[...svg.querySelectorAll(".lazo")];
+function reset(){svg.classList.remove("sel");nodes.forEach(n=>n.classList.remove("on"));edges.forEach(l=>l.classList.remove("on"));panel.innerHTML=`<h3>¿Quién conoce a quién?</h3><p class="pista">Toca un nombre para iluminar sus lazos. Homer está en el centro, porque en Springfield todo acaba pasando por él.</p>${spr("sofa",120)}`}
+function sel(id){const p=IDX[id].obj,l=lazosDe(id);svg.classList.add("sel");edges.forEach(e=>e.classList.toggle("on",e.dataset.a===id||e.dataset.b===id));const v=new Set(l.map(x=>x[0]));nodes.forEach(n=>n.classList.toggle("on",n.dataset.id===id||v.has(n.dataset.id)));
+panel.innerHTML=`<p class="eyebrow">${l.length} lazos</p><h3>${p.nombre}</h3><p class="pista">${p.alias}</p><ul class="lazos">${l.map(([o,t])=>`<li><b data-go="${o}">${nombreDe(o)}</b> · ${t}</li>`).join("")}</ul><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn" data-go="${id}">Abrir su carta</button><button type="button" class="btn ghost" id="red-reset">Quitar selección</button></div>`}
+svg.addEventListener("click",e=>{const n=e.target.closest(".nodo");if(n)sel(n.dataset.id)});
+svg.addEventListener("keydown",e=>{const n=e.target.closest(".nodo");if(n&&(e.key==="Enter"||e.key===" ")){e.preventDefault();sel(n.dataset.id)}});
+panel.addEventListener("click",e=>{if(e.target.id==="red-reset")reset()});reset()})();
+
+/* nav activa */
+(function(){const links=[...document.querySelectorAll(".nav a")],secs=links.map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);let t;function upd(){const y=scrollY+130;let cur=null;secs.forEach(s=>{if(s.offsetTop<=y)cur=s});links.forEach(a=>a.classList.toggle("on",!!cur&&a.getAttribute("href")==="#"+cur.id))}addEventListener("scroll",()=>{clearTimeout(t);t=setTimeout(upd,60)},{passive:true});upd()})();
+
+/* ===== Sala de juegos: seis rincones de Springfield ===== */
+const JUEGOS=[
+{id:"moe",titulo:"Concurso en la taberna de Moe",lbl:"Taberna de Moe",esc:()=>`${spr("jarra",56)}${spr("telefono",44)}${spr("duff",44)}`,desc:"Diez preguntas en la barra. Cada acierto llena la jarra; cada fallo, suena el teléfono.",best:s=>s.moe?"Récord: "+s.moe+" jarras":""},
+{id:"pizarra",titulo:"La pizarra de Bart",lbl:"Aula de Edna",esc:()=>`<span style="font-family:var(--font-chalk);color:#fff;font-size:1.1rem;line-height:1.1;text-align:left">No debo fallar letras<br>No debo fallar letras</span>${spr("tiza",48)}`,desc:"Adivina la palabra de Springfield letra a letra. Cada fallo, una línea de castigo.",best:s=>s.pizarra?"Palabras: "+s.pizarra:""},
+{id:"central",titulo:"Sala de control 7G",lbl:"Central nuclear",esc:()=>`${spr("torre",64)}${spr("barra",48)}${spr("donut",40)}`,desc:"Ordena la historia real de la serie antes de que salte la alarma del reactor.",best:s=>s.central?"Mejor turno: "+s.central+" de 5":""},
+{id:"sofa",titulo:"Parejas en el sofá",lbl:"El salón",esc:()=>`${spr("sofa",96)}`,desc:"Cada Simpson con su objeto. Al terminar, la familia corre al sofá.",best:s=>s.sofa?"Mejor: "+s.sofa+" intentos":""},
+{id:"tele",titulo:"¿Quién lo dijo?",lbl:"Canal 6",esc:()=>`${spr("tele",80)}`,desc:"Una frase famosa sale por la tele. ¿De quién es? Diez canales, diez frases.",best:s=>s.tele?"Récord: "+s.tele+" de 10":""},
+{id:"badulaque",titulo:"¿Quién soy? en el Badulaque",lbl:"Badulaque",esc:()=>`${spr("caja",56)}${spr("squishee",48)}${spr("donut",36)}`,desc:"Las pistas salen en el tique de la caja. Cuantas menos necesites, más cobras.",best:s=>s.badulaque?"Récord: "+s.badulaque+" $":""}
+];
+const JUEGOS_KEY="siempreviva-juegos";
+function loadSaves(){try{return JSON.parse(localStorage.getItem(JUEGOS_KEY)||"{}")||{}}catch(e){return {}}}
+function save(k,v){try{const s=loadSaves();s[k]=v;localStorage.setItem(JUEGOS_KEY,JSON.stringify(s))}catch(e){}}
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const sample=(a,n)=>shuffle(a).slice(0,n);
+const dlgJ=$("#juego"),stage=$("#j-stage"),jscore=$("#j-score"),jtitulo=$("#j-titulo");
+let juegoActual=null,cleanupJ=null;
+function renderJuegos(){const s=loadSaves();$("#grid-juegos").innerHTML=JUEGOS.map(j=>`<article class="jcard" tabindex="0" role="button" data-juego="${j.id}"><div class="esc"><span class="lbl">${j.lbl}</span>${j.esc()}</div><h3>${j.titulo}</h3><p>${j.desc}</p>${j.best(s)?`<span class="best">${j.best(s)}</span>`:""}</article>`).join("")}
+const setScore=t=>{jscore.textContent=t||""};
+function pantalla(html){stage.innerHTML=html;dlgJ.querySelector(".j-in").scrollTop=0}
+const btnFin=()=>`<button type="button" class="btn ghost" data-jclose>Volver a la sala</button>`;
+const perroCorre=()=>`<span class="corre" aria-hidden="true">${spr("perro",48)}</span>`;
+function nombreCorto(id){const p=IDX[id]&&IDX[id].obj;return p?p.nombre:id}
+function cara(id,size){const p=IDX[id]&&IDX[id].obj;if(!p)return"";return p.spr?spr(p.spr,size||32):`<svg viewBox="0 0 100 100" width="${size||32}" height="${size||32}" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#fed90f" stroke="#1d1b17" stroke-width="6"/><text x="50" y="62" text-anchor="middle" font-family="Luckiest Guy, Arial Black, sans-serif" font-size="${p.ini.length>2?28:36}" fill="#1d1b17">${p.ini}</text></svg>`}
+function portada(id){const j=JUEGOS.find(x=>x.id===id),g=G[id];pantalla(`<div class="portada">${g.intro.arte()}<span class="lugar">${g.intro.lugar}</span><h3>${j.titulo}</h3><p>${g.intro.texto}</p><div class="j-actions"><button type="button" class="btn" data-jstart>${g.intro.boton}</button>${btnFin()}</div></div>`);stage.querySelector("[data-jstart]").addEventListener("click",()=>g.run())}
+function abrirJuego(id,directo){const j=JUEGOS.find(x=>x.id===id);if(!j)return;if(cleanupJ){cleanupJ();cleanupJ=null}juegoActual=id;jtitulo.textContent=j.titulo;dlgJ.dataset.skin=id;dlgJ.classList.remove("alarma");setScore("");if(directo)G[id].run();else portada(id);if(!dlgJ.open)dlgJ.showModal()}
+function cerrarJuego(){if(cleanupJ){cleanupJ();cleanupJ=null}if(dlgJ.open)dlgJ.close();renderJuegos()}
+$("#j-close").addEventListener("click",cerrarJuego);
+dlgJ.addEventListener("click",e=>{if(e.target===dlgJ){cerrarJuego();return}if(e.target.closest("[data-jclose]")){cerrarJuego();return}if(e.target.closest("[data-jagain]"))abrirJuego(juegoActual,true)});
+dlgJ.addEventListener("close",()=>{if(cleanupJ){cleanupJ();cleanupJ=null}renderJuegos()});
+document.addEventListener("click",e=>{const c=e.target.closest(".jcard");if(c)abrirJuego(c.dataset.juego)});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("jcard")){e.preventDefault();abrirJuego(e.target.dataset.juego)}});
+const G={};
+
+/* 1 · Taberna de Moe */
+G.moe={intro:{arte:()=>`<div class="neon">MOE'S<small>DUFF · ABIERTO</small></div><div class="escena">${spr("jarra",72)}${spr("duff",56)}${spr("telefono",56)}</div>`,lugar:"Taberna de Moe · noche de concurso",texto:"Moe ha montado un concurso para atraer clientes. Diez preguntas: cada acierto te llena la jarra. Si fallas, suena el teléfono, y ya sabes quién llama.",boton:"Sentarse en la barra"},
+run(){const qs=sample(TRIVIA,10);let i=0,jarras=0;
+const barra=(sonar,msg)=>`<div class="barra-moe"><div class="escena">${Array.from({length:10},(_,k)=>`<span class="jarra-wrap" style="width:28px;height:28px">${spr("jarra",28,k<jarras?"":"vacia")}</span>`).join("")}</div><div class="escena">${msg?`<span class="bocadillo">${msg}</span>`:""}<span class="telefono ${sonar?"suena":""}">${spr("telefono",44)}</span></div></div>`;
+function paso(){if(i>=qs.length){fin();return}const q=qs[i];const opts=shuffle(q.a.map((t,k)=>[t,k===0]));setScore(`Ronda ${i+1} de 10 · ${jarras} jarras`);
+pantalla(`<div class="neon">MOE'S<small>PREGUNTA ${i+1}</small></div>${barra(false,"")}<h3 class="j-q">${q.q}</h3><div class="j-opts">${opts.map(([t,ok])=>`<button type="button" class="j-opt" data-ok="${ok?1:0}">${t}</button>`).join("")}</div><div id="j-exp"></div>`);
+stage.querySelectorAll(".j-opt").forEach(b=>b.addEventListener("click",()=>{const ok=b.dataset.ok==="1";stage.querySelectorAll(".j-opt").forEach(x=>{x.disabled=true;if(x.dataset.ok==="1")x.classList.add("ok")});if(ok)jarras++;else b.classList.add("bad");
+stage.querySelector(".barra-moe").outerHTML=barra(!ok,ok?"¡Otra ronda!":"Taberna de Moe… ¡Bart!");setScore(`Ronda ${i+1} de 10 · ${jarras} jarras`);
+$("#j-exp").outerHTML=`<div class="j-exp"><p><b>${ok?"¡Woo-hoo!":"¡D'oh!"}</b> ${q.e}</p><div class="j-actions">${q.go&&IDX[q.go]?`<button type="button" class="btn ghost" data-go="${q.go}">Ver en la wiki</button>`:""}<button type="button" class="btn" data-next>${i<qs.length-1?"Siguiente ronda":"Pedir la cuenta"}</button></div></div>`;stage.querySelector("[data-next]").addEventListener("click",()=>{i++;paso()})}))}
+function fin(){const s=loadSaves();if(jarras>(s.moe||0))save("moe",jarras);setScore("Cierre");pantalla(`<div class="neon">MOE'S<small>CERRADO</small></div><div class="resultado"><div class="escena"><span class="jarra-wrap" style="width:96px;height:96px">${spr("jarra",96,jarras?"":"vacia")}</span></div><div class="big">${jarras} de 10</div><p class="bocadillo" style="max-width:none">${jarras>=9?"Moe te invita a la próxima. Eso no había pasado nunca.":jarras>=6?"Barney te pide la revancha.":jarras>=3?"Moe dice que vuelvas cuando hayas visto más temporadas.":"Moe te echa a la calle. Con cariño."}</p><div class="j-actions"><button type="button" class="btn" data-jagain>Otra ronda</button>${btnFin()}</div></div>${perroCorre()}`)}
+paso()}};
+
+/* 2 · La pizarra de Bart */
+G.pizarra={intro:{arte:()=>`<p class="tiza-t" style="font-size:1.3rem">No debo copiar en el examen<br>No debo copiar en el examen</p>${spr("tiza",56)}`,lugar:"Aula de la señora Krabappel · después de clase",texto:"Bart está castigado otra vez. En la pizarra hay una palabra de Springfield escondida. Cada letra que falles, Bart escribe otra línea de castigo; a la séptima, llega Skinner.",boton:"Coger la tiza"},
+run(){const w=PIZARRA[Math.random()*PIZARRA.length|0];const letras=new Set();let fallos=0,guardado=false;const MAX=7;
+function draw(){const vis=[...w].map(c=>c===" "?" ":letras.has(c)?c:"_").join("");const gana=!vis.includes("_"),pierde=fallos>=MAX;if(gana&&!guardado){guardado=true;const s=loadSaves();save("pizarra",(s.pizarra||0)+1)}setScore(`${fallos} de ${MAX} líneas`);
+pantalla(`<p class="tiza-t">Pista: ${PISTA_PIZ[w]}</p><div class="palabra" aria-label="${vis}">${vis.split(" ").map(x=>`<span>${[...x].map(c=>`<b>${c==="_"?"&nbsp;":c}</b>`).join("")}</span>`).join("")}</div><div class="castigo">${Array.from({length:fallos},()=>`<span>No debo fallar letras en la pizarra</span>`).join("")}</div>${gana||pierde?`<div class="j-exp"><p><b>${gana?"¡Ay, caramba! La has sacado.":"Llega Skinner: ¡castigado! Era «"+w+"»."}</b></p><div class="j-actions"><button type="button" class="btn" data-jagain>Otra palabra</button><a class="btn ghost" href="#glosario" data-jclose>Ver el diccionario</a>${btnFin()}</div></div>${gana?perroCorre():""}`:`<div class="teclas">${"ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".split("").map(l=>`<button type="button" class="tecla" data-l="${l}" ${letras.has(l)?"disabled":""}>${l}</button>`).join("")}</div>`}`);
+stage.querySelectorAll(".tecla").forEach(b=>b.addEventListener("click",()=>{const l=b.dataset.l;letras.add(l);if(!w.includes(l))fallos++;draw()}))}
+draw()}};
+
+/* 3 · Sala de control 7G */
+G.central={intro:{arte:()=>`<div class="escena">${spr("torre",80)}${spr("radiacion",56)}${spr("torre",80)}</div>`,lugar:"Central nuclear de Springfield · sector 7G",texto:"Homer se ha dormido sobre la consola y los registros de la historia de la serie se han desordenado. Ponlos en orden: cada acierto enciende una barra de combustible. Si fallas mucho, salta la alarma.",boton:"Sentarse en la consola"},
+run(){const idx=sample(CRONO.real.map((e,i)=>i),5).sort((a,b)=>a-b);const items=idx.map(i=>({t:CRONO.real[i].t,y:CRONO.real[i].y}));const mez=shuffle(items.map((it,k)=>({...it,k})));let pick=[];setScore("Turno de noche");
+const consola=(n,estado)=>`<div class="consola"><div class="luces">${Array.from({length:8},(_,k)=>`<i class="${estado==="rojo"?"rojo":k<n?"on":k===n?"amb":""}"></i>`).join("")}</div><span class="pantalla-c">${estado==="rojo"?"¡ALERTA! FUSIÓN":estado==="ok"?"SECTOR 7G SEGURO":"REGISTRO "+n+"/5"}</span><div class="barras-c">${Array.from({length:5},(_,k)=>spr("barra",34,k<n?"on":"")).join("")}</div></div>`;
+function draw(){pantalla(`${consola(pick.length,"")}<p class="j-n">Toca los sucesos del más antiguo al más reciente.</p><div class="orden"><div class="orden-pool">${mez.map(it=>`<button type="button" class="j-opt sm" data-k="${it.k}" ${pick.includes(it.k)?"disabled":""}>${it.t}</button>`).join("")}</div><ol class="orden-list">${pick.map(k=>`<li>${items[k].t}</li>`).join("")}${pick.length<5?`<li class="hueco">&gt; esperando registro ${pick.length+1}…</li>`:""}</ol></div><div class="j-actions mesa"><button type="button" class="btn ghost" data-undo ${pick.length?"":"disabled"}>Deshacer</button><button type="button" class="btn" data-check ${pick.length===5?"":"disabled"}>Enviar al reactor</button><span style="margin-left:auto">${spr("donut",44)}</span></div>`);
+stage.querySelectorAll(".orden-pool .j-opt").forEach(b=>b.addEventListener("click",()=>{pick.push(+b.dataset.k);draw()}));
+stage.querySelector("[data-undo]").addEventListener("click",()=>{pick.pop();draw()});
+stage.querySelector("[data-check]").addEventListener("click",()=>{const ok=pick.filter((k,i)=>k===i).length;const s=loadSaves();if(ok>(s.central||0))save("central",ok);const mal=ok<3;if(mal)dlgJ.classList.add("alarma");setScore(mal?"¡Alarma!":"Turno terminado");
+pantalla(`${consola(ok,mal?"rojo":ok===5?"ok":"")}<h3 class="j-q">${ok===5?"Reactor estable. Homer sigue durmiendo.":mal?"¡Fusión del núcleo! Burns no estará contento.":"Casi. Smithers lo apunta en tu expediente."} ${ok} de 5</h3><ol class="orden-list res">${items.map((it,i)=>`<li class="${pick[i]===i?"ok":"bad"}"><span class="y">${it.y}</span>${it.t}${pick[i]!==i?`<small>Pusiste: ${items[pick[i]].t}</small>`:""}</li>`).join("")}</ol><div class="j-actions"><button type="button" class="btn" data-jagain>Otro turno</button><a class="btn ghost" href="#linea" data-jclose>Ver la cronología</a>${btnFin()}</div>`)})}
+draw()}};
+
+/* 4 · Parejas en el sofá */
+G.sofa={intro:{arte:()=>`${spr("barco",96)}<div class="escena">${spr("gato",48)}${spr("sofa",130)}${spr("perro",56)}</div>`,lugar:"El salón del 742 · antes de la intro",texto:"Doce cartas boca abajo en el salón: seis Simpson y sus objetos favoritos. Empareja cada uno en el menor número de intentos y la familia correrá al sofá.",boton:"Abrir las cartas"},
+run(){const pares=PAREJAS;const cards=shuffle(pares.flatMap((p,i)=>[{i,s:p[0],k:"m"},{i,s:p[1],k:"p"}]));let open=[],found=new Set(),moves=0,lock=false,t1=null;cleanupJ=()=>clearTimeout(t1);
+function draw(){setScore(`${moves} intentos · ${found.size} de ${pares.length}`);pantalla(`<div class="salon-top">${spr("barco",80)}</div><div class="mem">${cards.map((c,x)=>`<button type="button" class="mem-card ${found.has(c.i)||open.includes(x)?"up":""} ${c.k}" data-x="${x}" data-s="${c.s}" ${found.has(c.i)?"disabled":""} aria-label="Carta ${x+1}"><span class="back">${spr("donut",40)}</span><span class="face">${c.k==="m"?cara(c.s,72):spr(c.s,72)}</span></button>`).join("")}</div><div class="sofa-fila">${spr("sofa",150)}</div>`);
+stage.querySelectorAll(".mem-card").forEach(b=>b.addEventListener("click",()=>{if(lock)return;const x=+b.dataset.x;if(open.includes(x)||found.has(cards[x].i))return;open.push(x);b.classList.add("up");if(open.length===2){moves++;setScore(`${moves} intentos · ${found.size} de ${pares.length}`);const [a,c]=open.map(i=>cards[i]);if(a.i===c.i&&a.k!==c.k){found.add(a.i);open.forEach(i=>stage.querySelector(`.mem-card[data-x="${i}"]`).disabled=true);open=[];if(found.size===pares.length)t1=setTimeout(fin,600)}else{lock=true;t1=setTimeout(()=>{open=[];lock=false;draw()},850)}}}))}
+function fin(){const s=loadSaves();if(!s.sofa||moves<s.sofa)save("sofa",moves);setScore(`${moves} intentos`);
+pantalla(`<div class="salon-top">${spr("barco",80)}</div><div class="resultado"><div class="big">¡Al sofá!</div><p>${moves} intentos. ${moves<=8?"Memoria de Lisa.":moves<=12?"Como Marge: con paciencia, todo encaja.":"Como Homer: al final, llegaste."}</p></div><div class="sofa-fila"><div class="gente">${["homer","marge","bart","lisa","maggie"].map((s,k)=>`<span style="animation-delay:${k*.12}s">${spr(s,s==="marge"?64:s==="maggie"?34:48)}</span>`).join("")}</div>${spr("sofa",190)}</div><ul class="j-exp" style="list-style:none;margin:0">${pares.map(p=>`<li>${p[2]}</li>`).join("")}</ul><div class="j-actions" style="justify-content:center"><button type="button" class="btn" data-jagain>Otra partida</button><button type="button" class="btn ghost" data-go="c-sofa">El gag del sofá</button>${btnFin()}</div>${perroCorre()}`)}
+draw()}};
+
+/* 5 · ¿Quién lo dijo? */
+G.tele={intro:{arte:()=>`${spr("tele",120)}`,lugar:"El salón · Canal 6",texto:"Homer no suelta el mando. Cada vez que cambia de canal sale una frase famosa de la serie, en su idioma original. Adivina quién la dice.",boton:"Encender la tele"},
+run(){const fr=sample(FRASES,10);let i=0,ok=0;const todos=[...new Set(FRASES.map(f=>f.id))];
+function paso(){if(i>=fr.length){fin();return}const f=fr[i];const opts=shuffle([f.id,...sample(todos.filter(x=>x!==f.id),3)]);setScore(`Canal ${i+1} de 10 · ${ok} aciertos`);
+pantalla(`<div class="tv"><div class="tv-screen ruido" id="tv"><span class="tv-canal">CH ${String(i*7%90+3).padStart(2,"0")}</span><div><div class="tv-frase">«${f.t}»</div><div class="tv-sub" id="tv-sub"></div></div></div></div><div class="tv-patas"><i></i><i></i></div><div class="j-opts cols">${opts.map(id=>`<button type="button" class="j-opt" data-id="${id}">${cara(id,34)}<span>${nombreCorto(id)}</span></button>`).join("")}</div><div id="j-exp"></div>`);
+setTimeout(()=>{const t=$("#tv");if(t)t.classList.remove("ruido")},450);
+stage.querySelectorAll(".j-opt").forEach(b=>b.addEventListener("click",()=>{const bien=b.dataset.id===f.id;stage.querySelectorAll(".j-opt").forEach(x=>{x.disabled=true;if(x.dataset.id===f.id)x.classList.add("ok")});if(bien)ok++;else b.classList.add("bad");$("#tv-sub").textContent=f.es;setScore(`Canal ${i+1} de 10 · ${ok} aciertos`);
+$("#j-exp").outerHTML=`<div class="j-exp"><p><b>${bien?"¡Correcto!":"Era "+nombreCorto(f.id)+"."}</b> ${f.es}</p><div class="j-actions"><button type="button" class="btn ghost" data-go="${f.id}">Ver su carta</button><button type="button" class="btn" data-next>${i<fr.length-1?"Cambiar de canal":"Apagar la tele"}</button></div></div>`;stage.querySelector("[data-next]").addEventListener("click",()=>{i++;paso()})}))}
+function fin(){const s=loadSaves();if(ok>(s.tele||0))save("tele",ok);setScore("Fin de la emisión");pantalla(`<div class="tv"><div class="tv-screen"><div><div class="tv-frase">${ok} / 10</div><div class="tv-sub">${ok>=9?"Eres más de la tele que Homer.":ok>=6?"Buen oído para las voces.":"Habrá que hacer un maratón."}</div></div></div></div><div class="tv-patas"><i></i><i></i></div><div class="j-actions" style="justify-content:center"><button type="button" class="btn" data-jagain>Volver a encenderla</button>${btnFin()}</div>${perroCorre()}`)}
+paso()}};
+
+/* 6 · ¿Quién soy? en el Badulaque */
+G.badulaque={intro:{arte:()=>`<div class="rotulo">BADULAQUE</div><div class="escena">${spr("caja",80)}${spr("squishee",56)}${spr("donut",44)}</div>`,lugar:"Badulaque · abierto 24 horas",texto:"Un cliente misterioso paga en la caja y el tique va soltando pistas sobre quién es. Cuantas menos pistas necesites, más dólares cobras. Ocho clientes por turno.",boton:"Abrir la caja"},
+run(){const rondas=sample(QUIEN,8);let i=0,caja=0;
+const mostrador=ding=>`<div class="rotulo">BADULAQUE</div><div class="mostrador"><div class="registradora ${ding?"ding":""}"><span class="visor">$${caja}</span>${spr("caja",64)}</div><div class="escena">${spr("squishee",44)}${spr("donut",36)}${spr("duff",36)}</div></div>`;
+function paso(){if(i>=rondas.length){fin();return}const r=rondas[i];let n=1;const opts=shuffle([r.id,...sample(QUIEN.filter(x=>x.id!==r.id),5).map(x=>x.id)]);
+function draw(ding){setScore(`Cliente ${i+1} de 8 · $${caja}`);pantalla(`${mostrador(ding)}<div class="ticket"><div class="cab"><span>TIQUE Nº ${742+i}</span><span>VALE $${5-n}</span></div><ol>${r.p.slice(0,n).map(t=>`<li>${t}</li>`).join("")}</ol></div><div class="j-opts cols precios">${opts.map(id=>`<button type="button" class="j-opt" data-id="${id}" data-precio="?">${cara(id,30)}<span>${nombreCorto(id)}</span></button>`).join("")}</div><div class="j-actions">${n<4?`<button type="button" class="btn ghost" data-more>Imprimir otra pista</button>`:""}</div>`);
+const m=stage.querySelector("[data-more]");if(m)m.addEventListener("click",()=>{n++;draw()});
+stage.querySelectorAll(".j-opt").forEach(b=>b.addEventListener("click",()=>{const bien=b.dataset.id===r.id;stage.querySelectorAll(".j-opt").forEach(x=>{x.disabled=true;if(x.dataset.id===r.id)x.classList.add("ok")});if(bien)caja+=5-n;else b.classList.add("bad");stage.querySelector(".mostrador").parentElement&&(stage.querySelector(".registradora").outerHTML=`<div class="registradora ${bien?"ding":""}"><span class="visor">$${caja}</span>${spr("caja",64)}</div>`);setScore(`Cliente ${i+1} de 8 · $${caja}`);
+const e=document.createElement("div");e.className="j-exp";e.innerHTML=`<p><b>${bien?"¡Ding! +$"+(5-n)+". Gracias, vuelva pronto.":"Era "+nombreCorto(r.id)+"."}</b> ${IDX[r.id].obj.alias}.</p><div class="j-actions"><button type="button" class="btn ghost" data-go="${r.id}">Ver su carta</button><button type="button" class="btn" data-next>${i<rondas.length-1?"Siguiente cliente":"Cerrar caja"}</button></div>`;stage.appendChild(e);e.querySelector("[data-next]").addEventListener("click",()=>{i++;paso()})}))}
+draw()}
+function fin(){const s=loadSaves();if(caja>(s.badulaque||0))save("badulaque",caja);setScore("Caja cerrada");pantalla(`${mostrador(true)}<div class="resultado"><div class="big">$${caja}</div><p>${caja>=28?"Apu te ofrece el turno de noche.":caja>=18?"Buena caja. El Squishee corre de tu cuenta.":"Hoy la caja no cuadra."}</p><div class="j-actions"><button type="button" class="btn" data-jagain>Otro turno</button><button type="button" class="btn ghost" data-go="c-badulaque">El Badulaque</button>${btnFin()}</div></div>${perroCorre()}`)}
+paso()}};
+
+renderJuegos();
+
+</script>
+
+</body>
+</html>
